@@ -17,10 +17,11 @@ def esc(text: str) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Birlesik Izmir CSV dosyasindan sade bir yayin HTML'i olusturur."
+        description="Birlesik CSV dosyasindan sade bir yayin HTML'i olusturur."
     )
     parser.add_argument("--input", default="izmir_tek_csv_12_04_2026.csv")
     parser.add_argument("--output", default="izmir_yayin.html")
+    parser.add_argument("--city", default="Izmir")
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -65,7 +66,7 @@ def main() -> int:
     parts.append("<head>")
     parts.append("  <meta charset=\"utf-8\" />")
     parts.append("  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />")
-    parts.append("  <title>Izmir At Analiz Listesi</title>")
+    parts.append(f"  <title>{esc(args.city)} At Analiz Listesi</title>")
     parts.append("  <style>")
     parts.append("    :root { color-scheme: light; }")
     parts.append("    body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #f6f7fb; color: #1f2a37; }")
@@ -89,7 +90,7 @@ def main() -> int:
     parts.append("</head>")
     parts.append("<body>")
     parts.append("  <div class=\"wrap\">")
-    parts.append("    <h1>Izmir Kosulari - At Listesi</h1>")
+    parts.append(f"    <h1>{esc(args.city)} Kosulari - At Listesi</h1>")
     parts.append("    <p class=\"sub\">Kosu kosu at numarasi, isim, cikti ve stil etiketleri</p>")
 
     for race_name, horses in races:
