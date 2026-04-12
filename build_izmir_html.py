@@ -22,10 +22,28 @@ def main() -> int:
     parser.add_argument("--input", default="izmir_tek_csv_12_04_2026.csv")
     parser.add_argument("--output", default="izmir_yayin.html")
     parser.add_argument("--city", default="Izmir")
+    parser.add_argument("--tempo-summary", default="")
     args = parser.parse_args()
 
     input_path = Path(args.input)
     output_path = Path(args.output)
+    tempo_map: dict[str, dict[str, str]] = {}
+
+    if args.tempo_summary:
+        tempo_path = Path(args.tempo_summary)
+        if tempo_path.exists():
+            with tempo_path.open("r", encoding="utf-8-sig", newline="") as tf:
+                treader = csv.DictReader(tf)
+                for row in treader:
+                    race_name = (row.get("Kosu") or "").strip()
+                    if not race_name:
+                        continue
+                    tempo_map[race_name] = {
+                        "at_sayisi": (row.get("At Sayisi") or "").strip(),
+                        "toplam_tempo": (row.get("Toplam Tempo") or "").strip(),
+                        "tempo_indeksi": (row.get("Tempo Indeksi") or "").strip(),
+                        "yaris_tipi": (row.get("Yaris Tipi") or "").strip(),
+                    }
 
     races: list[tuple[str, list[dict[str, str]]]] = []
     current_race = "Genel"
@@ -79,6 +97,8 @@ def main() -> int:
     parts.append("    .role-note { margin: 0 0 10px; font-size: 13px; color: #334e68; font-weight: 600; }")
     parts.append("    .race { background: #fff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; overflow: hidden; }")
     parts.append("    .race h2 { margin: 0; padding: 12px 14px; background: #0f3d5e; color: #fff; font-size: 18px; }")
+    parts.append("    .tempo { margin: 10px 14px 2px; display: flex; flex-wrap: wrap; gap: 8px; }")
+    parts.append("    .tempo-chip { display: inline-block; border-radius: 999px; background: #f1f5f9; border: 1px solid #d5e0eb; color: #102a43; padding: 4px 10px; font-size: 12px; font-weight: 600; }")
     parts.append("    table { width: 100%; border-collapse: collapse; }")
     parts.append("    th, td { padding: 10px 12px; border-bottom: 1px solid #edf1f5; text-align: left; font-size: 14px; }")
     parts.append("    th { background: #f8fafc; color: #334155; font-weight: 700; }")
@@ -102,6 +122,14 @@ def main() -> int:
     for race_name, horses in races:
         parts.append("    <section class=\"race\">")
         parts.append(f"      <h2>{esc(race_name)}</h2>")
+        tempo = tempo_map.get(race_name)
+        if tempo:
+            parts.append("      <div class=\"tempo\">")
+            parts.append(f"        <span class=\"tempo-chip\">Tempo Indeksi: {esc(tempo['tempo_indeksi'])}</span>")
+            parts.append(f"        <span class=\"tempo-chip\">Yaris Tipi: {esc(tempo['yaris_tipi'])}</span>")
+            parts.append(f"        <span class=\"tempo-chip\">At: {esc(tempo['at_sayisi'])}</span>")
+            parts.append(f"        <span class=\"tempo-chip\">Toplam Tempo: {esc(tempo['toplam_tempo'])}</span>")
+            parts.append("      </div>")
         parts.append("      <table>")
         parts.append("        <thead><tr><th class=\"num\">No</th><th>At Ismi</th><th class=\"score\">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>")
         parts.append("        <tbody>")
