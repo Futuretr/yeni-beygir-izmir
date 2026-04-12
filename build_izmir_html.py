@@ -73,6 +73,9 @@ def main() -> int:
     parts.append("    .wrap { max-width: 1000px; margin: 24px auto 40px; padding: 0 16px; }")
     parts.append("    h1 { margin: 0 0 8px; font-size: 28px; }")
     parts.append("    .sub { margin: 0 0 24px; color: #5c6b7a; }")
+    parts.append("    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }")
+    parts.append("    .back { text-decoration: none; font-size: 13px; color: #0f3d5e; border: 1px solid #bfd0e1; padding: 6px 10px; border-radius: 999px; background: #eef4fb; }")
+    parts.append("    .back:hover { background: #e2edf8; }")
     parts.append("    .race { background: #fff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; overflow: hidden; }")
     parts.append("    .race h2 { margin: 0; padding: 12px 14px; background: #0f3d5e; color: #fff; font-size: 18px; }")
     parts.append("    table { width: 100%; border-collapse: collapse; }")
@@ -90,6 +93,7 @@ def main() -> int:
     parts.append("</head>")
     parts.append("<body>")
     parts.append("  <div class=\"wrap\">")
+    parts.append("    <div class=\"topbar\"><a class=\"back\" href=\"index.html\">Geri Don ve Sehir Sec</a></div>")
     parts.append(f"    <h1>{esc(args.city)} Kosulari - At Listesi</h1>")
     parts.append("    <p class=\"sub\">Kosu kosu at numarasi, isim, cikti ve stil etiketleri</p>")
 
