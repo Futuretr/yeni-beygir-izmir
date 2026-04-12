@@ -42,7 +42,11 @@ def main() -> int:
                         "at_sayisi": (row.get("At Sayisi") or "").strip(),
                         "toplam_tempo": (row.get("Toplam Tempo") or "").strip(),
                         "tempo_indeksi": (row.get("Tempo Indeksi") or "").strip(),
+                        "siddet": (row.get("Siddet") or "").strip(),
                         "yaris_tipi": (row.get("Yaris Tipi") or "").strip(),
+                        "yaris_yapisi": (row.get("Yaris Yapisi") or "").strip(),
+                        "karar_sonucu": (row.get("Karar Sonucu") or "").strip(),
+                        "avantajli_at_turu": (row.get("Avantajli At Turu") or "").strip(),
                     }
 
     races: list[tuple[str, list[dict[str, str]]]] = []
@@ -97,6 +101,12 @@ def main() -> int:
     parts.append("    .role-note { margin: 0 0 10px; font-size: 13px; color: #334e68; font-weight: 600; }")
     parts.append("    .race { background: #fff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; overflow: hidden; }")
     parts.append("    .race h2 { margin: 0; padding: 12px 14px; background: #0f3d5e; color: #fff; font-size: 18px; }")
+    parts.append("    .guide { background: #ffffff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; padding: 12px; }")
+    parts.append("    .guide h3 { margin: 0 0 8px; font-size: 15px; color: #0f3d5e; }")
+    parts.append("    .guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }")
+    parts.append("    .guide table { width: 100%; border-collapse: collapse; }")
+    parts.append("    .guide th, .guide td { border: 1px solid #e6edf5; padding: 6px; font-size: 12px; }")
+    parts.append("    .guide th { background: #f7fafc; }")
     parts.append("    .tempo { margin: 10px 14px 2px; display: flex; flex-wrap: wrap; gap: 8px; }")
     parts.append("    .tempo-chip { display: inline-block; border-radius: 999px; background: #f1f5f9; border: 1px solid #d5e0eb; color: #102a43; padding: 4px 10px; font-size: 12px; font-weight: 600; }")
     parts.append("    table { width: 100%; border-collapse: collapse; }")
@@ -109,6 +119,7 @@ def main() -> int:
     parts.append("    @media (max-width: 700px) {")
     parts.append("      th, td { padding: 8px; font-size: 13px; }")
     parts.append("      h1 { font-size: 24px; }")
+    parts.append("      .guide-grid { grid-template-columns: 1fr; }")
     parts.append("    }")
     parts.append("  </style>")
     parts.append("</head>")
@@ -118,6 +129,33 @@ def main() -> int:
     parts.append("    <div class=\"topbar\"><a class=\"back\" href=\"index.html\">Geri Don ve Sehir Sec</a></div>")
     parts.append(f"    <h1>{esc(args.city)} Kosulari - At Listesi</h1>")
     parts.append("    <p class=\"sub\">Kosu kosu at numarasi, isim, cikti ve stil etiketleri</p>")
+    parts.append("    <section class=\"guide\">")
+    parts.append("      <h3>Tempo Rehberi (Kisa Tablo)</h3>")
+    parts.append("      <div class=\"guide-grid\">")
+    parts.append("        <table><thead><tr><th>Tempo Indeksi</th><th>Yaris Tipi</th><th>Avantaj</th></tr></thead><tbody>")
+    parts.append("          <tr><td>&lt; 0.9</td><td>Dusuk Tempo</td><td>Onde Kacan</td></tr>")
+    parts.append("          <tr><td>0.9 - 1.2</td><td>Orta Tempo</td><td>Takipci</td></tr>")
+    parts.append("          <tr><td>1.2 - 1.4</td><td>Yuksek Tempo</td><td>Guclu Takipci / Sprinter</td></tr>")
+    parts.append("          <tr><td>&gt; 1.4</td><td>Cok Yuksek</td><td>Sprinter / Guclu Kapanis</td></tr>")
+    parts.append("        </tbody></table>")
+    parts.append("        <table><thead><tr><th>Toplam Tempo</th><th>Siddet</th><th>Anlam</th></tr></thead><tbody>")
+    parts.append("          <tr><td>&lt; 6</td><td>Dusuk</td><td>Lider rahat</td></tr>")
+    parts.append("          <tr><td>6 - 10</td><td>Orta</td><td>Dengeli yaris</td></tr>")
+    parts.append("          <tr><td>&gt; 10</td><td>Yuksek</td><td>Yipranma fazla</td></tr>")
+    parts.append("        </tbody></table>")
+    parts.append("        <table><thead><tr><th>At Sayisi</th><th>Yapi</th><th>Etki</th></tr></thead><tbody>")
+    parts.append("          <tr><td>3 - 6</td><td>Kucuk grup</td><td>Kontrollu tempo</td></tr>")
+    parts.append("          <tr><td>7 - 10</td><td>Orta grup</td><td>Standart yaris</td></tr>")
+    parts.append("          <tr><td>11+</td><td>Kalabalik</td><td>Kaos / surpriz</td></tr>")
+    parts.append("        </tbody></table>")
+    parts.append("        <table><thead><tr><th>Matriks Ozeti</th><th>Sonuc</th><th>En Avantajli</th></tr></thead><tbody>")
+    parts.append("          <tr><td>Dusuk + Dusuk</td><td>Yavas yaris</td><td>Onde Kacan</td></tr>")
+    parts.append("          <tr><td>Orta + Orta</td><td>Klasik yaris</td><td>Takipci</td></tr>")
+    parts.append("          <tr><td>Yuksek + Yuksek</td><td>Yaris yanar</td><td>Sprinter</td></tr>")
+    parts.append("          <tr><td>Cok Yuksek + Yuksek</td><td>Kaos</td><td>En guclu kapanis</td></tr>")
+    parts.append("        </tbody></table>")
+    parts.append("      </div>")
+    parts.append("    </section>")
 
     for race_name, horses in races:
         parts.append("    <section class=\"race\">")
@@ -127,8 +165,12 @@ def main() -> int:
             parts.append("      <div class=\"tempo\">")
             parts.append(f"        <span class=\"tempo-chip\">Tempo Indeksi: {esc(tempo['tempo_indeksi'])}</span>")
             parts.append(f"        <span class=\"tempo-chip\">Yaris Tipi: {esc(tempo['yaris_tipi'])}</span>")
+            parts.append(f"        <span class=\"tempo-chip\">Siddet: {esc(tempo['siddet'])}</span>")
             parts.append(f"        <span class=\"tempo-chip\">At: {esc(tempo['at_sayisi'])}</span>")
             parts.append(f"        <span class=\"tempo-chip\">Toplam Tempo: {esc(tempo['toplam_tempo'])}</span>")
+            parts.append(f"        <span class=\"tempo-chip\">Yapi: {esc(tempo['yaris_yapisi'])}</span>")
+            parts.append(f"        <span class=\"tempo-chip\">Sonuc: {esc(tempo['karar_sonucu'])}</span>")
+            parts.append(f"        <span class=\"tempo-chip\">En Avantajli: {esc(tempo['avantajli_at_turu'])}</span>")
             parts.append("      </div>")
         parts.append("      <table>")
         parts.append("        <thead><tr><th class=\"num\">No</th><th>At Ismi</th><th class=\"score\">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>")

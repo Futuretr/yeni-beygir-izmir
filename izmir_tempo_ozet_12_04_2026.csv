@@ -1,9 +1,9 @@
-﻿Kosu,At Sayisi,Ortalama Cikti,Toplam Tempo,Tempo Indeksi,Catisma,Yaris Tipi
-1. Koşu,8,6.530,-0.959,-0.120,0.00,Düşük
-2. Koşu,5,6.500,6.954,1.391,1.50,Orta
-3. Koşu,9,6.392,12.947,1.439,3.50,Yüksek
-4. Koşu,7,6.893,10.993,1.570,4.50,Yüksek
-5. Koşu,8,6.467,1.842,0.230,1.50,Düşük
-6. Koşu,5,6.404,5.059,1.012,3.00,Yüksek
-7. Koşu,9,6.577,-1.031,-0.115,0.00,Düşük
-8. Koşu,14,6.875,5.069,0.362,0.00,Düşük
+﻿Kosu,At Sayisi,Ortalama Cikti,Toplam Tempo,Tempo Indeksi,Siddet,Yaris Tipi,Yaris Yapisi,Karar Sonucu,Avantajli At Turu
+1. Koşu,8,6.530,-0.959,-0.120,Düşük,Düşük Tempo,Orta grup,Yavaş yarış,Önde Kaçan
+2. Koşu,5,6.500,6.954,1.391,Orta,Yüksek Tempo,Küçük grup,Tempolu ama kontrollü,Takipçi
+3. Koşu,9,6.392,12.947,1.439,Yüksek,Çok Yüksek,Orta grup,Kaos,En güçlü kapanış
+4. Koşu,7,6.893,10.993,1.570,Yüksek,Çok Yüksek,Orta grup,Kaos,En güçlü kapanış
+5. Koşu,8,6.467,1.842,0.230,Düşük,Düşük Tempo,Orta grup,Yavaş yarış,Önde Kaçan
+6. Koşu,5,6.404,5.059,1.012,Düşük,Orta Tempo,Küçük grup,Dengeli yarış,Takipçi
+7. Koşu,9,6.577,-1.031,-0.115,Düşük,Düşük Tempo,Orta grup,Yavaş yarış,Önde Kaçan
+8. Koşu,14,6.875,5.069,0.362,Düşük,Düşük Tempo,Kalabalık,Yavaş yarış,Önde Kaçan

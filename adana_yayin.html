@@ -16,6 +16,12 @@
     .role-note { margin: 0 0 10px; font-size: 13px; color: #334e68; font-weight: 600; }
     .race { background: #fff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; overflow: hidden; }
     .race h2 { margin: 0; padding: 12px 14px; background: #0f3d5e; color: #fff; font-size: 18px; }
+    .guide { background: #ffffff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; padding: 12px; }
+    .guide h3 { margin: 0 0 8px; font-size: 15px; color: #0f3d5e; }
+    .guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .guide table { width: 100%; border-collapse: collapse; }
+    .guide th, .guide td { border: 1px solid #e6edf5; padding: 6px; font-size: 12px; }
+    .guide th { background: #f7fafc; }
     .tempo { margin: 10px 14px 2px; display: flex; flex-wrap: wrap; gap: 8px; }
     .tempo-chip { display: inline-block; border-radius: 999px; background: #f1f5f9; border: 1px solid #d5e0eb; color: #102a43; padding: 4px 10px; font-size: 12px; font-weight: 600; }
     table { width: 100%; border-collapse: collapse; }
@@ -28,6 +34,7 @@
     @media (max-width: 700px) {
       th, td { padding: 8px; font-size: 13px; }
       h1 { font-size: 24px; }
+      .guide-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -37,13 +44,44 @@
     <div class="topbar"><a class="back" href="index.html">Geri Don ve Sehir Sec</a></div>
     <h1>Adana Kosulari - At Listesi</h1>
     <p class="sub">Kosu kosu at numarasi, isim, cikti ve stil etiketleri</p>
+    <section class="guide">
+      <h3>Tempo Rehberi (Kisa Tablo)</h3>
+      <div class="guide-grid">
+        <table><thead><tr><th>Tempo Indeksi</th><th>Yaris Tipi</th><th>Avantaj</th></tr></thead><tbody>
+          <tr><td>&lt; 0.9</td><td>Dusuk Tempo</td><td>Onde Kacan</td></tr>
+          <tr><td>0.9 - 1.2</td><td>Orta Tempo</td><td>Takipci</td></tr>
+          <tr><td>1.2 - 1.4</td><td>Yuksek Tempo</td><td>Guclu Takipci / Sprinter</td></tr>
+          <tr><td>&gt; 1.4</td><td>Cok Yuksek</td><td>Sprinter / Guclu Kapanis</td></tr>
+        </tbody></table>
+        <table><thead><tr><th>Toplam Tempo</th><th>Siddet</th><th>Anlam</th></tr></thead><tbody>
+          <tr><td>&lt; 6</td><td>Dusuk</td><td>Lider rahat</td></tr>
+          <tr><td>6 - 10</td><td>Orta</td><td>Dengeli yaris</td></tr>
+          <tr><td>&gt; 10</td><td>Yuksek</td><td>Yipranma fazla</td></tr>
+        </tbody></table>
+        <table><thead><tr><th>At Sayisi</th><th>Yapi</th><th>Etki</th></tr></thead><tbody>
+          <tr><td>3 - 6</td><td>Kucuk grup</td><td>Kontrollu tempo</td></tr>
+          <tr><td>7 - 10</td><td>Orta grup</td><td>Standart yaris</td></tr>
+          <tr><td>11+</td><td>Kalabalik</td><td>Kaos / surpriz</td></tr>
+        </tbody></table>
+        <table><thead><tr><th>Matriks Ozeti</th><th>Sonuc</th><th>En Avantajli</th></tr></thead><tbody>
+          <tr><td>Dusuk + Dusuk</td><td>Yavas yaris</td><td>Onde Kacan</td></tr>
+          <tr><td>Orta + Orta</td><td>Klasik yaris</td><td>Takipci</td></tr>
+          <tr><td>Yuksek + Yuksek</td><td>Yaris yanar</td><td>Sprinter</td></tr>
+          <tr><td>Cok Yuksek + Yuksek</td><td>Kaos</td><td>En guclu kapanis</td></tr>
+        </tbody></table>
+      </div>
+    </section>
     <section class="race">
       <h2>1. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 0.204</span>
-        <span class="tempo-chip">Yaris Tipi: Düşük</span>
+        <span class="tempo-chip">Yaris Tipi: Düşük Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
         <span class="tempo-chip">At: 9</span>
         <span class="tempo-chip">Toplam Tempo: 1.840</span>
+        <span class="tempo-chip">Yapi: Orta grup</span>
+        <span class="tempo-chip">Sonuc: Yavaş yarış</span>
+        <span class="tempo-chip">En Avantajli: Önde Kaçan</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>
@@ -64,9 +102,13 @@
       <h2>2. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 0.498</span>
-        <span class="tempo-chip">Yaris Tipi: Düşük</span>
+        <span class="tempo-chip">Yaris Tipi: Düşük Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
         <span class="tempo-chip">At: 8</span>
         <span class="tempo-chip">Toplam Tempo: 3.982</span>
+        <span class="tempo-chip">Yapi: Orta grup</span>
+        <span class="tempo-chip">Sonuc: Yavaş yarış</span>
+        <span class="tempo-chip">En Avantajli: Önde Kaçan</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>
@@ -86,9 +128,13 @@
       <h2>3. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 1.450</span>
-        <span class="tempo-chip">Yaris Tipi: Yüksek</span>
+        <span class="tempo-chip">Yaris Tipi: Çok Yüksek</span>
+        <span class="tempo-chip">Siddet: Yüksek</span>
         <span class="tempo-chip">At: 9</span>
         <span class="tempo-chip">Toplam Tempo: 13.051</span>
+        <span class="tempo-chip">Yapi: Orta grup</span>
+        <span class="tempo-chip">Sonuc: Kaos</span>
+        <span class="tempo-chip">En Avantajli: En güçlü kapanış</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>
@@ -109,9 +155,13 @@
       <h2>4. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 1.005</span>
-        <span class="tempo-chip">Yaris Tipi: Yüksek</span>
+        <span class="tempo-chip">Yaris Tipi: Orta Tempo</span>
+        <span class="tempo-chip">Siddet: Yüksek</span>
         <span class="tempo-chip">At: 10</span>
         <span class="tempo-chip">Toplam Tempo: 10.051</span>
+        <span class="tempo-chip">Yapi: Orta grup</span>
+        <span class="tempo-chip">Sonuc: Sert bitiş</span>
+        <span class="tempo-chip">En Avantajli: Güçlü Takipçi</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>
@@ -133,9 +183,13 @@
       <h2>5. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 0.840</span>
-        <span class="tempo-chip">Yaris Tipi: Orta</span>
+        <span class="tempo-chip">Yaris Tipi: Düşük Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
         <span class="tempo-chip">At: 6</span>
         <span class="tempo-chip">Toplam Tempo: 5.039</span>
+        <span class="tempo-chip">Yapi: Küçük grup</span>
+        <span class="tempo-chip">Sonuc: Yavaş yarış</span>
+        <span class="tempo-chip">En Avantajli: Önde Kaçan</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>
@@ -153,9 +207,13 @@
       <h2>6. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 1.260</span>
-        <span class="tempo-chip">Yaris Tipi: Yüksek</span>
+        <span class="tempo-chip">Yaris Tipi: Yüksek Tempo</span>
+        <span class="tempo-chip">Siddet: Yüksek</span>
         <span class="tempo-chip">At: 11</span>
         <span class="tempo-chip">Toplam Tempo: 13.855</span>
+        <span class="tempo-chip">Yapi: Kalabalık</span>
+        <span class="tempo-chip">Sonuc: Yarış yanar</span>
+        <span class="tempo-chip">En Avantajli: Sprinter</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>
@@ -178,9 +236,13 @@
       <h2>7. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 0.334</span>
-        <span class="tempo-chip">Yaris Tipi: Düşük</span>
+        <span class="tempo-chip">Yaris Tipi: Düşük Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
         <span class="tempo-chip">At: 6</span>
         <span class="tempo-chip">Toplam Tempo: 2.002</span>
+        <span class="tempo-chip">Yapi: Küçük grup</span>
+        <span class="tempo-chip">Sonuc: Yavaş yarış</span>
+        <span class="tempo-chip">En Avantajli: Önde Kaçan</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>
@@ -198,9 +260,13 @@
       <h2>8. Koşu</h2>
       <div class="tempo">
         <span class="tempo-chip">Tempo Indeksi: 1.239</span>
-        <span class="tempo-chip">Yaris Tipi: Yüksek</span>
+        <span class="tempo-chip">Yaris Tipi: Yüksek Tempo</span>
+        <span class="tempo-chip">Siddet: Yüksek</span>
         <span class="tempo-chip">At: 14</span>
         <span class="tempo-chip">Toplam Tempo: 17.346</span>
+        <span class="tempo-chip">Yapi: Kalabalık</span>
+        <span class="tempo-chip">Sonuc: Yarış yanar</span>
+        <span class="tempo-chip">En Avantajli: Sprinter</span>
       </div>
       <table>
         <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>

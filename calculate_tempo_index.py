@@ -65,9 +65,12 @@ class RaceTempo:
     race: str
     horse_count: int = 0
     total_tempo: float = 0.0
-    catisma: float = 0.0
     ortalama_cikti: float = 0.0
-    tempo_tipi: str = "Düşük"
+    tempo_tipi: str = "Düşük Tempo"
+    siddet_seviyesi: str = "Düşük"
+    yaris_yapisi: str = "Orta grup"
+    karar_sonucu: str = "Klasik yarış"
+    avantajli_at_turu: str = "Takipçi"
 
     @property
     def tempo_index(self) -> float:
@@ -99,6 +102,56 @@ def is_onde_kacan(style_1: str, style_2: str) -> bool:
 
 def is_takipci(style_1: str, style_2: str) -> bool:
     return (style_1 == "Takipçi") or (style_2 == "Takipçi")
+
+
+def classify_tempo_index(idx: float) -> str:
+    if idx < 0.9:
+        return "Düşük Tempo"
+    if idx <= 1.2:
+        return "Orta Tempo"
+    if idx <= 1.4:
+        return "Yüksek Tempo"
+    return "Çok Yüksek"
+
+
+def classify_total_tempo(total_tempo: float) -> str:
+    if total_tempo < 6:
+        return "Düşük"
+    if total_tempo <= 10:
+        return "Orta"
+    return "Yüksek"
+
+
+def classify_field_size(horse_count: int) -> str:
+    if 3 <= horse_count <= 6:
+        return "Küçük grup"
+    if 7 <= horse_count <= 10:
+        return "Orta grup"
+    if horse_count >= 11:
+        return "Kalabalık"
+    return "Küçük grup"
+
+
+def decision_matrix(tempo_tipi: str, siddet: str) -> tuple[str, str]:
+    matrix = {
+        ("Düşük Tempo", "Düşük"): ("Yavaş yarış", "Önde Kaçan"),
+        ("Düşük Tempo", "Yüksek"): ("Sahte tempo (tek kaçış)", "Lider / güçlü at"),
+        ("Orta Tempo", "Orta"): ("Klasik yarış", "Takipçi"),
+        ("Orta Tempo", "Yüksek"): ("Sert bitiş", "Güçlü Takipçi"),
+        ("Yüksek Tempo", "Yüksek"): ("Yarış yanar", "Sprinter"),
+        ("Yüksek Tempo", "Orta"): ("Tempolu ama kontrollü", "Takipçi"),
+        ("Çok Yüksek", "Yüksek"): ("Kaos", "En güçlü kapanış"),
+    }
+    if (tempo_tipi, siddet) in matrix:
+        return matrix[(tempo_tipi, siddet)]
+
+    fallback = {
+        "Düşük Tempo": ("Kontrollü tempo", "Önde Kaçan"),
+        "Orta Tempo": ("Dengeli yarış", "Takipçi"),
+        "Yüksek Tempo": ("Sert tempo", "Güçlü Takipçi / Sprinter"),
+        "Çok Yüksek": ("Yıpratıcı yarış", "Sprinter / Güçlü kapanış"),
+    }
+    return fallback[tempo_tipi]
 
 
 def parse_race_horses(input_csv: Path) -> dict[str, list[HorseRow]]:
@@ -168,24 +221,11 @@ def build_models(input_csv: Path) -> tuple[list[RaceTempo], list[HorseModel]]:
 
         race.total_tempo = sum(temp_katkilar)
 
-        # 2) Tempo catisma skoru.
-        lider_sayisi = 0.0
-        for h in horses:
-            onde = is_onde_kacan(h.style_1, h.style_2)
-            takip = is_takipci(h.style_1, h.style_2)
-            if onde:
-                lider_sayisi += 1.0
-            if onde and takip:
-                lider_sayisi += 0.5
-        race.catisma = lider_sayisi
-
-        # 3) Yaris tempo tipi.
-        if race.catisma >= 3:
-            race.tempo_tipi = "Yüksek"
-        elif race.tempo_index >= 0.8:
-            race.tempo_tipi = "Orta"
-        else:
-            race.tempo_tipi = "Düşük"
+        # 2) Yeni tabloya gore siniflandirma.
+        race.tempo_tipi = classify_tempo_index(race.tempo_index)
+        race.siddet_seviyesi = classify_total_tempo(race.total_tempo)
+        race.yaris_yapisi = classify_field_size(race.horse_count)
+        race.karar_sonucu, race.avantajli_at_turu = decision_matrix(race.tempo_tipi, race.siddet_seviyesi)
 
         # 4) At bazli kazanma skoru + ekstra dayanıklılık.
         for h in horses:
@@ -198,13 +238,19 @@ def build_models(input_csv: Path) -> tuple[list[RaceTempo], list[HorseModel]]:
             else:
                 tempo_katkisi = stil_skoru * guc
 
-            bonus_1 = TEMPO_BONUS[race.tempo_tipi].get(h.style_1, 0)
-            bonus_2 = TEMPO_BONUS[race.tempo_tipi].get(h.style_2, 0)
+            bonus_key = "Düşük"
+            if race.tempo_tipi == "Orta Tempo":
+                bonus_key = "Orta"
+            elif race.tempo_tipi in {"Yüksek Tempo", "Çok Yüksek"}:
+                bonus_key = "Yüksek"
+
+            bonus_1 = TEMPO_BONUS[bonus_key].get(h.style_1, 0)
+            bonus_2 = TEMPO_BONUS[bonus_key].get(h.style_2, 0)
 
             kazanma_skoru = (1 / output_used) * 0.6 + bonus_1 * 0.25 + bonus_2 * 0.15
 
             dayaniklilik = None
-            if race.tempo_tipi == "Yüksek":
+            if race.tempo_tipi in {"Yüksek Tempo", "Çok Yüksek"}:
                 dayaniklilik = guc * 2 - stil_skoru * 0.3
 
             horse_models.append(
@@ -249,8 +295,11 @@ def write_summary(output_csv: Path, races: list[RaceTempo]) -> None:
                 "Ortalama Cikti",
                 "Toplam Tempo",
                 "Tempo Indeksi",
-                "Catisma",
+                "Siddet",
                 "Yaris Tipi",
+                "Yaris Yapisi",
+                "Karar Sonucu",
+                "Avantajli At Turu",
             ],
         )
         writer.writeheader()
@@ -262,8 +311,11 @@ def write_summary(output_csv: Path, races: list[RaceTempo]) -> None:
                     "Ortalama Cikti": f"{r.ortalama_cikti:.3f}",
                     "Toplam Tempo": f"{r.total_tempo:.3f}",
                     "Tempo Indeksi": f"{r.tempo_index:.3f}",
-                    "Catisma": f"{r.catisma:.2f}",
+                    "Siddet": r.siddet_seviyesi,
                     "Yaris Tipi": r.tempo_tipi,
+                    "Yaris Yapisi": r.yaris_yapisi,
+                    "Karar Sonucu": r.karar_sonucu,
+                    "Avantajli At Turu": r.avantajli_at_turu,
                 }
             )
 
@@ -337,8 +389,8 @@ def main() -> int:
     print(f"Tempo ozeti yazildi: {output_csv}")
     for r in races:
         print(
-            f"- {r.race}: at={r.horse_count}, catisma={r.catisma:.2f}, toplam={r.total_tempo:.3f}, "
-            f"indeks={r.tempo_index:.3f}, tip={r.tempo_tipi}"
+            f"- {r.race}: at={r.horse_count}, toplam={r.total_tempo:.3f}, indeks={r.tempo_index:.3f}, "
+            f"tip={r.tempo_tipi}, siddet={r.siddet_seviyesi}, avantaj={r.avantajli_at_turu}"
         )
 
     if args.ranking_output:
