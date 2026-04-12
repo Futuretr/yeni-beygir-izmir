@@ -35,20 +35,24 @@
       text-align: left;
       color: #0f3d5e;
       text-shadow: 0 2px 0 #dce8f5;
-      max-width: calc(100% - 190px);
+      max-width: calc(100% - 320px);
     }
     h1 {
       margin: 0 0 8px;
       font-size: 30px;
       text-align: left;
-      max-width: calc(100% - 190px);
+      max-width: calc(100% - 320px);
     }
-    .monkey {
+    .meme-strip {
       position: absolute;
       top: 18px;
       right: 18px;
-      width: 150px;
-      height: 150px;
+      display: flex;
+      gap: 8px;
+    }
+    .meme {
+      width: 94px;
+      height: 94px;
       object-fit: cover;
       border-radius: 12px;
       border: 2px solid #d6deeb;
@@ -58,7 +62,7 @@
       margin: 0 0 20px;
       text-align: left;
       color: #486581;
-      max-width: calc(100% - 190px);
+      max-width: calc(100% - 320px);
     }
     .grid {
       display: grid;
@@ -99,19 +103,25 @@
       .sub {
         max-width: 100%;
       }
-      .monkey {
+      .meme-strip {
         position: static;
-        display: block;
-        width: 120px;
-        height: 120px;
+        justify-content: center;
         margin: 0 auto 12px;
+      }
+      .meme {
+        width: 90px;
+        height: 90px;
       }
     }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <img class="monkey" src="the-original-image-of-the-monkey-thinking-meme-v0-vewwqeyihbaf1.webp" alt="Maymun" />
+    <div class="meme-strip">
+      <img class="meme" src="the-original-image-of-the-monkey-thinking-meme-v0-vewwqeyihbaf1.webp" alt="Maymun 1" />
+      <img class="meme" src="WhatsApp%20Image%202026-04-12%20at%2013.16.37.jpeg" alt="At" />
+      <img class="meme" src="monkey.jpeg" alt="Maymun 2" />
+    </div>
     <p class="big-note">PROFESOR VE YARDIMCI PROFESOR ICIN</p>
     <h1>Hangi Sehirin Verisini Gormek Istersin?</h1>
     <p class="sub">Secim yap ve ilgili kosu listesini ac.</p>
