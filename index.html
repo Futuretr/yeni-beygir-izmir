@@ -17,6 +17,7 @@
       padding: 16px;
     }
     .wrap {
+      position: relative;
       width: min(760px, 100%);
       background: #ffffffd9;
       border: 1px solid #d6deeb;
@@ -24,15 +25,40 @@
       padding: 24px;
       box-shadow: 0 16px 40px rgba(16, 42, 67, 0.12);
     }
+    .big-note {
+      margin: 0 0 8px;
+      font-size: 40px;
+      line-height: 1;
+      letter-spacing: 1px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: left;
+      color: #0f3d5e;
+      text-shadow: 0 2px 0 #dce8f5;
+      max-width: calc(100% - 190px);
+    }
     h1 {
       margin: 0 0 8px;
       font-size: 30px;
-      text-align: center;
+      text-align: left;
+      max-width: calc(100% - 190px);
+    }
+    .monkey {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #d6deeb;
+      box-shadow: 0 8px 18px rgba(15, 61, 94, 0.2);
     }
     .sub {
       margin: 0 0 20px;
-      text-align: center;
+      text-align: left;
       color: #486581;
+      max-width: calc(100% - 190px);
     }
     .grid {
       display: grid;
@@ -65,11 +91,28 @@
     @media (max-width: 680px) {
       .grid { grid-template-columns: 1fr; }
       h1 { font-size: 25px; }
+      .big-note {
+        font-size: 30px;
+        max-width: 100%;
+      }
+      h1,
+      .sub {
+        max-width: 100%;
+      }
+      .monkey {
+        position: static;
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 12px;
+      }
     }
   </style>
 </head>
 <body>
   <main class="wrap">
+    <img class="monkey" src="the-original-image-of-the-monkey-thinking-meme-v0-vewwqeyihbaf1.webp" alt="Maymun" />
+    <p class="big-note">PROFESOR VE YARDIMCI PROFESOR ICIN</p>
     <h1>Hangi Sehirin Verisini Gormek Istersin?</h1>
     <p class="sub">Secim yap ve ilgili kosu listesini ac.</p>
     <section class="grid">
