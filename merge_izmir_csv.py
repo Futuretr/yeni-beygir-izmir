@@ -6,6 +6,14 @@ import unicodedata
 from pathlib import Path
 
 
+def get_first(row: dict[str, str], *keys: str) -> str:
+    for k in keys:
+        val = row.get(k)
+        if val is not None:
+            return val
+    return ""
+
+
 def normalize_name(value: str) -> str:
     # Case-insensitive + accent-insensitive key for stable matching.
     text = unicodedata.normalize("NFKD", (value or "").strip())
@@ -80,7 +88,7 @@ def main() -> int:
         total_horses = 0
 
         for row in reader:
-            name = (row.get("At İsmi") or "").strip()
+            name = get_first(row, "At İsmi", "At Ismi", "At Ä°smi").strip()
             if not name:
                 # Kosu baslik satiri gibi bos at satirlarini oldugu gibi tut.
                 merged = {**row}
