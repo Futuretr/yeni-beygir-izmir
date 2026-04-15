@@ -115,9 +115,9 @@ def main() -> int:
             else:
                 merged["At No"] = ""
                 merged["At ID"] = ""
-                merged["Stil Etiketi"] = ""
+                merged["Stil Etiketi"] = "Bilinmiyor"
                 merged["Stil Etiketi 2"] = ""
-                merged["Stil Aciklama"] = ""
+                merged["Stil Aciklama"] = "At ismi stil verisiyle eslesmedi."
                 merged["Yaris Stili"] = ""
                 merged["At Profili"] = ""
                 merged["Eslesme"] = "bulunamadi"
