@@ -8,6 +8,7 @@ import sys
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
+from datetime import datetime
 from typing import List
 from urllib.parse import urljoin
 from urllib.request import Request, urlopen
@@ -189,12 +190,34 @@ def extract_prev_race_info(soup: BeautifulSoup, horse_url: str, horse_id: str) -
         return "", "", ""
 
     prev_row = None
+    prev_date = None
     for tr in rows:
         first_cell = tr.select_one("td")
         date_text = first_cell.get_text(" ", strip=True) if first_cell else ""
-        if date_text and date_text.lower() != "bugün":
+        if not date_text or date_text.lower() == "bugün":
+            continue
+
+        mdate = re.match(r"(\d{2}\.\d{2}\.\d{4})", date_text)
+        if not mdate:
+            continue
+        try:
+            race_date = datetime.strptime(mdate.group(1), "%d.%m.%Y").date()
+        except ValueError:
+            continue
+
+        tds = tr.select("td")
+        if len(tds) < 7:
+            continue
+
+        derece_text = tds[6].get_text(" ", strip=True)
+        if parse_race_time_to_sec(derece_text) is None:
+            # Kosmaz / derece yok satirlarini ele.
+            continue
+
+        # En yeni tamamlanmis kosuyu sec.
+        if prev_row is None or (prev_date is not None and race_date > prev_date):
             prev_row = tr
-            break
+            prev_date = race_date
 
     if prev_row is None:
         return "", "", ""
@@ -221,7 +244,33 @@ def extract_prev_race_info(soup: BeautifulSoup, horse_url: str, horse_id: str) -
         pl = p.lower()
         if any(tok in pl for tok in keep_tokens):
             cond_parts.append(p.strip())
-    cond = " / ".join(cond_parts)
+    # Cim pistte sayisal deger (or. 5,3) geciyorsa agir/hafif yorumla.
+    if "çim" in msf_pist.lower() or "cim" in msf_pist.lower():
+        for p in paren_parts:
+            mnum = re.search(r"(\d+[.,]\d+)", p)
+            if not mnum:
+                continue
+            val = float(mnum.group(1).replace(",", "."))
+            if val >= 5.0:
+                cond_parts.append(f"Ağır Çim ({mnum.group(1)})")
+            elif val <= 3.7:
+                cond_parts.append(f"Hafif Çim ({mnum.group(1)})")
+            break
+    # Bazi satirlarda kosul parantezsiz geciyor olabilir.
+    msf_low = msf_pist.lower()
+    for direct in ("ağır", "agir", "hafif", "yumuşak", "yumusak", "nem", "sulu", "ısl", "islak"):
+        if direct in msf_low and all(direct not in x.lower() for x in cond_parts):
+            cond_parts.append(direct.title())
+    # Tekrar eden etiketleri temizle.
+    seen = set()
+    uniq_parts = []
+    for x in cond_parts:
+        k = x.lower()
+        if k in seen:
+            continue
+        seen.add(k)
+        uniq_parts.append(x)
+    cond = " / ".join(uniq_parts)
 
     horse_time = parse_race_time_to_sec(tds[6].get_text(" ", strip=True))
     a = tds[0].select_one('a[href*="sonuclar"]')
