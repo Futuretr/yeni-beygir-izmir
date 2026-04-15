@@ -1,85 +1,113 @@
 ﻿At İsmi,Koşu,Çıktı,Son Mesafe,Son Pist,Son Kilo,Kilo,Son Hipodrom,At No,At ID,Stil Etiketi,Stil Etiketi 2,Stil Aciklama,Yaris Stili,At Profili,Eslesme
 ,1. Koşu,,,,,,,,,,,,,,
-TALİPHAN BEY,,6.25,1400,Sentetik,58,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-DIRE WOLF,,6.27,1400,Sentetik,58,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-LİSENDORA,,6.33,1400,Sentetik,58,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-FIBER,,6.38,1400,Sentetik,53.7,56.3,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-NO MORE SORROW,,6.40,1400,Sentetik,56,56.2,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SHAREHOLDER,,6.44,1400,Kum,60,55.6,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SHIRIN WARRIOR,,6.56,1400,Sentetik,56,57,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-COSAS,,6.60,1200,Kum,54.6,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-GONE WITH STORM,,6.62,1400,Sentetik,58,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SHINING DRAGON,,6.77,1400,Kum,56,56,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SECRET VICTOR,,6.97,2000,Sentetik,56,55.9,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+SUBİKE,,6.94,2000,Kum,55.5,53.5,İstanbul,1,76958,Takipçi,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %22, arka-grup %34, on-grup %44, onde %1.",28/130 (22%) | 44/130 (34%) | 57/130 (44%) | 1/130 (1%),https://yenibeygir.com/at/76958/subike,bulundu
+TUĞCU SULTAN,,6.94,1400,Sentetik,56.3,56,İstanbul,9,98321,Orta Grup,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %5, arka-grup %57, on-grup %38, onde %0.",1/21 (5%) | 12/21 (57%) | 8/21 (38%) | 0/21 (0%),https://yenibeygir.com/at/98321/tugcu-sultan,bulundu
+BİLETÇİ KIZ,,7.09,2000,Kum,56,57.6,İstanbul,3,93575,Orta Grup,Sprinter,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %33, arka-grup %44, on-grup %19, onde %4.",9/27 (33%) | 12/27 (44%) | 5/27 (19%) | 1/27 (4%),https://yenibeygir.com/at/93575/biletci-kiz,bulundu
+BENİM SULTANIM,,7.12,1300,Çim,56,60,Adana,2,98608,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %4, arka-grup %26, on-grup %48, onde %22.",1/27 (4%) | 7/27 (26%) | 13/27 (48%) | 6/27 (22%),https://yenibeygir.com/at/98608/benim-sultanim,bulundu
+BLUEMOON,,7.17,2100,Çim,52.8,57,İstanbul,4,94362,Takipçi,Önde Kaçan,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %5, arka-grup %14, on-grup %48, onde %33.",1/21 (5%) | 3/21 (14%) | 10/21 (48%) | 7/21 (33%),https://yenibeygir.com/at/94362/bluemoon,bulundu
+DİLAN KIZ,,7.21,1300,Sentetik,57.2,57,Antalya,5,89077,Önde Kaçan,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %3, arka-grup %9, on-grup %31, onde %57.",2/74 (3%) | 7/74 (9%) | 23/74 (31%) | 42/74 (57%),https://yenibeygir.com/at/89077/dilan-kiz,bulundu
+FIRATIN GÜCÜ,,7.22,1400,Sentetik,56.8,56,İstanbul,6,97348,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %51, arka-grup %27, on-grup %16, onde %5.",19/37 (51%) | 10/37 (27%) | 6/37 (16%) | 2/37 (5%),https://yenibeygir.com/at/97348/firatin-gucu,bulundu
+NERGİZLİ,,7.32,2100,Sentetik,56,57.5,İstanbul,7,97202,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %21, arka-grup %12, on-grup %67, onde %0.",5/24 (21%) | 3/24 (12%) | 16/24 (67%) | 0/24 (0%),https://yenibeygir.com/at/97202/nergizli,bulundu
+SAADGIRL,,7.46,2000,Kum,53.9,56.5,İstanbul,8,95352,Önde Kaçan,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %2, on-grup %46, onde %52.",0/48 (0%) | 1/48 (2%) | 22/48 (46%) | 25/48 (52%),https://yenibeygir.com/at/95352/saadgirl,bulundu
 ,2. Koşu,,,,,,,,,,,,,,
-SON OF SAINT,,6.59,2000,Sentetik,58,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SHINING LIFE,,6.60,1400,Sentetik,56.1,58.5,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-JASMINE SCENT,,6.63,1500,Sentetik,53,56,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ICE DROPS,,6.64,1800,Kum,56,58,Bursa,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ÇEPNİ,,6.65,1900,Kum,57.2,58,İzmir,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-İNŞİRAH,,6.66,2000,Sentetik,56,56,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SAMUİ,,6.70,2000,Sentetik,55,55.7,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ŞAHİKA MARA,,6.76,1400,Kum,54,52.7,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+ARABIAN NIGHTS,,geçersiz,,,57,,,1,105460,Bilinmiyor,,Yaris stili verisi bulunamadi.,,https://yenibeygir.com/at/105460/arabian-nights,bulundu
+AZİZ DOSTUM,,geçersiz,,,57,,,2,106502,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/106502/aziz-dostum,bulundu
+DAĞYIKAN,,geçersiz,,,57.1,,,3,105534,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105534/dagyikan,bulundu
+DEDEMHAMZAREİS,,geçersiz,,,58.1,,,4,106115,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/106115/dedemhamzareis,bulundu
+HIZLI KRAL,,geçersiz,,,57,,,5,106956,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %100, arka-grup %0, on-grup %0, onde %0.",1/1 (100%) | 0/1 (0%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/106956/hizli-kral,bulundu
+KAFKAS YÜREKLİ,,geçersiz,,,57,,,6,106436,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/106436/kafkas-yurekli,bulundu
+KAUÇUKÇU,,geçersiz,,,57.6,,,7,105493,Önde Kaçan,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %0, onde %100.",0/1 (0%) | 0/1 (0%) | 0/1 (0%) | 1/1 (100%),https://yenibeygir.com/at/105493/kaucukcu,bulundu
+KERVAN SANCAĞI,,geçersiz,,,58,,,8,105532,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/105532/kervan-sancagi,bulundu
+SAROZ BEYİ,,geçersiz,,,57,,,9,105485,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105485/saroz-beyi,bulundu
+USKUMRU,,geçersiz,,,57,,,10,105576,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/105576/uskumru,bulundu
+DAYANA,,geçersiz,,,55,,,11,106103,Bilinmiyor,,Yaris stili verisi bulunamadi.,,https://yenibeygir.com/at/106103/dayana,bulundu
 ,3. Koşu,,,,,,,,,,,,,,
-GÜROBASI,,6.92,1400,Kum,63,59,Bursa,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-KOŞAN NUR,,6.96,1300,Sentetik,58.5,54.7,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-BAY UMUT,,6.99,2000,Sentetik,55.5,59.5,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-EGETAY,,7.07,2000,Sentetik,62.5,55.7,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-MESUTCAN,,7.12,1400,Sentetik,61.5,52,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ÇELİKOVİÇ,,7.14,1400,Sentetik,51.5,53,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-BÜYÜK MACELAN,,7.15,2100,Çim,62.5,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-TUTKUNLAR,,7.24,2000,Sentetik,57,53.5,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-TRAKTÖR,,7.30,2000,Sentetik,60,58.5,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ESEN BATU,,7.30,1500,Sentetik,57,59,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-DEKÇİ BEY,,7.71,1900,Kum,58,54.6,Bursa,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-KÜÇÜK MİRZA,,8.19,1400,Kum,59.5,58.1,Ankara,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+TURKISH PUNCH,,5.92,1400,Kum,57.5,57,İstanbul,7,96656,Orta Grup,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %7, arka-grup %54, on-grup %39, onde %0.",2/28 (7%) | 15/28 (54%) | 11/28 (39%) | 0/28 (0%),https://yenibeygir.com/at/96656/turkish-punch,bulundu
+KANDO,,5.94,1500,Sentetik,57.5,59,İstanbul,4,93318,Sprinter,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %38, arka-grup %35, on-grup %27, onde %0.",18/48 (38%) | 17/48 (35%) | 13/48 (27%) | 0/48 (0%),https://yenibeygir.com/at/93318/kando,bulundu
+PAREZKAR,,5.98,1500,Sentetik,55,55.3,İstanbul,9,98843,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %29, arka-grup %57, on-grup %14, onde %0.",2/7 (29%) | 4/7 (57%) | 1/7 (14%) | 0/7 (0%),https://yenibeygir.com/at/98843/parezkar,bulundu
+DIAMOND BROTHERS,,5.99,1400,Sentetik,59.5,57,İstanbul,1,90870,Sprinter,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %35, arka-grup %32, on-grup %30, onde %2.",14/40 (35%) | 13/40 (32%) | 12/40 (30%) | 1/40 (2%),https://yenibeygir.com/at/90870/diamond-brothers,bulundu
+GREY GHOST,,6.00,1500,Sentetik,56,55.3,İstanbul,8,98754,Sprinter,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %38, arka-grup %24, on-grup %29, onde %10.",8/21 (38%) | 5/21 (24%) | 6/21 (29%) | 2/21 (10%),https://yenibeygir.com/at/98754/grey-ghost,bulundu
+LOWER SPIRIT,,6.01,2100,Sentetik,57.5,56.9,İstanbul,5,95593,Karakteri Belli Değil,,"4 stil kutucugu birbirine cok yakin. Dagilim: arkada %30, arka-grup %20, on-grup %30, onde %20.",6/20 (30%) | 4/20 (20%) | 6/20 (30%) | 4/20 (20%),https://yenibeygir.com/at/95593/lower-spirit,bulundu
+ANOTHER BANGER,,6.05,1400,Sentetik,57.5,56.2,İstanbul,3,95318,Sprinter,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %33, arka-grup %30, on-grup %30, onde %7.",10/30 (33%) | 9/30 (30%) | 9/30 (30%) | 2/30 (7%),https://yenibeygir.com/at/95318/another-banger,bulundu
+ALAKONT,,6.08,1300,Sentetik,57.5,56.1,İstanbul,2,92085,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %5, on-grup %76, onde %19.",0/21 (0%) | 1/21 (5%) | 16/21 (76%) | 4/21 (19%),https://yenibeygir.com/at/92085/alakont,bulundu
+SUICIDE KING,,6.13,2200,Sentetik,56,54,İstanbul,10,98516,Takipçi,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %17, arka-grup %38, on-grup %46, onde %0.",4/24 (17%) | 9/24 (38%) | 11/24 (46%) | 0/24 (0%),https://yenibeygir.com/at/98516/suicide-king,bulundu
+THE WITCHER,,8.21,1500,Sentetik,53.5,60,İstanbul,6,94555,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %25, arka-grup %29, on-grup %42, onde %4.",6/24 (25%) | 7/24 (29%) | 10/24 (42%) | 1/24 (4%),https://yenibeygir.com/at/94555/the-witcher,bulundu
 ,4. Koşu,,,,,,,,,,,,,,
-ŞİMŞEK YELELİ,,6.91,1400,Sentetik,54,59,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-AYSERA KIZ,,7.01,1300,Sentetik,61,56,Antalya,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-AYAZ DEFNE,,7.02,1400,Kum,58,55.8,İzmir,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-RAZKAN,,7.02,2000,Sentetik,58,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SAKIZ ADASI,,7.08,1800,Kum,54,54,Bursa,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ADİLE HANIM,,7.25,1300,Sentetik,54,52,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+ATICI KAYA,,geçersiz,,,57,,,1,106112,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/106112/atici-kaya,bulundu
+BOZAĞIN KRALI,,geçersiz,,,57,,,2,106130,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/106130/bozagin-krali,bulundu
+ERYÜREKLİ,,geçersiz,,,57,,,3,105466,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %100, arka-grup %0, on-grup %0, onde %0.",1/1 (100%) | 0/1 (0%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105466/eryurekli,bulundu
+HAN ÇERCİ,,geçersiz,,,57,,,4,105488,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105488/han-cerci,bulundu
+KABALBEYİ,,geçersiz,,,57,,,5,106801,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/106801/kabalbeyi,bulundu
+KORGÜN,,geçersiz,,,57,,,6,106129,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %100, arka-grup %0, on-grup %0, onde %0.",1/1 (100%) | 0/1 (0%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/106129/korgun,bulundu
+PARLAMA ZAMANI,,geçersiz,,,57,,,7,105440,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105440/parlama-zamani,bulundu
+SEHER ZAMANI,,geçersiz,,,57,,,8,105439,Önde Kaçan,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %0, onde %100.",0/1 (0%) | 0/1 (0%) | 0/1 (0%) | 1/1 (100%),https://yenibeygir.com/at/105439/seher-zamani,bulundu
+ŞAHİNYÜREKLİ,,geçersiz,,,58.3,,,9,105972,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/105972/sahinyurekli,bulundu
+ŞELEMZAR,,geçersiz,,,57,,,10,106293,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/106293/selemzar,bulundu
 ,5. Koşu,,,,,,,,,,,,,,
-RIDE THE LIGHTNING,,6.34,2000,Sentetik,56,60,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-DAGMAR,,6.39,2000,Sentetik,60,60,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-BAHRAIN,,6.48,1500,Sentetik,56,57,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-EAGLE KHAN,,6.48,2000,Sentetik,54,59,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-PITFALL,,6.49,1500,Sentetik,56,56,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SEFAKÖYLÜ,,6.50,2000,Sentetik,54,61,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-HEXAGON,,6.64,2000,Kum,56,60.5,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+BLACK RUBY,,6.43,2200,Sentetik,55.5,56,İstanbul,7,100093,Orta Grup,Sprinter,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %35, arka-grup %48, on-grup %17, onde %0.",8/23 (35%) | 11/23 (48%) | 4/23 (17%) | 0/23 (0%),https://yenibeygir.com/at/100093/black-ruby,bulundu
+SENKRON,,6.43,2200,Sentetik,57.7,60.5,İstanbul,8,96096,Sprinter,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %54, arka-grup %46, on-grup %0, onde %0.",7/13 (54%) | 6/13 (46%) | 0/13 (0%) | 0/13 (0%),https://yenibeygir.com/at/96096/senkron,bulundu
+ASRA İNAT,,6.44,2200,Sentetik,54.5,54.5,İstanbul,15,100850,Sprinter,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %50, arka-grup %31, on-grup %19, onde %0.",8/16 (50%) | 5/16 (31%) | 3/16 (19%) | 0/16 (0%),https://yenibeygir.com/at/100850/asra-inat,bulundu
+SWORD OF HONOUR,,6.45,2200,Sentetik,54.5,53,İstanbul,5,97812,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %18, on-grup %64, onde %18.",0/22 (0%) | 4/22 (18%) | 14/22 (64%) | 4/22 (18%),https://yenibeygir.com/at/97812/sword-of-honour,bulundu
+CANKAFESİM,,6.46,2200,Sentetik,55,55.5,İstanbul,10,99455,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %28, arka-grup %50, on-grup %22, onde %0.",5/18 (28%) | 9/18 (50%) | 4/18 (22%) | 0/18 (0%),https://yenibeygir.com/at/99455/cankafesim,bulundu
+ÖZGÜR ABİ,,6.46,2200,Sentetik,55.2,55.6,İstanbul,11,101282,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %5, arka-grup %15, on-grup %80, onde %0.",1/20 (5%) | 3/20 (15%) | 16/20 (80%) | 0/20 (0%),https://yenibeygir.com/at/101282/ozgur-abi,bulundu
+FILIUS VENTUS,,6.47,2200,Sentetik,57,58.5,İstanbul,9,93313,Orta Grup,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %13, arka-grup %53, on-grup %32, onde %2.",7/53 (13%) | 28/53 (53%) | 17/53 (32%) | 1/53 (2%),https://yenibeygir.com/at/93313/filius-ventus,bulundu
+SUPERSONIC BOOM,,6.51,1500,Sentetik,60,60,İstanbul,2,99240,Önde Kaçan,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %10, arka-grup %20, on-grup %20, onde %50.",1/10 (10%) | 2/10 (20%) | 2/10 (20%) | 5/10 (50%),https://yenibeygir.com/at/99240/supersonic-boom,bulundu
+COMING RAIN,,6.52,1700,Sentetik,60,60,Antalya,1,100698,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %17, arka-grup %60, on-grup %23, onde %0.",6/35 (17%) | 21/35 (60%) | 8/35 (23%) | 0/35 (0%),https://yenibeygir.com/at/100698/coming-rain,bulundu
+STAR AND MOON,,6.52,2000,Sentetik,52,52,İstanbul,14,96812,Sprinter,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %56, arka-grup %6, on-grup %31, onde %6.",9/16 (56%) | 1/16 (6%) | 5/16 (31%) | 1/16 (6%),https://yenibeygir.com/at/96812/star-and-moon,bulundu
+DESERT POINT,,6.52,2000,Sentetik,51.4,51.3,İstanbul,17,99253,Takipçi,Sprinter,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %33, arka-grup %24, on-grup %38, onde %5.",7/21 (33%) | 5/21 (24%) | 8/21 (38%) | 1/21 (5%),https://yenibeygir.com/at/99253/desert-point,bulundu
+TOUCH THE CLOUD,,6.53,2000,Sentetik,54.8,55,İstanbul,12,98825,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %80, arka-grup %0, on-grup %20, onde %0.",4/5 (80%) | 0/5 (0%) | 1/5 (20%) | 0/5 (0%),https://yenibeygir.com/at/98825/touch-the-cloud,bulundu
+SARILAR KIZI,,6.53,2200,Sentetik,52.1,52.5,İstanbul,18,100982,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %20, arka-grup %53, on-grup %27, onde %0.",3/15 (20%) | 8/15 (53%) | 4/15 (27%) | 0/15 (0%),https://yenibeygir.com/at/100982/sarilar-kizi,bulundu
+ARNAVUT KIZ,,6.60,1400,Sentetik,60.5,57.7,İstanbul,3,99617,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %5, on-grup %86, onde %9.",0/22 (0%) | 1/22 (5%) | 19/22 (86%) | 2/22 (9%),https://yenibeygir.com/at/99617/arnavut-kiz,bulundu
+WAITING A SUNNYDAY,,6.60,1500,Sentetik,52.5,54,İstanbul,13,101030,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %64, arka-grup %18, on-grup %18, onde %0.",7/11 (64%) | 2/11 (18%) | 2/11 (18%) | 0/11 (0%),https://yenibeygir.com/at/101030/waiting-a-sunnyday,bulundu
+GIATRES,,6.61,1500,Sentetik,59,59.5,İstanbul,4,92194,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %9, arka-grup %22, on-grup %53, onde %16.",3/32 (9%) | 7/32 (22%) | 17/32 (53%) | 5/32 (16%),https://yenibeygir.com/at/92194/giatres,bulundu
+AUTHORITY,,6.74,2000,Sentetik,59,56,İstanbul,6,95844,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %17, arka-grup %23, on-grup %53, onde %7.",5/30 (17%) | 7/30 (23%) | 16/30 (53%) | 2/30 (7%),https://yenibeygir.com/at/95844/authority,bulundu
+MOSKITO,,7.06,1500,Sentetik,53.6,51.9,İstanbul,16,99203,Takipçi,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %17, arka-grup %33, on-grup %50, onde %0.",1/6 (17%) | 2/6 (33%) | 3/6 (50%) | 0/6 (0%),https://yenibeygir.com/at/99203/moskito,bulundu
 ,6. Koşu,,,,,,,,,,,,,,
-AMMAYAMAN,,6.16,1300,Sentetik,52,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-LAUREATE,,6.22,1300,Sentetik,53,55.5,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-FLEXIMAN,,6.23,1400,Kum,61,61,İzmir,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-MAGIC WEAPON,,6.23,1500,Sentetik,59,52,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-HARDOLD,,6.24,1500,Sentetik,56.5,55,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-STRAKHOV,,6.24,1300,Sentetik,52,56.3,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-MAKE A FIRE,,6.28,1300,Sentetik,60.5,56,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+LEGENDARY MAJESTY,,5.86,1400,Kum,54,58,İstanbul,8,104930,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %29, arka-grup %14, on-grup %57, onde %0.",2/7 (29%) | 1/7 (14%) | 4/7 (57%) | 0/7 (0%),https://yenibeygir.com/at/104930/legendary-majesty,bulundu
+JOYFUL FOREVER,,5.87,1500,Sentetik,54.8,58,İstanbul,6,103760,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %50, arka-grup %25, on-grup %0, onde %25.",2/4 (50%) | 1/4 (25%) | 0/4 (0%) | 1/4 (25%),https://yenibeygir.com/at/103760/joyful-forever,bulundu
+SNOW LEOPARD,,5.87,1500,Sentetik,55,58,Antalya,7,102207,Orta Grup,Sprinter,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %33, arka-grup %42, on-grup %25, onde %0.",4/12 (33%) | 5/12 (42%) | 3/12 (25%) | 0/12 (0%),https://yenibeygir.com/at/102207/snow-leopard,bulundu
+HARDOX,,5.91,1400,Kum,58,61,İzmir,1,103792,Takipçi,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %12, arka-grup %35, on-grup %47, onde %6.",2/17 (12%) | 6/17 (35%) | 8/17 (47%) | 1/17 (6%),https://yenibeygir.com/at/103792/hardox,bulundu
+VICTORY LANE,,5.91,1400,Kum,53.1,55.8,İstanbul,9,102158,Önde Kaçan,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %17, on-grup %33, onde %50.",0/6 (0%) | 1/6 (17%) | 2/6 (33%) | 3/6 (50%),https://yenibeygir.com/at/102158/victory-lane,bulundu
+LINARES,,5.92,1500,Sentetik,57,58,İstanbul,4,103586,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %8, arka-grup %17, on-grup %58, onde %17.",1/12 (8%) | 2/12 (17%) | 7/12 (58%) | 2/12 (17%),https://yenibeygir.com/at/103586/linares,bulundu
+EXTENSIVE,,5.95,1400,Kum,57,55,İstanbul,3,102012,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %18, arka-grup %64, on-grup %18, onde %0.",2/11 (18%) | 7/11 (64%) | 2/11 (18%) | 0/11 (0%),https://yenibeygir.com/at/102012/extensive,bulundu
+HİDAN,,6.16,1500,Sentetik,52,55.6,İstanbul,10,102869,Takipçi,Önde Kaçan,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %0, on-grup %50, onde %50.",0/4 (0%) | 0/4 (0%) | 2/4 (50%) | 2/4 (50%),https://yenibeygir.com/at/102869/hidan,bulundu
+WHITE WOLF,,6.35,1700,Çim,56.3,56,İzmir,5,104422,Orta Grup,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %7, arka-grup %47, on-grup %47, onde %0.",1/15 (7%) | 7/15 (47%) | 7/15 (47%) | 0/15 (0%),https://yenibeygir.com/at/104422/white-wolf,bulundu
+JAZZ RUNNER,,6.56,1700,Çim,57.5,58,İzmir,2,103761,Takipçi,Önde Kaçan,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %10, on-grup %50, onde %40.",0/10 (0%) | 1/10 (10%) | 5/10 (50%) | 4/10 (40%),https://yenibeygir.com/at/103761/jazz-runner,bulundu
 ,7. Koşu,,,,,,,,,,,,,,
-LOVE ME BATTER,,6.37,1300,Kum,51,55,Bursa,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-TIMETEX,,6.44,1500,Sentetik,56,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-HEAVEN TIME,,6.47,2000,Sentetik,58,55.2,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-RAIN BEAUTY,,6.48,2000,Kum,60,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-LADY CLASSMAN,,6.53,1400,Kum,56,56,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-CHARMING CAT,,6.54,1300,Kum,56,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-LEGACY OF HENRY,,6.55,2000,Sentetik,58,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-FOMO,,6.56,2000,Sentetik,53,56,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-DANCING KING,,6.59,1600,Çim,58,57,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-GILMOUR,,6.60,1400,Kum,58,58,Antalya,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ALİN SULTAN,,6.60,1200,Kum,56,58,Adana,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+WOLF RULES,,5.87,1500,Sentetik,58,56,İstanbul,7,104015,Sprinter,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %50, arka-grup %0, on-grup %50, onde %0.",1/2 (50%) | 0/2 (0%) | 1/2 (50%) | 0/2 (0%),https://yenibeygir.com/at/104015/wolf-rules,bulundu
+BALLAD KING,,5.90,1400,Sentetik,59,58,İstanbul,1,103762,Karakteri Belli Değil,,"4 stil kutucugu birbirine cok yakin. Dagilim: arkada %25, arka-grup %25, on-grup %25, onde %25.",1/4 (25%) | 1/4 (25%) | 1/4 (25%) | 1/4 (25%),https://yenibeygir.com/at/103762/ballad-king,bulundu
+PRENS LAUTARO,,5.95,1500,Sentetik,58,56.7,İstanbul,5,104875,Orta Grup,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %50, on-grup %50, onde %0.",0/2 (0%) | 1/2 (50%) | 1/2 (50%) | 0/2 (0%),https://yenibeygir.com/at/104875/prens-lautaro,bulundu
+GOLDRAKHAN,,5.96,1500,Sentetik,58,55.9,İstanbul,3,103938,Orta Grup,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %50, on-grup %50, onde %0.",0/4 (0%) | 2/4 (50%) | 2/4 (50%) | 0/4 (0%),https://yenibeygir.com/at/103938/goldrakhan,bulundu
+HAVACI,,6.02,1400,Kum,58,52,Adana,4,105159,Önde Kaçan,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %0, on-grup %33, onde %67.",0/3 (0%) | 0/3 (0%) | 1/3 (33%) | 2/3 (67%),https://yenibeygir.com/at/105159/havaci,bulundu
+DILUVIO,,6.18,1700,Sentetik,58,58,Antalya,2,102491,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %89, onde %11.",0/9 (0%) | 0/9 (0%) | 8/9 (89%) | 1/9 (11%),https://yenibeygir.com/at/102491/diluvio,bulundu
+TOLPER,,6.36,1700,Çim,58,58,İzmir,6,103374,Takipçi,Önde Kaçan,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %0, on-grup %60, onde %40.",0/5 (0%) | 0/5 (0%) | 3/5 (60%) | 2/5 (40%),https://yenibeygir.com/at/103374/tolper,bulundu
 ,8. Koşu,,,,,,,,,,,,,,
-ATİLLABEY,,7.02,2200,Sentetik,51.5,56.2,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ABDİ BABA,,7.07,2100,Sentetik,50,60.5,Antalya,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-BARAN REİS,,7.12,2000,Sentetik,50.5,55.3,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-EFE METE BEY,,7.14,1300,Kum,53,58,Bursa,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ATAMANBEY,,7.16,2200,Sentetik,51.5,61,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-LAZFATİH,,7.19,1400,Sentetik,61,60,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-LAZMAN,,7.19,2000,Sentetik,51.5,53.7,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ÖZTUĞ,,7.23,1300,Sentetik,53.5,58,Antalya,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-LEONİDAS,,7.24,1400,Sentetik,53.5,52.6,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-GÖKTUĞTAY,,7.25,1400,Sentetik,52.5,52.3,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-KÖKŞUBAR,,7.26,2100,Kum,50,58,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ÖZGÜR FURKAN,,7.27,2000,Sentetik,58.5,59,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-ÖZGÜNSTONE,,7.57,2000,Sentetik,50,53.2,İstanbul,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
-SANPMAN,,7.89,1300,Kum,52,57,Bursa,,,Bilinmiyor,,At ismi stil verisiyle eslesmedi.,,,bulunamadi
+BABA BALYOZ,,geçersiz,,,57,,,1,105419,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/105419/baba-balyoz,bulundu
+BALMEHMET,,geçersiz,,,57.1,,,2,106145,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/106145/balmehmet,bulundu
+BAYDARBEY,,geçersiz,,,57,,,3,105517,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105517/baydarbey,bulundu
+BİGASİ,,geçersiz,,,57,,,4,105896,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105896/bigasi,bulundu
+CİHANERK,,geçersiz,,,57,,,5,106003,Önde Kaçan,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %0, onde %100.",0/1 (0%) | 0/1 (0%) | 0/1 (0%) | 1/1 (100%),https://yenibeygir.com/at/106003/cihanerk,bulundu
+DÜZ KOŞU,,geçersiz,,,57,,,6,106979,Bilinmiyor,,Yaris stili verisi bulunamadi.,,https://yenibeygir.com/at/106979/duz-kosu,bulundu
+KESTEL YİĞİDİ,,geçersiz,,,57,,,7,105529,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/1 (0%) | 1/1 (100%) | 0/1 (0%) | 0/1 (0%),https://yenibeygir.com/at/105529/kestel-yigidi,bulundu
+KIR ZİNCİRLERİNİ,,geçersiz,,,57.5,,,8,105494,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/105494/kir-zincirlerini,bulundu
+ÜNVERDİ BEY,,geçersiz,,,57,,,9,105631,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/1 (0%) | 0/1 (0%) | 1/1 (100%) | 0/1 (0%),https://yenibeygir.com/at/105631/unverdi-bey,bulundu
+BİTTER ÇİKOLATA,,geçersiz,,,55,,,10,106113,Bilinmiyor,,Yaris stili verisi bulunamadi.,,https://yenibeygir.com/at/106113/bitter-cikolata,bulundu
+,9. Koşu,,,,,,,,,,,,,,
+UDARHAN,,6.98,1500,Sentetik,61,61,İstanbul,1,102681,Sprinter,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %42, arka-grup %42, on-grup %17, onde %0.",5/12 (42%) | 5/12 (42%) | 2/12 (17%) | 0/12 (0%),https://yenibeygir.com/at/102681/udarhan,bulundu
+BELLİ BEY,,7.10,1400,Kum,57.2,61,İstanbul,2,102985,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %23, on-grup %77, onde %0.",0/13 (0%) | 3/13 (23%) | 10/13 (77%) | 0/13 (0%),https://yenibeygir.com/at/102985/belli-bey,bulundu
+KANATLANAN,,7.14,1400,Kum,56.8,57,İstanbul,13,102340,Sprinter,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %33, arka-grup %0, on-grup %33, onde %33.",2/6 (33%) | 0/6 (0%) | 2/6 (33%) | 2/6 (33%),https://yenibeygir.com/at/102340/kanatlanan,bulundu
+LADY STONE,,7.15,1400,Kum,53.2,58,İstanbul,10,102660,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %22, arka-grup %56, on-grup %22, onde %0.",2/9 (22%) | 5/9 (56%) | 2/9 (22%) | 0/9 (0%),https://yenibeygir.com/at/102660/lady-stone,bulundu
+DÜMENCAN,,7.16,1200,Sentetik,58,54,Antalya,5,101921,Takipçi,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %33, on-grup %50, onde %17.",0/6 (0%) | 2/6 (33%) | 3/6 (50%) | 1/6 (17%),https://yenibeygir.com/at/101921/dumencan,bulundu
+ATİK HASAN,,7.17,1400,Kum,52.8,55.4,İstanbul,8,102894,Takipçi,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %0, arka-grup %33, on-grup %67, onde %0.",0/9 (0%) | 3/9 (33%) | 6/9 (67%) | 0/9 (0%),https://yenibeygir.com/at/102894/atik-hasan,bulundu
+BUSE,,7.19,1800,Kum,58,58,Bursa,3,104862,Sprinter,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %50, arka-grup %42, on-grup %8, onde %0.",6/12 (50%) | 5/12 (42%) | 1/12 (8%) | 0/12 (0%),https://yenibeygir.com/at/104862/buse,bulundu
+GENÇYÜREK,,7.20,1900,Kum,55,58,İzmir,6,103242,Takipçi,Orta Grup,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %12, arka-grup %31, on-grup %56, onde %0.",2/16 (12%) | 5/16 (31%) | 9/16 (56%) | 0/16 (0%),https://yenibeygir.com/at/103242/gencyurek,bulundu
+THOTH,,7.21,1400,Kum,58,58,İstanbul,7,103943,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %17, arka-grup %17, on-grup %67, onde %0.",1/6 (17%) | 1/6 (17%) | 4/6 (67%) | 0/6 (0%),https://yenibeygir.com/at/103943/thoth,bulundu
+AKBİLGE,,7.24,1400,Kum,55.2,53,İstanbul,11,102738,Orta Grup,Takipçi,"Karma stil: iki farkli kosu profili belirgin gorunuyor. Dagilim: arkada %19, arka-grup %44, on-grup %38, onde %0.",3/16 (19%) | 7/16 (44%) | 6/16 (38%) | 0/16 (0%),https://yenibeygir.com/at/102738/akbilge,bulundu
+BOYABAT,,7.24,1200,Sentetik,56,58,Antalya,14,104565,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %25, arka-grup %50, on-grup %0, onde %25.",1/4 (25%) | 2/4 (50%) | 0/4 (0%) | 1/4 (25%),https://yenibeygir.com/at/104565/boyabat,bulundu
+HÜRHANA,,7.25,1200,Sentetik,55.8,54.7,Antalya,12,101612,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %17, arka-grup %17, on-grup %67, onde %0.",1/6 (17%) | 1/6 (17%) | 4/6 (67%) | 0/6 (0%),https://yenibeygir.com/at/101612/hurhana,bulundu
+YEŞİLBAHAR,,7.28,1400,Sentetik,53,55,İstanbul,18,104609,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %100, on-grup %0, onde %0.",0/3 (0%) | 3/3 (100%) | 0/3 (0%) | 0/3 (0%),https://yenibeygir.com/at/104609/yesilbahar,bulundu
+DERENİMO,,7.29,1400,Kum,58,56,İstanbul,4,104978,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %25, on-grup %50, onde %25.",0/8 (0%) | 2/8 (25%) | 4/8 (50%) | 2/8 (25%),https://yenibeygir.com/at/104978/derenimo,bulundu
+DUMANLI DAĞ,,7.32,1200,Çim,56,57,İzmir,17,104483,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %0, on-grup %100, onde %0.",0/4 (0%) | 0/4 (0%) | 4/4 (100%) | 0/4 (0%),https://yenibeygir.com/at/104483/dumanli-dag,bulundu
+KAPGAN KAĞAN,,7.61,1400,Kum,56.8,56,İstanbul,16,105129,Orta Grup,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %20, arka-grup %60, on-grup %20, onde %0.",1/5 (20%) | 3/5 (60%) | 1/5 (20%) | 0/5 (0%),https://yenibeygir.com/at/105129/kapgan-kagan,bulundu
+SONZEYBEK,,7.62,1400,Kum,56,58,İstanbul,15,104163,Sprinter,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %100, arka-grup %0, on-grup %0, onde %0.",4/4 (100%) | 0/4 (0%) | 0/4 (0%) | 0/4 (0%),https://yenibeygir.com/at/104163/sonzeybek,bulundu
+KÖKBEYİ,,7.66,1400,Kum,56,60,Adana,9,103333,Takipçi,,"Genel olarak baskin stiline gore siniflandirildi. Dagilim: arkada %0, arka-grup %25, on-grup %75, onde %0.",0/4 (0%) | 1/4 (25%) | 3/4 (75%) | 0/4 (0%),https://yenibeygir.com/at/103333/kokbeyi,bulundu
