@@ -45,6 +45,9 @@ def load_style_map(path: Path) -> dict[str, dict[str, str]]:
                 "stil_etiketi_2": row.get("stil_etiketi_2", ""),
                 "stil_aciklama": row.get("stil_aciklama", ""),
                 "yaris_stili": row.get("yaris_stili", ""),
+                "son_kosu_zemin_durumu": row.get("son_kosu_zemin_durumu", ""),
+                "birinciden_5sn_fazla": row.get("birinciden_5sn_fazla", ""),
+                "birinciden_fark_sn": row.get("birinciden_fark_sn", ""),
                 "at_profili": row.get("at_profili", ""),
             }
     return out
@@ -89,6 +92,9 @@ def main() -> int:
             "Stil Etiketi 2",
             "Stil Aciklama",
             "Yaris Stili",
+            "Son Kosu Zemin Durumu",
+            "Birinciden 5sn+",
+            "Birinciden Fark Sn",
             "At Profili",
             "Eslesme",
         ]
@@ -127,6 +133,9 @@ def main() -> int:
                 merged["Stil Etiketi 2"] = style["stil_etiketi_2"]
                 merged["Stil Aciklama"] = style["stil_aciklama"]
                 merged["Yaris Stili"] = style["yaris_stili"]
+                merged["Son Kosu Zemin Durumu"] = style["son_kosu_zemin_durumu"]
+                merged["Birinciden 5sn+"] = style["birinciden_5sn_fazla"]
+                merged["Birinciden Fark Sn"] = style["birinciden_fark_sn"]
                 merged["At Profili"] = style["at_profili"]
                 merged["Eslesme"] = "bulundu"
             else:
@@ -136,6 +145,9 @@ def main() -> int:
                 merged["Stil Etiketi 2"] = ""
                 merged["Stil Aciklama"] = "At ismi stil verisiyle eslesmedi."
                 merged["Yaris Stili"] = ""
+                merged["Son Kosu Zemin Durumu"] = ""
+                merged["Birinciden 5sn+"] = ""
+                merged["Birinciden Fark Sn"] = ""
                 merged["At Profili"] = ""
                 merged["Eslesme"] = "bulunamadi"
 

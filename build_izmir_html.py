@@ -76,6 +76,9 @@ def main() -> int:
                     "cikti": (row.get("Çıktı") or "").strip(),
                     "stil_etiketi": (row.get("Stil Etiketi") or "").strip(),
                     "stil_etiketi_2": (row.get("Stil Etiketi 2") or "").strip(),
+                    "zemin": (row.get("Son Kosu Zemin Durumu") or "").strip(),
+                    "slow5": (row.get("Birinciden 5sn+") or "").strip(),
+                    "fark_sn": (row.get("Birinciden Fark Sn") or "").strip(),
                 }
             )
 
@@ -173,13 +176,22 @@ def main() -> int:
             parts.append(f"        <span class=\"tempo-chip\">En Avantajli: {esc(tempo['avantajli_at_turu'])}</span>")
             parts.append("      </div>")
         parts.append("      <table>")
-        parts.append("        <thead><tr><th class=\"num\">No</th><th>At Ismi</th><th class=\"score\">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th></tr></thead>")
+        parts.append("        <thead><tr><th class=\"num\">No</th><th>At Ismi</th><th class=\"score\">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>")
         parts.append("        <tbody>")
         for horse in horses:
             se1 = esc(horse["stil_etiketi"])
             se2 = esc(horse["stil_etiketi_2"])
             se1_html = f"<span class=\"badge\">{se1}</span>" if se1 else ""
             se2_html = f"<span class=\"badge\">{se2}</span>" if se2 else ""
+            warn_bits = []
+            if (horse.get("slow5") or "").strip().upper() == "X":
+                fark = (horse.get("fark_sn") or "").strip()
+                label = f"X (>{fark} sn)" if fark else "X (>5 sn)"
+                warn_bits.append(f"<span class=\"badge\">{esc(label)}</span>")
+            zemin = (horse.get("zemin") or "").strip()
+            if zemin:
+                warn_bits.append(f"<span class=\"badge\">{esc(zemin)}</span>")
+            warn_html = "".join(warn_bits)
             parts.append(
                 "          <tr>"
                 f"<td class=\"num\">{esc(horse['at_no'])}</td>"
@@ -187,6 +199,7 @@ def main() -> int:
                 f"<td class=\"score\">{esc(horse['cikti'])}</td>"
                 f"<td>{se1_html}</td>"
                 f"<td>{se2_html}</td>"
+                f"<td>{warn_html}</td>"
                 "</tr>"
             )
         parts.append("        </tbody>")
