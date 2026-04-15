@@ -204,11 +204,24 @@ def extract_prev_race_info(soup: BeautifulSoup, horse_url: str, horse_id: str) -
         return "", "", ""
 
     msf_pist = tds[4].get_text(" ", strip=True)
-    cond = ""
-    for token in ("Nem", "Sulu", "Isl", "Islak"):
-        if token.lower() in msf_pist.lower():
-            cond = token
-            break
+    cond_parts: list[str] = []
+    paren_parts = re.findall(r"\(([^)]+)\)", msf_pist)
+    keep_tokens = (
+        "nem",
+        "sulu",
+        "isl",
+        "ısl",
+        "hafif",
+        "agir",
+        "ağır",
+        "yumusak",
+        "yumuşak",
+    )
+    for p in paren_parts:
+        pl = p.lower()
+        if any(tok in pl for tok in keep_tokens):
+            cond_parts.append(p.strip())
+    cond = " / ".join(cond_parts)
 
     horse_time = parse_race_time_to_sec(tds[6].get_text(" ", strip=True))
     a = tds[0].select_one('a[href*="sonuclar"]')
