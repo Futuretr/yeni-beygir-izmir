@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import argparse
 import csv
+import difflib
+import re
 import unicodedata
 from pathlib import Path
 
@@ -19,7 +21,13 @@ def normalize_name(value: str) -> str:
     text = unicodedata.normalize("NFKD", (value or "").strip())
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
     text = text.casefold()
+    text = re.sub(r"\([^)]*\)", " ", text)
+    text = re.sub(r"[^a-z0-9]+", " ", text)
     return " ".join(text.split())
+
+
+def compact_key(value: str) -> str:
+    return normalize_name(value).replace(" ", "")
 
 
 def load_style_map(path: Path) -> dict[str, dict[str, str]]:
@@ -68,6 +76,8 @@ def main() -> int:
     output_path = Path(args.output)
 
     style_map = load_style_map(styles_path)
+    compact_style_map = {compact_key(k): v for k, v in style_map.items()}
+    compact_style_keys = list(compact_style_map.keys())
 
     with analysis_path.open("r", encoding="utf-8-sig", newline="") as fin:
         reader = csv.DictReader(fin)
@@ -100,6 +110,13 @@ def main() -> int:
             total_horses += 1
             key = normalize_name(name)
             style = style_map.get(key)
+            if not style:
+                ckey = compact_key(name)
+                style = compact_style_map.get(ckey)
+                if not style and ckey:
+                    close = difflib.get_close_matches(ckey, compact_style_keys, n=1, cutoff=0.90)
+                    if close:
+                        style = compact_style_map.get(close[0])
 
             merged = {**row}
             if style:
