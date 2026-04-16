@@ -1,9 +1,9 @@
 ﻿Kosu,At Sayisi,Ortalama Cikti,Toplam Tempo,Tempo Indeksi,Siddet,Yaris Tipi,Yaris Yapisi,Karar Sonucu,Avantajli At Turu
-1. Koşu,9,7.073,7.527,0.836,Orta,Düşük Tempo,Orta grup,Kontrollü tempo,Önde Kaçan
-2. Koşu,5,7.040,4.031,0.806,Düşük,Düşük Tempo,Küçük grup,Yavaş yarış,Önde Kaçan
-3. Koşu,11,7.738,10.742,0.977,Yüksek,Orta Tempo,Kalabalık,Sert bitiş,Güçlü Takipçi
-4. Koşu,9,1.000,0.000,0.000,Düşük,Düşük Tempo,Orta grup,Yavaş yarış,Önde Kaçan
-5. Koşu,15,6.849,16.410,1.094,Yüksek,Orta Tempo,Kalabalık,Sert bitiş,Güçlü Takipçi
-6. Koşu,9,7.968,1.007,0.112,Düşük,Düşük Tempo,Orta grup,Yavaş yarış,Önde Kaçan
-7. Koşu,6,7.608,10.999,1.833,Yüksek,Çok Yüksek,Küçük grup,Kaos,En güçlü kapanış
-8. Koşu,9,1.000,0.000,0.000,Düşük,Düşük Tempo,Orta grup,Yavaş yarış,Önde Kaçan
+1. Koşu,9,7.073,4.540,1.180,Orta,Yüksek Tempo,Orta grup,Tempolu ama kontrollü,Takipçi
+2. Koşu,5,7.040,2.767,1.198,Düşük,Yüksek Tempo,Küçük grup,Sert tempo,Güçlü Takipçi / Sprinter
+3. Koşu,11,7.738,5.879,1.206,Orta,Yüksek Tempo,Kalabalık,Tempolu ama kontrollü,Takipçi
+4. Koşu,9,1.000,0.000,1.000,Düşük,Orta Tempo,Orta grup,Dengeli yarış,Takipçi
+5. Koşu,15,6.849,10.516,1.325,Yüksek,Yüksek Tempo,Kalabalık,Yarış yanar,Sprinter
+6. Koşu,9,7.968,-0.584,0.977,Düşük,Orta Tempo,Orta grup,Dengeli yarış,Takipçi
+7. Koşu,6,7.608,6.843,1.407,Orta,Çok Yüksek,Küçük grup,Yıpratıcı yarış,Sprinter / Güçlü kapanış
+8. Koşu,9,1.000,0.000,1.000,Düşük,Orta Tempo,Orta grup,Dengeli yarış,Takipçi

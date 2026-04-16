@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import argparse
 import csv
@@ -6,32 +6,20 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-STYLE_SCORES = {
-    "Önde Kaçan": 2,
-    "Takipçi": 1,
-    "Orta Grup": 0,
-    "Sprinter": -1,
+# Pace pressure contribution per style (higher => race likely runs faster early)
+PACE_WEIGHTS = {
+    "Önde Kaçan": 1.20,
+    "Takipçi": 0.60,
+    "Orta Grup": 0.00,
+    "Sprinter": -0.90,
 }
 
-TEMPO_BONUS = {
-    "Düşük": {
-        "Önde Kaçan": 2,
-        "Takipçi": 1,
-        "Orta Grup": 0,
-        "Sprinter": -2,
-    },
-    "Orta": {
-        "Önde Kaçan": 0,
-        "Takipçi": 2,
-        "Orta Grup": 1,
-        "Sprinter": 0,
-    },
-    "Yüksek": {
-        "Önde Kaçan": -2,
-        "Takipçi": 1,
-        "Orta Grup": 0,
-        "Sprinter": 2,
-    },
+# Tempo-fit bonus used in horse ranking after race tempo is estimated
+TEMPO_FIT = {
+    "Düşük Tempo": {"Önde Kaçan": 1.4, "Takipçi": 1.0, "Orta Grup": 0.4, "Sprinter": -0.6},
+    "Orta Tempo": {"Önde Kaçan": 0.5, "Takipçi": 1.2, "Orta Grup": 0.9, "Sprinter": 0.3},
+    "Yüksek Tempo": {"Önde Kaçan": -0.7, "Takipçi": 0.9, "Orta Grup": 0.4, "Sprinter": 1.3},
+    "Çok Yüksek": {"Önde Kaçan": -1.0, "Takipçi": 0.7, "Orta Grup": 0.3, "Sprinter": 1.6},
 }
 
 
@@ -41,8 +29,9 @@ class HorseRow:
     name: str
     style_1: str
     style_2: str
-    output_raw: str
     output_value: float | None
+    over_5s: bool
+    track_cond: str
 
 
 @dataclass
@@ -52,7 +41,6 @@ class HorseModel:
     style_1: str
     style_2: str
     output_used: float
-    stil_skoru: int
     guc: float
     tempo_katkisi: float
     tempo_tipi: str
@@ -76,11 +64,23 @@ class RaceTempo:
     def tempo_index(self) -> float:
         if self.horse_count == 0:
             return 0.0
-        return self.total_tempo / self.horse_count
+        # Center index around 1.0 to reduce systematic low-tempo bias
+        base = 1.0
+        scaled = self.total_tempo / max(6.0, self.horse_count * 2.8)
+        crowd_factor = max(0, self.horse_count - 10) * 0.015
+        return base + scaled + crowd_factor
 
 
-def style_score(style_label: str) -> int:
-    return STYLE_SCORES.get((style_label or "").strip(), 0)
+def get_first(row: dict[str, str], *keys: str) -> str:
+    for k in keys:
+        v = row.get(k)
+        if v is not None:
+            return v
+    return ""
+
+
+def pace_weight(style_label: str) -> float:
+    return PACE_WEIGHTS.get((style_label or "").strip(), 0.0)
 
 
 def parse_output(raw_value: str) -> float | None:
@@ -96,28 +96,21 @@ def parse_output(raw_value: str) -> float | None:
     return value
 
 
-def is_onde_kacan(style_1: str, style_2: str) -> bool:
-    return (style_1 == "Önde Kaçan") or (style_2 == "Önde Kaçan")
-
-
-def is_takipci(style_1: str, style_2: str) -> bool:
-    return (style_1 == "Takipçi") or (style_2 == "Takipçi")
-
-
 def classify_tempo_index(idx: float) -> str:
-    if idx < 0.9:
+    if idx < 0.90:
         return "Düşük Tempo"
-    if idx <= 1.2:
+    if idx <= 1.15:
         return "Orta Tempo"
-    if idx <= 1.4:
+    if idx <= 1.35:
         return "Yüksek Tempo"
     return "Çok Yüksek"
 
 
 def classify_total_tempo(total_tempo: float) -> str:
-    if total_tempo < 6:
+    # total_tempo is now pressure-like; use softer buckets
+    if total_tempo < 4:
         return "Düşük"
-    if total_tempo <= 10:
+    if total_tempo <= 8:
         return "Orta"
     return "Yüksek"
 
@@ -162,8 +155,8 @@ def parse_race_horses(input_csv: Path) -> dict[str, list[HorseRow]]:
         reader = csv.DictReader(f)
 
         for row in reader:
-            horse_name = (row.get("At İsmi") or "").strip()
-            race_name = (row.get("Koşu") or "").strip()
+            horse_name = get_first(row, "At İsmi", "At Ä°smi").strip()
+            race_name = get_first(row, "Koşu", "KoÅŸu").strip()
 
             if not horse_name and race_name:
                 current_race = race_name
@@ -173,14 +166,19 @@ def parse_race_horses(input_csv: Path) -> dict[str, list[HorseRow]]:
             if not horse_name:
                 continue
 
+            output_raw = get_first(row, "Çıktı", "Ã‡Ä±ktÄ±")
+            over_5s = get_first(row, "Birinciden 5sn+").strip().upper() == "X"
+            track_cond = get_first(row, "Son Kosu Zemin Durumu").strip()
+
             race_horses.setdefault(current_race, []).append(
                 HorseRow(
                     race=current_race,
                     name=horse_name,
-                    style_1=(row.get("Stil Etiketi") or "").strip(),
-                    style_2=(row.get("Stil Etiketi 2") or "").strip(),
-                    output_raw=(row.get("Çıktı") or "").strip(),
-                    output_value=parse_output(row.get("Çıktı", "")),
+                    style_1=get_first(row, "Stil Etiketi").strip(),
+                    style_2=get_first(row, "Stil Etiketi 2").strip(),
+                    output_value=parse_output(output_raw),
+                    over_5s=over_5s,
+                    track_cond=track_cond,
                 )
             )
 
@@ -197,61 +195,53 @@ def build_models(input_csv: Path) -> tuple[list[RaceTempo], list[HorseModel]]:
             continue
 
         valid_outputs = [h.output_value for h in horses if h.output_value is not None]
-        if valid_outputs:
-            ortalama_cikti = sum(valid_outputs) / len(valid_outputs)
-        else:
-            # Tum ciktilar gecersizse bolme hatasi olmamasi icin nobetci deger.
-            ortalama_cikti = 1.0
+        ortalama_cikti = (sum(valid_outputs) / len(valid_outputs)) if valid_outputs else 1.0
 
         race = RaceTempo(race=race_name, horse_count=len(horses), ortalama_cikti=ortalama_cikti)
 
-        # 1) Tempo katkisi ve tempo indeksini hesapla.
+        # 1) Tempo pressure + race tempo index
         temp_katkilar: list[float] = []
         for h in horses:
-            stil_skoru = style_score(h.style_1) + style_score(h.style_2)
             output_used = h.output_value if h.output_value is not None else ortalama_cikti
-            guc = output_used / ortalama_cikti if ortalama_cikti else 1.0
+            guc = (ortalama_cikti / output_used) if output_used else 1.0
 
-            if guc < 0.95:
-                tempo_katkisi = stil_skoru * guc * 0.5
-            else:
-                tempo_katkisi = stil_skoru * guc
+            pace = pace_weight(h.style_1) + 0.60 * pace_weight(h.style_2)
+            # Stronger horse can enforce its style better
+            tempo_katkisi = pace * (0.8 + 0.4 * guc)
+            # If horse recently faded badly, reduce expected pace pressure
+            if h.over_5s:
+                tempo_katkisi *= 0.85
 
             temp_katkilar.append(tempo_katkisi)
 
         race.total_tempo = sum(temp_katkilar)
 
-        # 2) Yeni tabloya gore siniflandirma.
         race.tempo_tipi = classify_tempo_index(race.tempo_index)
         race.siddet_seviyesi = classify_total_tempo(race.total_tempo)
         race.yaris_yapisi = classify_field_size(race.horse_count)
         race.karar_sonucu, race.avantajli_at_turu = decision_matrix(race.tempo_tipi, race.siddet_seviyesi)
 
-        # 4) At bazli kazanma skoru + ekstra dayanıklılık.
+        # 2) Horse win score in estimated tempo scenario
         for h in horses:
-            stil_skoru = style_score(h.style_1) + style_score(h.style_2)
             output_used = h.output_value if h.output_value is not None else ortalama_cikti
-            guc = output_used / ortalama_cikti if ortalama_cikti else 1.0
+            guc = (ortalama_cikti / output_used) if output_used else 1.0
 
-            if guc < 0.95:
-                tempo_katkisi = stil_skoru * guc * 0.5
-            else:
-                tempo_katkisi = stil_skoru * guc
+            pace = pace_weight(h.style_1) + 0.60 * pace_weight(h.style_2)
+            tempo_katkisi = pace * (0.8 + 0.4 * guc)
+            if h.over_5s:
+                tempo_katkisi *= 0.85
 
-            bonus_key = "Düşük"
-            if race.tempo_tipi == "Orta Tempo":
-                bonus_key = "Orta"
-            elif race.tempo_tipi in {"Yüksek Tempo", "Çok Yüksek"}:
-                bonus_key = "Yüksek"
+            fit = TEMPO_FIT[race.tempo_tipi].get(h.style_1, 0.0) + 0.55 * TEMPO_FIT[race.tempo_tipi].get(h.style_2, 0.0)
 
-            bonus_1 = TEMPO_BONUS[bonus_key].get(h.style_1, 0)
-            bonus_2 = TEMPO_BONUS[bonus_key].get(h.style_2, 0)
-
-            kazanma_skoru = (1 / output_used) * 0.6 + bonus_1 * 0.25 + bonus_2 * 0.15
+            # Base from odds-like output (lower is better) + tempo fit + pace suitability
+            base = (1.0 / output_used)
+            wet_adj = 0.10 if h.track_cond else 0.0
+            penalty_5s = -0.12 if h.over_5s else 0.0
+            kazanma_skoru = base * 0.62 + fit * 0.24 + tempo_katkisi * 0.10 + wet_adj + penalty_5s
 
             dayaniklilik = None
             if race.tempo_tipi in {"Yüksek Tempo", "Çok Yüksek"}:
-                dayaniklilik = guc * 2 - stil_skoru * 0.3
+                dayaniklilik = guc * 2.0 - max(0.0, pace) * 0.4
 
             horse_models.append(
                 HorseModel(
@@ -260,7 +250,6 @@ def build_models(input_csv: Path) -> tuple[list[RaceTempo], list[HorseModel]]:
                     style_1=h.style_1,
                     style_2=h.style_2,
                     output_used=output_used,
-                    stil_skoru=stil_skoru,
                     guc=guc,
                     tempo_katkisi=tempo_katkisi,
                     tempo_tipi=race.tempo_tipi,
@@ -271,7 +260,6 @@ def build_models(input_csv: Path) -> tuple[list[RaceTempo], list[HorseModel]]:
 
         races.append(race)
 
-    # Her kosu icinde kazanma skoruna gore sirala.
     ordered: list[HorseModel] = []
     by_race: dict[str, list[HorseModel]] = {}
     for hm in horse_models:
@@ -330,7 +318,6 @@ def write_rankings(output_csv: Path, models: list[HorseModel]) -> None:
                 "At",
                 "Stil 1",
                 "Stil 2",
-                "Stil Skoru",
                 "Cikti",
                 "Guc",
                 "Tempo Katkisi",
@@ -357,7 +344,6 @@ def write_rankings(output_csv: Path, models: list[HorseModel]) -> None:
                     "At": hm.name,
                     "Stil 1": hm.style_1,
                     "Stil 2": hm.style_2,
-                    "Stil Skoru": hm.stil_skoru,
                     "Cikti": f"{hm.output_used:.3f}",
                     "Guc": f"{hm.guc:.3f}",
                     "Tempo Katkisi": f"{hm.tempo_katkisi:.3f}",

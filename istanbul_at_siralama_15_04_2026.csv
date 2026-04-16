@@ -1,104 +1,104 @@
-﻿Kosu,Sira,At,Stil 1,Stil 2,Stil Skoru,Cikti,Guc,Tempo Katkisi,Tempo Tipi,Kazanma Skoru,Dayaniklilik
-1. Koşu,1,FIRATIN GÜCÜ,Sprinter,,-1,7.220,1.008,-1.008,Yüksek Tempo,0.583102,2.316
-1. Koşu,2,BİLETÇİ KIZ,Orta Grup,Sprinter,-1,7.090,0.990,-0.990,Yüksek Tempo,0.384626,2.280
-1. Koşu,3,SUBİKE,Takipçi,Orta Grup,1,6.940,0.969,0.969,Yüksek Tempo,0.336455,1.638
-1. Koşu,4,BENİM SULTANIM,Takipçi,,1,7.120,0.994,0.994,Yüksek Tempo,0.334270,1.688
-1. Koşu,5,NERGİZLİ,Takipçi,,1,7.320,1.022,1.022,Yüksek Tempo,0.331967,1.744
-1. Koşu,6,TUĞCU SULTAN,Orta Grup,Takipçi,1,6.940,0.969,0.969,Yüksek Tempo,0.236455,1.638
-1. Koşu,7,BLUEMOON,Takipçi,Önde Kaçan,3,7.170,1.001,3.003,Yüksek Tempo,0.033682,1.102
-1. Koşu,8,DİLAN KIZ,Önde Kaçan,Takipçi,3,7.210,1.007,3.020,Yüksek Tempo,-0.266782,1.113
-1. Koşu,9,SAADGIRL,Önde Kaçan,Takipçi,3,7.460,1.041,3.124,Yüksek Tempo,-0.269571,1.183
-2. Koşu,1,KAUÇUKÇU,Önde Kaçan,,2,1.000,1.000,2.000,Düşük Tempo,1.100000,
-2. Koşu,2,AZİZ DOSTUM,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-2. Koşu,3,KAFKAS YÜREKLİ,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-2. Koşu,4,KERVAN SANCAĞI,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-2. Koşu,5,USKUMRU,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-2. Koşu,6,ARABIAN NIGHTS,Bilinmiyor,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-2. Koşu,7,DAĞYIKAN,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-2. Koşu,8,DEDEMHAMZAREİS,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-2. Koşu,9,SAROZ BEYİ,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-2. Koşu,10,DAYANA,Bilinmiyor,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-2. Koşu,11,HIZLI KRAL,Sprinter,,-1,1.000,1.000,-1.000,Düşük Tempo,0.100000,
-3. Koşu,1,ALAKONT,Takipçi,,1,6.080,0.976,0.976,Düşük Tempo,0.348684,
-3. Koşu,2,SUICIDE KING,Takipçi,Orta Grup,1,6.130,0.984,0.984,Düşük Tempo,0.347879,
-3. Koşu,3,THE WITCHER,Takipçi,,1,8.210,1.318,1.318,Düşük Tempo,0.323082,
-3. Koşu,4,TURKISH PUNCH,Orta Grup,Takipçi,1,5.920,0.950,0.950,Düşük Tempo,0.251351,
-3. Koşu,5,PAREZKAR,Orta Grup,,0,5.980,0.960,0.000,Düşük Tempo,0.100334,
-3. Koşu,6,LOWER SPIRIT,Karakteri Belli Değil,,0,6.010,0.965,0.000,Düşük Tempo,0.099834,
-3. Koşu,7,GREY GHOST,Sprinter,Takipçi,0,6.000,0.963,0.000,Düşük Tempo,-0.250000,
-3. Koşu,8,KANDO,Sprinter,Orta Grup,-1,5.940,0.953,-0.953,Düşük Tempo,-0.398990,
-3. Koşu,9,DIAMOND BROTHERS,Sprinter,Orta Grup,-1,5.990,0.961,-0.961,Düşük Tempo,-0.399833,
-3. Koşu,10,ANOTHER BANGER,Sprinter,Orta Grup,-1,6.050,0.971,-0.971,Düşük Tempo,-0.400826,
-4. Koşu,1,SEHER ZAMANI,Önde Kaçan,,2,1.000,1.000,2.000,Düşük Tempo,1.100000,
-4. Koşu,2,ATICI KAYA,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-4. Koşu,3,BOZAĞIN KRALI,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-4. Koşu,4,KABALBEYİ,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-4. Koşu,5,ŞAHİNYÜREKLİ,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-4. Koşu,6,HAN ÇERCİ,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-4. Koşu,7,PARLAMA ZAMANI,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-4. Koşu,8,ŞELEMZAR,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-4. Koşu,9,ERYÜREKLİ,Sprinter,,-1,1.000,1.000,-1.000,Düşük Tempo,0.100000,
-4. Koşu,10,KORGÜN,Sprinter,,-1,1.000,1.000,-1.000,Düşük Tempo,0.100000,
-5. Koşu,1,SUPERSONIC BOOM,Önde Kaçan,,2,6.510,0.994,1.988,Düşük Tempo,0.592166,
-5. Koşu,2,SWORD OF HONOUR,Takipçi,,1,6.450,0.985,0.985,Düşük Tempo,0.343023,
-5. Koşu,3,ÖZGÜR ABİ,Takipçi,,1,6.460,0.986,0.986,Düşük Tempo,0.342879,
-5. Koşu,4,ARNAVUT KIZ,Takipçi,,1,6.600,1.008,1.008,Düşük Tempo,0.340909,
-5. Koşu,5,GIATRES,Takipçi,,1,6.610,1.009,1.009,Düşük Tempo,0.340772,
-5. Koşu,6,AUTHORITY,Takipçi,,1,6.740,1.029,1.029,Düşük Tempo,0.339021,
-5. Koşu,7,MOSKITO,Takipçi,Orta Grup,1,7.060,1.078,1.078,Düşük Tempo,0.334986,
-5. Koşu,8,FILIUS VENTUS,Orta Grup,Takipçi,1,6.470,0.988,0.988,Düşük Tempo,0.242736,
-5. Koşu,9,CANKAFESİM,Orta Grup,,0,6.460,0.986,0.000,Düşük Tempo,0.092879,
-5. Koşu,10,COMING RAIN,Orta Grup,,0,6.520,0.996,0.000,Düşük Tempo,0.092025,
-5. Koşu,11,SARILAR KIZI,Orta Grup,,0,6.530,0.997,0.000,Düşük Tempo,0.091884,
-5. Koşu,12,DESERT POINT,Takipçi,Sprinter,0,6.520,0.996,0.000,Düşük Tempo,0.042025,
-5. Koşu,13,BLACK RUBY,Orta Grup,Sprinter,-1,6.430,0.982,-0.982,Düşük Tempo,-0.206687,
-5. Koşu,14,STAR AND MOON,Sprinter,Takipçi,0,6.520,0.996,0.000,Düşük Tempo,-0.257975,
-5. Koşu,15,SENKRON,Sprinter,Orta Grup,-1,6.430,0.982,-0.982,Düşük Tempo,-0.406687,
-5. Koşu,16,ASRA İNAT,Sprinter,Orta Grup,-1,6.440,0.983,-0.983,Düşük Tempo,-0.406832,
-5. Koşu,17,TOUCH THE CLOUD,Sprinter,,-1,6.530,0.997,-0.997,Düşük Tempo,-0.408116,
-5. Koşu,18,WAITING A SUNNYDAY,Sprinter,,-1,6.600,1.008,-1.008,Düşük Tempo,-0.409091,
-6. Koşu,1,VICTORY LANE,Önde Kaçan,Takipçi,3,5.910,0.979,2.937,Düşük Tempo,0.751523,
-6. Koşu,2,JAZZ RUNNER,Takipçi,Önde Kaçan,3,6.560,1.087,3.260,Düşük Tempo,0.641463,
-6. Koşu,3,LEGENDARY MAJESTY,Takipçi,,1,5.860,0.971,0.971,Düşük Tempo,0.352389,
-6. Koşu,4,HARDOX,Takipçi,Orta Grup,1,5.910,0.979,0.979,Düşük Tempo,0.351523,
-6. Koşu,5,LINARES,Takipçi,,1,5.920,0.981,0.981,Düşük Tempo,0.351351,
-6. Koşu,6,WHITE WOLF,Orta Grup,Takipçi,1,6.350,1.052,1.052,Düşük Tempo,0.244488,
-6. Koşu,7,EXTENSIVE,Orta Grup,,0,5.950,0.986,0.000,Düşük Tempo,0.100840,
-6. Koşu,8,HİDAN,Bilinmiyor,,0,6.160,1.021,0.000,Düşük Tempo,0.097403,
-6. Koşu,9,SNOW LEOPARD,Orta Grup,Sprinter,-1,5.870,0.972,-0.972,Düşük Tempo,-0.197785,
-6. Koşu,10,JOYFUL FOREVER,Sprinter,,-1,5.870,0.972,-0.972,Düşük Tempo,-0.397785,
-7. Koşu,1,WOLF RULES,Sprinter,Takipçi,0,5.870,0.973,0.000,Yüksek Tempo,0.752215,1.946
-7. Koşu,2,DILUVIO,Takipçi,,1,6.180,1.024,1.024,Yüksek Tempo,0.347087,1.748
-7. Koşu,3,PRENS LAUTARO,Orta Grup,Takipçi,1,5.950,0.986,0.986,Yüksek Tempo,0.250840,1.672
-7. Koşu,4,GOLDRAKHAN,Orta Grup,Takipçi,1,5.960,0.988,0.988,Yüksek Tempo,0.250671,1.675
-7. Koşu,5,BALLAD KING,Karakteri Belli Değil,,0,5.900,0.978,0.000,Yüksek Tempo,0.101695,1.955
-7. Koşu,6,TOLPER,Takipçi,Önde Kaçan,3,6.360,1.054,3.162,Yüksek Tempo,0.044340,1.208
-7. Koşu,7,HAVACI,Önde Kaçan,Takipçi,3,6.020,0.998,2.993,Yüksek Tempo,-0.250332,1.095
-8. Koşu,1,CİHANERK,Önde Kaçan,,2,1.000,1.000,2.000,Düşük Tempo,1.100000,
-8. Koşu,2,BABA BALYOZ,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-8. Koşu,3,BALMEHMET,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-8. Koşu,4,KIR ZİNCİRLERİNİ,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-8. Koşu,5,ÜNVERDİ BEY,Takipçi,,1,1.000,1.000,1.000,Düşük Tempo,0.850000,
-8. Koşu,6,BAYDARBEY,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-8. Koşu,7,BİGASİ,Orta Grup,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-8. Koşu,8,DÜZ KOŞU,Bilinmiyor,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-8. Koşu,9,KESTEL YİĞİDİ,Bilinmiyor,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-8. Koşu,10,BİTTER ÇİKOLATA,Bilinmiyor,,0,1.000,1.000,0.000,Düşük Tempo,0.600000,
-9. Koşu,1,BELLİ BEY,Takipçi,,1,7.100,0.977,0.977,Düşük Tempo,0.334507,
-9. Koşu,2,DÜMENCAN,Takipçi,Orta Grup,1,7.160,0.985,0.985,Düşük Tempo,0.333799,
-9. Koşu,3,ATİK HASAN,Takipçi,Orta Grup,1,7.170,0.987,0.987,Düşük Tempo,0.333682,
-9. Koşu,4,GENÇYÜREK,Takipçi,Orta Grup,1,7.200,0.991,0.991,Düşük Tempo,0.333333,
-9. Koşu,5,THOTH,Takipçi,,1,7.210,0.992,0.992,Düşük Tempo,0.333218,
-9. Koşu,6,HÜRHANA,Takipçi,,1,7.250,0.998,0.998,Düşük Tempo,0.332759,
-9. Koşu,7,DERENİMO,Takipçi,,1,7.290,1.003,1.003,Düşük Tempo,0.332305,
-9. Koşu,8,DUMANLI DAĞ,Takipçi,,1,7.320,1.007,1.007,Düşük Tempo,0.331967,
-9. Koşu,9,KÖKBEYİ,Takipçi,,1,7.660,1.054,1.054,Düşük Tempo,0.328329,
-9. Koşu,10,AKBİLGE,Orta Grup,Takipçi,1,7.240,0.996,0.996,Düşük Tempo,0.232873,
-9. Koşu,11,LADY STONE,Orta Grup,,0,7.150,0.984,0.000,Düşük Tempo,0.083916,
-9. Koşu,12,BOYABAT,Orta Grup,,0,7.240,0.996,0.000,Düşük Tempo,0.082873,
-9. Koşu,13,YEŞİLBAHAR,Orta Grup,,0,7.280,1.002,0.000,Düşük Tempo,0.082418,
-9. Koşu,14,KAPGAN KAĞAN,Orta Grup,,0,7.610,1.047,0.000,Düşük Tempo,0.078844,
-9. Koşu,15,KANATLANAN,Sprinter,Takipçi,0,7.140,0.982,0.000,Düşük Tempo,-0.265966,
-9. Koşu,16,UDARHAN,Sprinter,Orta Grup,-1,6.980,0.960,-0.960,Düşük Tempo,-0.414040,
-9. Koşu,17,BUSE,Sprinter,Orta Grup,-1,7.190,0.989,-0.989,Düşük Tempo,-0.416551,
-9. Koşu,18,SONZEYBEK,Sprinter,,-1,7.620,1.049,-1.049,Düşük Tempo,-0.421260,
+﻿Kosu,Sira,At,Stil 1,Stil 2,Cikti,Guc,Tempo Katkisi,Tempo Tipi,Kazanma Skoru,Dayaniklilik
+1. Koşu,1,BLUEMOON,Takipçi,Önde Kaçan,7.170,0.999,1.584,Orta Tempo,0.698822,
+1. Koşu,2,DİLAN KIZ,Önde Kaçan,Takipçi,7.210,0.994,1.868,Orta Tempo,0.551188,
+1. Koşu,3,TUĞCU SULTAN,Orta Grup,Takipçi,6.940,1.032,0.437,Orta Tempo,0.507401,
+1. Koşu,4,BENİM SULTANIM,Takipçi,,7.120,1.006,0.721,Orta Tempo,0.447225,
+1. Koşu,5,NERGİZLİ,Takipçi,,7.320,0.979,0.715,Orta Tempo,0.444186,
+1. Koşu,6,BİLETÇİ KIZ,Orta Grup,Sprinter,7.090,1.010,-0.650,Orta Tempo,0.378024,
+1. Koşu,7,SUBİKE,Bilinmiyor,,6.940,1.032,0.000,Orta Tempo,0.089337,
+1. Koşu,8,SAADGIRL,Bilinmiyor,,7.460,0.960,0.000,Orta Tempo,0.083110,
+1. Koşu,9,FIRATIN GÜCÜ,Sprinter,,7.220,0.992,-1.077,Orta Tempo,0.050155,
+2. Koşu,1,AZİZ DOSTUM,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+2. Koşu,2,KAFKAS YÜREKLİ,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+2. Koşu,3,KERVAN SANCAĞI,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+2. Koşu,4,USKUMRU,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+2. Koşu,5,KAUÇUKÇU,Önde Kaçan,,1.000,1.000,1.440,Orta Tempo,0.884000,
+2. Koşu,6,DAĞYIKAN,Orta Grup,,1.000,1.000,0.000,Orta Tempo,0.836000,
+2. Koşu,7,DEDEMHAMZAREİS,Orta Grup,,1.000,1.000,0.000,Orta Tempo,0.836000,
+2. Koşu,8,SAROZ BEYİ,Orta Grup,,1.000,1.000,0.000,Orta Tempo,0.836000,
+2. Koşu,9,ARABIAN NIGHTS,Bilinmiyor,,1.000,1.000,0.000,Orta Tempo,0.620000,
+2. Koşu,10,DAYANA,Bilinmiyor,,1.000,1.000,0.000,Orta Tempo,0.620000,
+2. Koşu,11,HIZLI KRAL,Sprinter,,1.000,1.000,-1.080,Orta Tempo,0.584000,
+3. Koşu,1,TURKISH PUNCH,Orta Grup,Takipçi,5.920,1.053,0.440,Orta Tempo,0.623086,
+3. Koşu,2,SUICIDE KING,Takipçi,Orta Grup,6.130,1.016,0.724,Orta Tempo,0.580337,
+3. Koşu,3,ALAKONT,Takipçi,,6.080,1.025,0.726,Orta Tempo,0.462570,
+3. Koşu,4,PAREZKAR,Orta Grup,,5.980,1.042,0.000,Orta Tempo,0.319679,
+3. Koşu,5,THE WITCHER,Takipçi,,8.210,0.759,0.563,Orta Tempo,0.299800,
+3. Koşu,6,GREY GHOST,Sprinter,Takipçi,6.000,1.038,-0.656,Orta Tempo,0.268102,
+3. Koşu,7,DIAMOND BROTHERS,Sprinter,Orta Grup,5.990,1.040,-1.094,Orta Tempo,0.184857,
+3. Koşu,8,ANOTHER BANGER,Sprinter,Orta Grup,6.050,1.030,-1.091,Orta Tempo,0.184202,
+3. Koşu,9,KANDO,Bilinmiyor,,5.940,1.049,0.000,Orta Tempo,0.104377,
+3. Koşu,10,LOWER SPIRIT,Karakteri Belli Değil,,6.010,1.037,0.000,Orta Tempo,0.103161,
+4. Koşu,1,ATICI KAYA,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+4. Koşu,2,BOZAĞIN KRALI,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+4. Koşu,3,KABALBEYİ,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+4. Koşu,4,ŞAHİNYÜREKLİ,Takipçi,,1.000,1.000,0.720,Orta Tempo,0.980000,
+4. Koşu,5,SEHER ZAMANI,Önde Kaçan,,1.000,1.000,1.440,Orta Tempo,0.884000,
+4. Koşu,6,HAN ÇERCİ,Orta Grup,,1.000,1.000,0.000,Orta Tempo,0.836000,
+4. Koşu,7,PARLAMA ZAMANI,Orta Grup,,1.000,1.000,0.000,Orta Tempo,0.836000,
+4. Koşu,8,ŞELEMZAR,Orta Grup,,1.000,1.000,0.000,Orta Tempo,0.836000,
+4. Koşu,9,ERYÜREKLİ,Sprinter,,1.000,1.000,-1.080,Orta Tempo,0.584000,
+4. Koşu,10,KORGÜN,Sprinter,,1.000,1.000,-1.080,Orta Tempo,0.584000,
+5. Koşu,1,FILIUS VENTUS,Orta Grup,Takipçi,6.470,1.012,0.434,Orta Tempo,0.513602,
+5. Koşu,2,SWORD OF HONOUR,Takipçi,,6.450,1.015,0.724,Orta Tempo,0.456492,
+5. Koşu,3,ÖZGÜR ABİ,Takipçi,,6.460,1.014,0.723,Orta Tempo,0.456305,
+5. Koşu,4,ARNAVUT KIZ,Takipçi,,6.600,0.992,0.718,Orta Tempo,0.453754,
+5. Koşu,5,GIATRES,Takipçi,,6.610,0.991,0.718,Orta Tempo,0.453575,
+5. Koşu,6,AUTHORITY,Takipçi,,6.740,0.972,0.713,Orta Tempo,0.451308,
+5. Koşu,7,MOSKITO,Takipçi,Orta Grup,7.060,0.928,0.597,Orta Tempo,0.434342,
+5. Koşu,8,DESERT POINT,Takipçi,Sprinter,6.520,1.004,0.072,Orta Tempo,0.429903,
+5. Koşu,9,SUPERSONIC BOOM,Önde Kaçan,,6.510,1.006,1.443,Orta Tempo,0.359525,
+5. Koşu,10,CANKAFESİM,Orta Grup,,6.460,1.014,0.000,Orta Tempo,0.311975,
+5. Koşu,11,COMING RAIN,Orta Grup,,6.520,1.004,0.000,Orta Tempo,0.311092,
+5. Koşu,12,SARILAR KIZI,Orta Grup,,6.530,1.003,0.000,Orta Tempo,0.310946,
+5. Koşu,13,BLACK RUBY,Orta Grup,Sprinter,6.430,1.018,-0.652,Orta Tempo,0.286824,
+5. Koşu,14,STAR AND MOON,Sprinter,Takipçi,6.520,1.004,-0.649,Orta Tempo,0.260596,
+5. Koşu,15,SENKRON,Sprinter,Orta Grup,6.430,1.018,-1.087,Orta Tempo,0.178557,
+5. Koşu,16,ASRA İNAT,Sprinter,Orta Grup,6.440,1.017,-1.086,Orta Tempo,0.178465,
+5. Koşu,17,TOUCH THE CLOUD,Sprinter,,6.530,1.003,-1.081,Orta Tempo,0.058842,
+5. Koşu,18,WAITING A SUNNYDAY,Sprinter,,6.600,0.992,-1.077,Orta Tempo,0.058218,
+6. Koşu,1,JAZZ RUNNER,Takipçi,Önde Kaçan,6.560,0.920,1.542,Yüksek Tempo,0.472295,1.312
+6. Koşu,2,WHITE WOLF,Orta Grup,Takipçi,6.350,0.951,0.425,Yüksek Tempo,0.454926,1.757
+6. Koşu,3,LEGENDARY MAJESTY,Takipçi,,5.860,1.030,0.727,Yüksek Tempo,0.394523,1.820
+6. Koşu,4,LINARES,Takipçi,,5.920,1.020,0.725,Yüksek Tempo,0.393200,1.799
+6. Koşu,5,JOYFUL FOREVER,Sprinter,,5.870,1.028,-1.090,Yüksek Tempo,0.308604,2.057
+6. Koşu,6,SNOW LEOPARD,Orta Grup,Sprinter,5.870,1.028,-0.654,Yüksek Tempo,0.307811,2.057
+6. Koşu,7,VICTORY LANE,Önde Kaçan,Takipçi,5.910,1.021,1.885,Yüksek Tempo,0.244237,1.419
+6. Koşu,8,HİDAN,Takipçi,Önde Kaçan,6.160,0.980,1.337,Yüksek Tempo,0.237986,1.432
+6. Koşu,9,EXTENSIVE,Orta Grup,,5.950,1.014,0.000,Yüksek Tempo,0.200202,2.029
+6. Koşu,10,HARDOX,Bilinmiyor,,5.910,1.021,0.000,Yüksek Tempo,0.104907,2.043
+7. Koşu,1,TOLPER,Takipçi,Önde Kaçan,6.360,0.949,1.557,Yüksek Tempo,0.476780,1.370
+7. Koşu,2,WOLF RULES,Sprinter,Takipçi,5.870,1.028,-0.654,Yüksek Tempo,0.471017,2.056
+7. Koşu,3,PRENS LAUTARO,Orta Grup,Takipçi,5.950,1.014,0.434,Yüksek Tempo,0.362406,1.884
+7. Koşu,4,GOLDRAKHAN,Orta Grup,Takipçi,5.960,1.012,0.434,Yüksek Tempo,0.362206,1.881
+7. Koşu,5,DILUVIO,Takipçi,,6.180,0.976,0.607,Yüksek Tempo,0.257043,1.713
+7. Koşu,6,HAVACI,Önde Kaçan,Takipçi,6.020,1.002,1.873,Yüksek Tempo,0.241138,1.381
+7. Koşu,7,BALLAD KING,Karakteri Belli Değil,,5.900,1.023,0.000,Yüksek Tempo,0.105085,2.046
+8. Koşu,1,BABA BALYOZ,Takipçi,,1.000,1.000,0.720,Yüksek Tempo,0.908000,1.760
+8. Koşu,2,BALMEHMET,Takipçi,,1.000,1.000,0.720,Yüksek Tempo,0.908000,1.760
+8. Koşu,3,KIR ZİNCİRLERİNİ,Takipçi,,1.000,1.000,0.720,Yüksek Tempo,0.908000,1.760
+8. Koşu,4,ÜNVERDİ BEY,Takipçi,,1.000,1.000,0.720,Yüksek Tempo,0.908000,1.760
+8. Koşu,5,BAYDARBEY,Orta Grup,,1.000,1.000,0.000,Yüksek Tempo,0.716000,2.000
+8. Koşu,6,BİGASİ,Orta Grup,,1.000,1.000,0.000,Yüksek Tempo,0.716000,2.000
+8. Koşu,7,KESTEL YİĞİDİ,Orta Grup,,1.000,1.000,0.000,Yüksek Tempo,0.716000,2.000
+8. Koşu,8,DÜZ KOŞU,Bilinmiyor,,1.000,1.000,0.000,Yüksek Tempo,0.620000,2.000
+8. Koşu,9,BİTTER ÇİKOLATA,Bilinmiyor,,1.000,1.000,0.000,Yüksek Tempo,0.620000,2.000
+8. Koşu,10,CİHANERK,Önde Kaçan,,1.000,1.000,1.440,Yüksek Tempo,0.596000,1.520
+9. Koşu,1,ATİK HASAN,Takipçi,Orta Grup,7.170,1.014,0.723,Yüksek Tempo,0.527597,1.787
+9. Koşu,2,GENÇYÜREK,Takipçi,Orta Grup,7.200,1.009,0.722,Yüksek Tempo,0.527135,1.779
+9. Koşu,3,BELLİ BEY,Takipçi,,7.100,1.024,0.726,Yüksek Tempo,0.475889,1.807
+9. Koşu,4,THOTH,Takipçi,,7.210,1.008,0.722,Yüksek Tempo,0.474182,1.776
+9. Koşu,5,KANATLANAN,Sprinter,Takipçi,7.140,1.018,-0.652,Yüksek Tempo,0.452450,2.036
+9. Koşu,6,AKBİLGE,Orta Grup,Takipçi,7.240,1.004,0.433,Yüksek Tempo,0.443690,1.864
+9. Koşu,7,BUSE,Sprinter,Orta Grup,7.190,1.011,-1.084,Yüksek Tempo,0.442644,2.021
+9. Koşu,8,DÜMENCAN,Takipçi,Orta Grup,7.160,1.015,0.724,Yüksek Tempo,0.427752,1.790
+9. Koşu,9,HÜRHANA,Takipçi,,7.250,1.002,0.721,Yüksek Tempo,0.373574,1.765
+9. Koşu,10,DERENİMO,Takipçi,,7.290,0.997,0.719,Yüksek Tempo,0.372973,1.754
+9. Koşu,11,DUMANLI DAĞ,Takipçi,,7.320,0.993,0.718,Yüksek Tempo,0.372526,1.746
+9. Koşu,12,UDARHAN,Sprinter,Orta Grup,6.980,1.041,-1.095,Yüksek Tempo,0.344144,2.082
+9. Koşu,13,SONZEYBEK,Sprinter,,7.620,0.954,-0.904,Yüksek Tempo,0.282981,1.907
+9. Koşu,14,LADY STONE,Orta Grup,,7.150,1.016,0.000,Yüksek Tempo,0.282713,2.033
+9. Koşu,15,KÖKBEYİ,Takipçi,,7.660,0.949,0.602,Yüksek Tempo,0.237094,1.657
+9. Koşu,16,BOYABAT,Orta Grup,,7.240,1.004,0.000,Yüksek Tempo,0.181635,2.008
+9. Koşu,17,YEŞİLBAHAR,Orta Grup,,7.280,0.998,0.000,Yüksek Tempo,0.181165,1.996
+9. Koşu,18,KAPGAN KAĞAN,Orta Grup,,7.610,0.955,0.000,Yüksek Tempo,0.057472,1.910
