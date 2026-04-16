@@ -1,13 +1,13 @@
 ﻿Kosu,Sira,At,Stil 1,Stil 2,Cikti,Guc,Tempo Katkisi,Tempo Tipi,Kazanma Skoru,Dayaniklilik
-1. Koşu,1,CATALYST,Orta Grup,Takipçi,6.340,1.001,0.432,Orta Tempo,0.515402,
-1. Koşu,2,CALVADOS,Önde Kaçan,,6.130,1.035,1.457,Orta Tempo,0.466821,
-1. Koşu,3,KUPA AVCISI,Takipçi,,6.190,1.025,0.726,Orta Tempo,0.460760,
-1. Koşu,4,WALLACE,Takipçi,,6.250,1.015,0.724,Orta Tempo,0.459563,
-1. Koşu,5,MY SİXTH SENSE,Takipçi,,6.280,1.010,0.722,Orta Tempo,0.458972,
-1. Koşu,6,THRACE FEVER,Takipçi,,6.350,0.999,0.720,Orta Tempo,0.457617,
-1. Koşu,7,REFLECTED GLORY,Takipçi,,6.680,0.950,0.602,Orta Tempo,0.320990,
-1. Koşu,8,TURBO FANI,Sprinter,Orta Grup,6.350,0.999,-1.080,Orta Tempo,0.180469,
-1. Koşu,9,GOLDEN SNOW,Sprinter,Orta Grup,6.530,0.972,-0.909,Orta Tempo,0.074816,
+1. Koşu,1,KUPA AVCISI,Takipçi,,6.190,1.025,0.726,Yüksek Tempo,0.388760,1.810
+1. Koşu,2,WALLACE,Takipçi,,6.250,1.015,0.724,Yüksek Tempo,0.387563,1.790
+1. Koşu,3,MY SİXTH SENSE,Takipçi,,6.280,1.010,0.722,Yüksek Tempo,0.386972,1.781
+1. Koşu,4,THRACE FEVER,Takipçi,,6.350,0.999,0.720,Yüksek Tempo,0.385617,1.758
+1. Koşu,5,CATALYST,Orta Grup,Takipçi,6.340,1.001,0.432,Yüksek Tempo,0.355802,1.857
+1. Koşu,6,TURBO FANI,Sprinter,Orta Grup,6.350,0.999,-1.080,Yüksek Tempo,0.354469,1.998
+1. Koşu,7,REFLECTED GLORY,Takipçi,,6.680,0.950,0.602,Yüksek Tempo,0.248990,1.660
+1. Koşu,8,GOLDEN SNOW,Sprinter,Orta Grup,6.530,0.972,-0.909,Yüksek Tempo,0.248816,1.943
+1. Koşu,9,CALVADOS,Önde Kaçan,,6.130,1.035,1.457,Yüksek Tempo,0.178821,1.590
 2. Koşu,1,ALAMETİ FARİKA,Takipçi,Orta Grup,6.550,1.018,0.724,Orta Tempo,0.573890,
 2. Koşu,2,NEJDET BAŞKAN,Takipçi,,6.580,1.013,0.723,Orta Tempo,0.554547,
 2. Koşu,3,SUPER DİVO,Önde Kaçan,,6.540,1.020,1.449,Orta Tempo,0.359743,
@@ -25,18 +25,18 @@
 3. Koşu,9,ŞAH TUNALI,Bilinmiyor,,1.000,1.000,0.000,Orta Tempo,0.620000,
 3. Koşu,10,TORLAK,Bilinmiyor,,1.000,1.000,0.000,Orta Tempo,0.620000,
 3. Koşu,11,SON KRALİÇE,Bilinmiyor,,1.000,1.000,0.000,Orta Tempo,0.620000,
-4. Koşu,1,NUSRET OĞLU,Takipçi,Orta Grup,6.550,1.018,0.724,Orta Tempo,0.573890,
-4. Koşu,2,KÜÇÜKCEVER,Takipçi,Önde Kaçan,6.700,0.995,1.344,Orta Tempo,0.560965,
-4. Koşu,3,ÖZTUĞ,Orta Grup,Takipçi,6.430,1.037,0.437,Orta Tempo,0.514557,
-4. Koşu,4,ATEŞ REİSİ,Orta Grup,Takipçi,6.530,1.021,0.435,Orta Tempo,0.512851,
-4. Koşu,5,HOPDEDİK,Orta Grup,Takipçi,6.690,0.997,0.432,Orta Tempo,0.510229,
-4. Koşu,6,DELİ UMUT,Orta Grup,Takipçi,6.740,0.989,0.430,Orta Tempo,0.509435,
-4. Koşu,7,BERAY SULTAN,Orta Grup,Takipçi,6.960,0.958,0.362,Orta Tempo,0.379688,
-4. Koşu,8,HERZAMAN,Önde Kaçan,,6.710,0.994,1.437,Orta Tempo,0.356101,
-4. Koşu,9,NERGİSLİK TAY,Takipçi,Sprinter,7.020,0.950,0.060,Orta Tempo,0.301937,
-4. Koşu,10,CEVAHİRKAN,Sprinter,Orta Grup,6.570,1.015,-1.085,Orta Tempo,0.176630,
-4. Koşu,11,METİNCİM,Sprinter,,6.500,1.026,-1.089,Orta Tempo,0.058452,
-4. Koşu,12,DOĞUYURT,Sprinter,,6.620,1.007,-1.083,Orta Tempo,0.057393,
+4. Koşu,1,NUSRET OĞLU,Takipçi,Orta Grup,6.550,1.018,0.724,Yüksek Tempo,0.435890,1.796
+4. Koşu,2,NERGİSLİK TAY,Takipçi,Sprinter,7.020,0.950,0.060,Yüksek Tempo,0.361937,1.876
+4. Koşu,3,ÖZTUĞ,Orta Grup,Takipçi,6.430,1.037,0.437,Yüksek Tempo,0.354957,1.930
+4. Koşu,4,ATEŞ REİSİ,Orta Grup,Takipçi,6.530,1.021,0.435,Yüksek Tempo,0.353251,1.898
+4. Koşu,5,CEVAHİRKAN,Sprinter,Orta Grup,6.570,1.015,-1.085,Yüksek Tempo,0.350630,2.030
+4. Koşu,6,HOPDEDİK,Orta Grup,Takipçi,6.690,0.997,0.432,Yüksek Tempo,0.350629,1.850
+4. Koşu,7,DELİ UMUT,Orta Grup,Takipçi,6.740,0.989,0.430,Yüksek Tempo,0.349835,1.835
+4. Koşu,8,KÜÇÜKCEVER,Takipçi,Önde Kaçan,6.700,0.995,1.344,Yüksek Tempo,0.330565,1.463
+4. Koşu,9,METİNCİM,Sprinter,,6.500,1.026,-1.089,Yüksek Tempo,0.298452,2.052
+4. Koşu,10,DOĞUYURT,Sprinter,,6.620,1.007,-1.083,Yüksek Tempo,0.297393,2.015
+4. Koşu,11,BERAY SULTAN,Orta Grup,Takipçi,6.960,0.958,0.362,Yüksek Tempo,0.220088,1.772
+4. Koşu,12,HERZAMAN,Önde Kaçan,,6.710,0.994,1.437,Yüksek Tempo,0.068101,1.508
 5. Koşu,1,ERDİ BEY,Takipçi,Orta Grup,7.290,1.035,0.728,Orta Tempo,0.564678,
 5. Koşu,2,İSKİT ALP,Takipçi,Orta Grup,7.360,1.025,0.726,Orta Tempo,0.563633,
 5. Koşu,3,SİDAR BEY,Takipçi,,7.400,1.019,0.725,Orta Tempo,0.544244,

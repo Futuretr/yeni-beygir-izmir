@@ -97,11 +97,11 @@ def parse_output(raw_value: str) -> float | None:
 
 
 def classify_tempo_index(idx: float) -> str:
-    if idx < 0.90:
+    if idx < 0.98:
         return "Düşük Tempo"
-    if idx <= 1.15:
+    if idx <= 1.10:
         return "Orta Tempo"
-    if idx <= 1.35:
+    if idx <= 1.22:
         return "Yüksek Tempo"
     return "Çok Yüksek"
 
@@ -125,26 +125,41 @@ def classify_field_size(horse_count: int) -> str:
     return "Küçük grup"
 
 
-def decision_matrix(tempo_tipi: str, siddet: str) -> tuple[str, str]:
-    matrix = {
-        ("Düşük Tempo", "Düşük"): ("Yavaş yarış", "Önde Kaçan"),
-        ("Düşük Tempo", "Yüksek"): ("Sahte tempo (tek kaçış)", "Lider / güçlü at"),
-        ("Orta Tempo", "Orta"): ("Klasik yarış", "Takipçi"),
-        ("Orta Tempo", "Yüksek"): ("Sert bitiş", "Güçlü Takipçi"),
-        ("Yüksek Tempo", "Yüksek"): ("Yarış yanar", "Sprinter"),
-        ("Yüksek Tempo", "Orta"): ("Tempolu ama kontrollü", "Takipçi"),
-        ("Çok Yüksek", "Yüksek"): ("Kaos", "En güçlü kapanış"),
-    }
-    if (tempo_tipi, siddet) in matrix:
-        return matrix[(tempo_tipi, siddet)]
+def decision_matrix(
+    tempo_tipi: str,
+    siddet: str,
+    leader_share: float,
+    takip_share: float,
+    sprinter_share: float,
+) -> tuple[str, str]:
+    # Dynamic decision: avoid collapsing all races into one advantage type.
+    if tempo_tipi == "Düşük Tempo":
+        if leader_share >= 0.34:
+            return "Lider kontrollü gidiş", "Önde Kaçan"
+        if takip_share >= 0.38:
+            return "Dengeli ama takip odaklı", "Takipçi"
+        return "Kontrollü tempo", "Önde Kaçan"
 
-    fallback = {
-        "Düşük Tempo": ("Kontrollü tempo", "Önde Kaçan"),
-        "Orta Tempo": ("Dengeli yarış", "Takipçi"),
-        "Yüksek Tempo": ("Sert tempo", "Güçlü Takipçi / Sprinter"),
-        "Çok Yüksek": ("Yıpratıcı yarış", "Sprinter / Güçlü kapanış"),
-    }
-    return fallback[tempo_tipi]
+    if tempo_tipi == "Orta Tempo":
+        if sprinter_share >= 0.30 and siddet in {"Orta", "Yüksek"}:
+            return "Sonlarda hızlanan yarış", "Güçlü Takipçi / Sprinter"
+        if leader_share >= 0.24 and sprinter_share < 0.24:
+            return "Ön grup avantajlı orta tempo", "Önde Kaçan"
+        if sprinter_share >= 0.20:
+            return "Dengeli ama kapanışa açık", "Sprinter / Takipçi"
+        return "Klasik denge yarışı", "Takipçi"
+
+    if tempo_tipi == "Yüksek Tempo":
+        if sprinter_share >= 0.24:
+            return "Tempolu yarış, kapanış etkili", "Sprinter"
+        if leader_share >= 0.28:
+            return "Sert tempo ama lider direnebilir", "Lider / güçlü at"
+        return "Tempolu yarış", "Güçlü Takipçi / Sprinter"
+
+    # Çok Yüksek
+    if sprinter_share >= 0.18:
+        return "Kaos ve yıpranma", "En güçlü kapanış"
+    return "Yıpratıcı yarış", "Sprinter / Güçlü kapanış"
 
 
 def parse_race_horses(input_csv: Path) -> dict[str, list[HorseRow]]:
@@ -219,7 +234,27 @@ def build_models(input_csv: Path) -> tuple[list[RaceTempo], list[HorseModel]]:
         race.tempo_tipi = classify_tempo_index(race.tempo_index)
         race.siddet_seviyesi = classify_total_tempo(race.total_tempo)
         race.yaris_yapisi = classify_field_size(race.horse_count)
-        race.karar_sonucu, race.avantajli_at_turu = decision_matrix(race.tempo_tipi, race.siddet_seviyesi)
+        leader_weight = 0.0
+        takip_weight = 0.0
+        sprinter_weight = 0.0
+        for h in horses:
+            leader_weight += 1.0 if h.style_1 == "Önde Kaçan" else 0.0
+            leader_weight += 0.55 if h.style_2 == "Önde Kaçan" else 0.0
+            takip_weight += 1.0 if h.style_1 == "Takipçi" else 0.0
+            takip_weight += 0.55 if h.style_2 == "Takipçi" else 0.0
+            sprinter_weight += 1.0 if h.style_1 == "Sprinter" else 0.0
+            sprinter_weight += 0.55 if h.style_2 == "Sprinter" else 0.0
+        denom = max(1.0, race.horse_count * 1.55)
+        leader_share = leader_weight / denom
+        takip_share = takip_weight / denom
+        sprinter_share = sprinter_weight / denom
+        race.karar_sonucu, race.avantajli_at_turu = decision_matrix(
+            race.tempo_tipi,
+            race.siddet_seviyesi,
+            leader_share,
+            takip_share,
+            sprinter_share,
+        )
 
         # 2) Horse win score in estimated tempo scenario
         for h in horses:
