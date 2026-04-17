@@ -5,6 +5,23 @@ import csv
 from pathlib import Path
 
 
+def norm_text(s: str) -> str:
+    return (
+        (s or "")
+        .replace("Ä°", "İ")
+        .replace("Ã‡", "Ç")
+        .replace("Ã–", "Ö")
+        .replace("Åž", "Ş")
+        .replace("ÄŸ", "ğ")
+        .replace("Ä±", "ı")
+        .replace("Ã¼", "ü")
+        .replace("Ã§", "ç")
+        .replace("Ã¶", "ö")
+        .replace("ÅŸ", "ş")
+        .strip()
+    )
+
+
 def esc(text: str) -> str:
     return (
         (text or "")
@@ -43,18 +60,18 @@ def main() -> int:
             with tempo_path.open("r", encoding="utf-8-sig", newline="") as tf:
                 treader = csv.DictReader(tf)
                 for row in treader:
-                    race_name = (row.get("Kosu") or "").strip()
+                    race_name = norm_text(row.get("Kosu") or "")
                     if not race_name:
                         continue
                     tempo_map[race_name] = {
-                        "at_sayisi": (row.get("At Sayisi") or "").strip(),
-                        "toplam_tempo": (row.get("Toplam Tempo") or "").strip(),
-                        "tempo_indeksi": (row.get("Tempo Indeksi") or "").strip(),
-                        "siddet": (row.get("Siddet") or "").strip(),
-                        "yaris_tipi": (row.get("Yaris Tipi") or "").strip(),
-                        "yaris_yapisi": (row.get("Yaris Yapisi") or "").strip(),
-                        "karar_sonucu": (row.get("Karar Sonucu") or "").strip(),
-                        "avantajli_at_turu": (row.get("Avantajli At Turu") or "").strip(),
+                        "at_sayisi": norm_text(row.get("At Sayisi") or ""),
+                        "toplam_tempo": norm_text(row.get("Toplam Tempo") or ""),
+                        "tempo_indeksi": norm_text(row.get("Tempo Indeksi") or ""),
+                        "siddet": norm_text(row.get("Siddet") or ""),
+                        "yaris_tipi": norm_text(row.get("Yaris Tipi") or ""),
+                        "yaris_yapisi": norm_text(row.get("Yaris Yapisi") or ""),
+                        "karar_sonucu": norm_text(row.get("Karar Sonucu") or ""),
+                        "avantajli_at_turu": norm_text(row.get("Avantajli At Turu") or ""),
                     }
 
     races: list[tuple[str, list[dict[str, str]]]] = []
@@ -64,8 +81,8 @@ def main() -> int:
     with input_path.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
-            at_ismi = get_first(row, "At İsmi", "At Ä°smi", "At Ismi", "At Ã„Â°smi").strip()
-            kosu = get_first(row, "Koşu", "KoÅŸu").strip()
+            at_ismi = norm_text(get_first(row, "At İsmi", "At Ä°smi", "At Ismi", "At Ã„Â°smi"))
+            kosu = norm_text(get_first(row, "Koşu", "KoÅŸu"))
 
             if not at_ismi and kosu:
                 if current_rows:
@@ -81,12 +98,12 @@ def main() -> int:
                 {
                     "at_no": (row.get("At No") or "").strip(),
                     "at_ismi": at_ismi,
-                    "cikti": get_first(row, "Çıktı", "Ã‡Ä±ktÄ±").strip(),
-                    "stil_etiketi": (row.get("Stil Etiketi") or "").strip(),
-                    "stil_etiketi_2": (row.get("Stil Etiketi 2") or "").strip(),
-                    "zemin": (row.get("Son Kosu Zemin Durumu") or "").strip(),
+                    "cikti": norm_text(get_first(row, "Çıktı", "Ã‡Ä±ktÄ±")),
+                    "stil_etiketi": norm_text(row.get("Stil Etiketi") or ""),
+                    "stil_etiketi_2": norm_text(row.get("Stil Etiketi 2") or ""),
+                    "zemin": norm_text(row.get("Son Kosu Zemin Durumu") or ""),
                     "slow5": (row.get("Birinciden 5sn+") or "").strip(),
-                    "fark_sn": (row.get("Birinciden Fark Sn") or "").strip(),
+                    "fark_sn": norm_text(row.get("Birinciden Fark Sn") or ""),
                 }
             )
 
@@ -99,7 +116,7 @@ def main() -> int:
     parts.append("<head>")
     parts.append('  <meta charset="utf-8" />')
     parts.append('  <meta name="viewport" content="width=device-width, initial-scale=1" />')
-    parts.append(f"  <title>{esc(args.city)} At Analiz Listesi</title>")
+    parts.append(f"  <title>{esc(norm_text(args.city))} At Analiz Listesi</title>")
     parts.append("  <style>")
     parts.append("    :root { color-scheme: light; }")
     parts.append("    body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #f6f7fb; color: #1f2a37; }")
@@ -128,7 +145,7 @@ def main() -> int:
     parts.append('  <div class="wrap">')
     parts.append('    <p class="role-note">Profesor ve Yardimci Profesor icin</p>')
     parts.append('    <div class="topbar"><a class="back" href="index.html">Geri Don ve Sehir Sec</a></div>')
-    parts.append(f"    <h1>{esc(args.city)} Kosulari - At Listesi</h1>")
+    parts.append(f"    <h1>{esc(norm_text(args.city))} Kosulari - At Listesi</h1>")
     parts.append('    <p class="sub">Kosu kosu at numarasi, isim, cikti ve stil etiketleri</p>')
 
     for race_name, horses in races:
