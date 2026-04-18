@@ -1,0 +1,483 @@
+================================================================================
+AT KALİTESİ SIRALAMASI - DETAYLI RAPOR (AVERAGE HANDICAP)
+Average Handicap Analizi
+================================================================================
+
+
+============================================================
+Sıra #1: G 1
+============================================================
+Toplam Dosya: 29
+Veri İçeren Dosya: 29
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     97.43 kg
+  Ortanca (Median):    100.80 kg
+  Minimum:             60.67 kg
+  Maksimum:            111.40 kg
+  Std. Sapma:          10.79 kg
+
+
+============================================================
+Sıra #2: G3 Handikap
+============================================================
+Toplam Dosya: 1
+Veri İçeren Dosya: 1
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     94.00 kg
+  Ortanca (Median):    94.00 kg
+  Minimum:             94.00 kg
+  Maksimum:            94.00 kg
+
+
+============================================================
+Sıra #3: G 2
+============================================================
+Toplam Dosya: 33
+Veri İçeren Dosya: 33
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     92.14 kg
+  Ortanca (Median):    92.00 kg
+  Minimum:             57.80 kg
+  Maksimum:            110.20 kg
+  Std. Sapma:          11.87 kg
+
+
+============================================================
+Sıra #4: Kısa Vade 24
+============================================================
+Toplam Dosya: 23
+Veri İçeren Dosya: 23
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     91.32 kg
+  Ortanca (Median):    92.50 kg
+  Minimum:             72.00 kg
+  Maksimum:            102.00 kg
+  Std. Sapma:          6.62 kg
+
+
+============================================================
+Sıra #5: G 3
+============================================================
+Toplam Dosya: 63
+Veri İçeren Dosya: 63
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     91.30 kg
+  Ortanca (Median):    95.00 kg
+  Minimum:             60.00 kg
+  Maksimum:            117.00 kg
+  Std. Sapma:          13.79 kg
+
+
+============================================================
+Sıra #6: A 2
+============================================================
+Toplam Dosya: 13
+Veri İçeren Dosya: 13
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     90.97 kg
+  Ortanca (Median):    95.67 kg
+  Minimum:             58.33 kg
+  Maksimum:            106.00 kg
+  Std. Sapma:          15.25 kg
+
+
+============================================================
+Sıra #7: KV-9
+============================================================
+Toplam Dosya: 63
+Veri İçeren Dosya: 63
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     88.32 kg
+  Ortanca (Median):    87.40 kg
+  Minimum:             67.33 kg
+  Maksimum:            110.00 kg
+  Std. Sapma:          11.09 kg
+
+
+============================================================
+Sıra #8: A 3
+============================================================
+Toplam Dosya: 54
+Veri İçeren Dosya: 54
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     87.31 kg
+  Ortanca (Median):    88.16 kg
+  Minimum:             55.33 kg
+  Maksimum:            110.00 kg
+  Std. Sapma:          14.05 kg
+
+
+============================================================
+Sıra #9: Kısa Vade 22
+============================================================
+Toplam Dosya: 41
+Veri İçeren Dosya: 41
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     86.71 kg
+  Ortanca (Median):    89.00 kg
+  Minimum:             74.00 kg
+  Maksimum:            97.00 kg
+  Std. Sapma:          5.83 kg
+
+
+============================================================
+Sıra #10: KV-8
+============================================================
+Toplam Dosya: 138
+Veri İçeren Dosya: 138
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     86.00 kg
+  Ortanca (Median):    88.33 kg
+  Minimum:             48.00 kg
+  Maksimum:            108.67 kg
+  Std. Sapma:          11.81 kg
+
+
+============================================================
+Sıra #11: Handikap 24
+============================================================
+Toplam Dosya: 6
+Veri İçeren Dosya: 6
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     82.28 kg
+  Ortanca (Median):    83.34 kg
+  Minimum:             72.67 kg
+  Maksimum:            87.67 kg
+  Std. Sapma:          5.92 kg
+
+
+============================================================
+Sıra #12: Handikap 22
+============================================================
+Toplam Dosya: 31
+Veri İçeren Dosya: 31
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     77.97 kg
+  Ortanca (Median):    79.00 kg
+  Minimum:             64.00 kg
+  Maksimum:            88.67 kg
+  Std. Sapma:          6.21 kg
+
+
+============================================================
+Sıra #13: KV-7
+============================================================
+Toplam Dosya: 140
+Veri İçeren Dosya: 140
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     77.68 kg
+  Ortanca (Median):    78.10 kg
+  Minimum:             42.00 kg
+  Maksimum:            104.00 kg
+  Std. Sapma:          12.42 kg
+
+
+============================================================
+Sıra #14: Amatör Binici
+============================================================
+Toplam Dosya: 1
+Veri İçeren Dosya: 1
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     76.00 kg
+  Ortanca (Median):    76.00 kg
+  Minimum:             76.00 kg
+  Maksimum:            76.00 kg
+
+
+============================================================
+Sıra #15: Handikap 21
+============================================================
+Toplam Dosya: 67
+Veri İçeren Dosya: 67
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     75.74 kg
+  Ortanca (Median):    76.40 kg
+  Minimum:             63.00 kg
+  Maksimum:            87.50 kg
+  Std. Sapma:          5.69 kg
+
+
+============================================================
+Sıra #16: KV-6
+============================================================
+Toplam Dosya: 161
+Veri İçeren Dosya: 161
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     74.13 kg
+  Ortanca (Median):    75.17 kg
+  Minimum:             42.00 kg
+  Maksimum:            106.00 kg
+  Std. Sapma:          13.51 kg
+
+
+============================================================
+Sıra #17: KV-18
+============================================================
+Toplam Dosya: 3
+Veri İçeren Dosya: 3
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     72.07 kg
+  Ortanca (Median):    67.00 kg
+  Minimum:             64.00 kg
+  Maksimum:            85.20 kg
+  Std. Sapma:          11.47 kg
+
+
+============================================================
+Sıra #18: SATIŞ 4
+============================================================
+Toplam Dosya: 10
+Veri İçeren Dosya: 10
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     71.40 kg
+  Ortanca (Median):    69.00 kg
+  Minimum:             53.00 kg
+  Maksimum:            95.00 kg
+  Std. Sapma:          12.99 kg
+
+
+============================================================
+Sıra #19: ŞARTLI 5
+============================================================
+Toplam Dosya: 226
+Veri İçeren Dosya: 226
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     71.20 kg
+  Ortanca (Median):    70.91 kg
+  Minimum:             19.00 kg
+  Maksimum:            96.00 kg
+  Std. Sapma:          10.78 kg
+
+
+============================================================
+Sıra #20: Handikap 17
+============================================================
+Toplam Dosya: 157
+Veri İçeren Dosya: 157
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     68.79 kg
+  Ortanca (Median):    68.60 kg
+  Minimum:             47.50 kg
+  Maksimum:            88.00 kg
+  Std. Sapma:          6.55 kg
+
+
+============================================================
+Sıra #21: ŞARTLI 4
+============================================================
+Toplam Dosya: 254
+Veri İçeren Dosya: 253
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     64.12 kg
+  Ortanca (Median):    63.58 kg
+  Minimum:             41.50 kg
+  Maksimum:            99.00 kg
+  Std. Sapma:          10.36 kg
+
+
+============================================================
+Sıra #22: SATIŞ 3
+============================================================
+Toplam Dosya: 37
+Veri İçeren Dosya: 37
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     61.61 kg
+  Ortanca (Median):    59.00 kg
+  Minimum:             32.00 kg
+  Maksimum:            97.00 kg
+  Std. Sapma:          16.51 kg
+
+
+============================================================
+Sıra #23: KADIN BİNİCİ
+============================================================
+Toplam Dosya: 1
+Veri İçeren Dosya: 1
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     59.00 kg
+  Ortanca (Median):    59.00 kg
+  Minimum:             59.00 kg
+  Maksimum:            59.00 kg
+
+
+============================================================
+Sıra #24: Handikap 16
+============================================================
+Toplam Dosya: 233
+Veri İçeren Dosya: 233
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     55.75 kg
+  Ortanca (Median):    55.71 kg
+  Minimum:             42.00 kg
+  Maksimum:            71.00 kg
+  Std. Sapma:          4.26 kg
+
+
+============================================================
+Sıra #25: ŞARTLI 3
+============================================================
+Toplam Dosya: 251
+Veri İçeren Dosya: 247
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     54.55 kg
+  Ortanca (Median):    54.53 kg
+  Minimum:             24.00 kg
+  Maksimum:            99.00 kg
+  Std. Sapma:          11.76 kg
+
+
+============================================================
+Sıra #26: SATIŞ 1
+============================================================
+Toplam Dosya: 79
+Veri İçeren Dosya: 79
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     52.23 kg
+  Ortanca (Median):    50.38 kg
+  Minimum:             29.00 kg
+  Maksimum:            84.00 kg
+  Std. Sapma:          11.48 kg
+
+
+============================================================
+Sıra #27: KADIN AMATÖR
+============================================================
+Toplam Dosya: 3
+Veri İçeren Dosya: 3
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     51.90 kg
+  Ortanca (Median):    51.20 kg
+  Minimum:             42.00 kg
+  Maksimum:            62.50 kg
+  Std. Sapma:          10.27 kg
+
+
+============================================================
+Sıra #28: ŞARTLI 2
+============================================================
+Toplam Dosya: 126
+Veri İçeren Dosya: 125
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     49.55 kg
+  Ortanca (Median):    46.71 kg
+  Minimum:             18.00 kg
+  Maksimum:            94.00 kg
+  Std. Sapma:          15.21 kg
+
+
+============================================================
+Sıra #29: SATIŞ 2
+============================================================
+Toplam Dosya: 98
+Veri İçeren Dosya: 98
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     48.56 kg
+  Ortanca (Median):    46.73 kg
+  Minimum:             17.00 kg
+  Maksimum:            98.00 kg
+  Std. Sapma:          12.82 kg
+
+
+============================================================
+Sıra #30: Handikap 15
+============================================================
+Toplam Dosya: 233
+Veri İçeren Dosya: 233
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     47.21 kg
+  Ortanca (Median):    47.00 kg
+  Minimum:             35.00 kg
+  Maksimum:            63.00 kg
+  Std. Sapma:          4.08 kg
+
+
+============================================================
+Sıra #31: Handikap 14
+============================================================
+Toplam Dosya: 207
+Veri İçeren Dosya: 207
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     40.68 kg
+  Ortanca (Median):    40.75 kg
+  Minimum:             33.00 kg
+  Maksimum:            54.00 kg
+  Std. Sapma:          3.25 kg
+
+
+============================================================
+Sıra #32: Handikap 13
+============================================================
+Toplam Dosya: 56
+Veri İçeren Dosya: 56
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     32.46 kg
+  Ortanca (Median):    31.45 kg
+  Minimum:             22.00 kg
+  Maksimum:            40.00 kg
+  Std. Sapma:          3.90 kg
+
+
+============================================================
+Sıra #33: ŞARTLI 19
+============================================================
+Toplam Dosya: 83
+Veri İçeren Dosya: 75
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     30.79 kg
+  Ortanca (Median):    31.40 kg
+  Minimum:             15.00 kg
+  Maksimum:            38.80 kg
+  Std. Sapma:          4.83 kg
+
+
+============================================================
+Sıra #34: Maiden
+============================================================
+Toplam Dosya: 201
+Veri İçeren Dosya: 166
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     30.41 kg
+  Ortanca (Median):    31.35 kg
+  Minimum:             17.50 kg
+  Maksimum:            37.86 kg
+  Std. Sapma:          3.92 kg
+
+
+============================================================
+VERİ BULUNMAYAN KOŞU TÜRLERİ:
+============================================================
+  - ŞARTLI 1 (83 dosya tarandı)

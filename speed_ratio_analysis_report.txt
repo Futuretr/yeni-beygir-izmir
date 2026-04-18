@@ -1,0 +1,492 @@
+================================================================================
+AT KALİTESİ SIRALAMASI - DETAYLI RAPOR (HIZ ORANI)
+Distance / Time Analizi (metre/saniye)
+================================================================================
+
+
+============================================================
+Sıra #1: G3 Handikap
+============================================================
+Toplam Dosya: 1
+Veri İçeren Dosya: 1
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     16.87 m/s
+  Ortanca (Median):    16.87 m/s
+  Minimum:             16.87 m/s
+  Maksimum:            16.87 m/s
+
+
+============================================================
+Sıra #2: SATIŞ 4
+============================================================
+Toplam Dosya: 10
+Veri İçeren Dosya: 10
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     16.36 m/s
+  Ortanca (Median):    16.41 m/s
+  Minimum:             15.91 m/s
+  Maksimum:            16.77 m/s
+  Std. Sapma:          0.32 m/s
+
+
+============================================================
+Sıra #3: KV-18
+============================================================
+Toplam Dosya: 3
+Veri İçeren Dosya: 3
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     16.32 m/s
+  Ortanca (Median):    16.84 m/s
+  Minimum:             15.25 m/s
+  Maksimum:            16.86 m/s
+  Std. Sapma:          0.92 m/s
+
+
+============================================================
+Sıra #4: KADIN BİNİCİ
+============================================================
+Toplam Dosya: 1
+Veri İçeren Dosya: 1
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     16.13 m/s
+  Ortanca (Median):    16.13 m/s
+  Minimum:             16.13 m/s
+  Maksimum:            16.13 m/s
+
+
+============================================================
+Sıra #5: A 2
+============================================================
+Toplam Dosya: 13
+Veri İçeren Dosya: 13
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.95 m/s
+  Ortanca (Median):    15.93 m/s
+  Minimum:             14.96 m/s
+  Maksimum:            16.73 m/s
+  Std. Sapma:          0.48 m/s
+
+
+============================================================
+Sıra #6: Kısa Vade 24
+============================================================
+Toplam Dosya: 23
+Veri İçeren Dosya: 23
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.83 m/s
+  Ortanca (Median):    15.97 m/s
+  Minimum:             14.15 m/s
+  Maksimum:            17.07 m/s
+  Std. Sapma:          0.73 m/s
+
+
+============================================================
+Sıra #7: Handikap 24
+============================================================
+Toplam Dosya: 6
+Veri İçeren Dosya: 6
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.65 m/s
+  Ortanca (Median):    15.73 m/s
+  Minimum:             14.34 m/s
+  Maksimum:            16.81 m/s
+  Std. Sapma:          0.99 m/s
+
+
+============================================================
+Sıra #8: KV-9
+============================================================
+Toplam Dosya: 63
+Veri İçeren Dosya: 63
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.61 m/s
+  Ortanca (Median):    15.78 m/s
+  Minimum:             13.94 m/s
+  Maksimum:            17.44 m/s
+  Std. Sapma:          0.89 m/s
+
+
+============================================================
+Sıra #9: G 1
+============================================================
+Toplam Dosya: 29
+Veri İçeren Dosya: 29
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.61 m/s
+  Ortanca (Median):    15.48 m/s
+  Minimum:             13.87 m/s
+  Maksimum:            17.79 m/s
+  Std. Sapma:          0.94 m/s
+
+
+============================================================
+Sıra #10: G 2
+============================================================
+Toplam Dosya: 33
+Veri İçeren Dosya: 33
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.60 m/s
+  Ortanca (Median):    15.84 m/s
+  Minimum:             14.07 m/s
+  Maksimum:            17.17 m/s
+  Std. Sapma:          0.87 m/s
+
+
+============================================================
+Sıra #11: Handikap 21
+============================================================
+Toplam Dosya: 67
+Veri İçeren Dosya: 67
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.51 m/s
+  Ortanca (Median):    15.46 m/s
+  Minimum:             13.48 m/s
+  Maksimum:            17.10 m/s
+  Std. Sapma:          0.96 m/s
+
+
+============================================================
+Sıra #12: ŞARTLI 1
+============================================================
+Toplam Dosya: 83
+Veri İçeren Dosya: 83
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.50 m/s
+  Ortanca (Median):    15.68 m/s
+  Minimum:             12.91 m/s
+  Maksimum:            17.10 m/s
+  Std. Sapma:          0.92 m/s
+
+
+============================================================
+Sıra #13: KADIN AMATÖR
+============================================================
+Toplam Dosya: 3
+Veri İçeren Dosya: 3
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.48 m/s
+  Ortanca (Median):    16.11 m/s
+  Minimum:             14.18 m/s
+  Maksimum:            16.14 m/s
+  Std. Sapma:          1.12 m/s
+
+
+============================================================
+Sıra #14: SATIŞ 3
+============================================================
+Toplam Dosya: 37
+Veri İçeren Dosya: 37
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.46 m/s
+  Ortanca (Median):    15.83 m/s
+  Minimum:             13.87 m/s
+  Maksimum:            16.83 m/s
+  Std. Sapma:          0.93 m/s
+
+
+============================================================
+Sıra #15: A 3
+============================================================
+Toplam Dosya: 54
+Veri İçeren Dosya: 54
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.45 m/s
+  Ortanca (Median):    15.67 m/s
+  Minimum:             13.00 m/s
+  Maksimum:            17.22 m/s
+  Std. Sapma:          1.10 m/s
+
+
+============================================================
+Sıra #16: Handikap 22
+============================================================
+Toplam Dosya: 31
+Veri İçeren Dosya: 31
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.36 m/s
+  Ortanca (Median):    15.39 m/s
+  Minimum:             13.78 m/s
+  Maksimum:            16.87 m/s
+  Std. Sapma:          0.98 m/s
+
+
+============================================================
+Sıra #17: KV-8
+============================================================
+Toplam Dosya: 138
+Veri İçeren Dosya: 138
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.36 m/s
+  Ortanca (Median):    15.38 m/s
+  Minimum:             13.08 m/s
+  Maksimum:            17.29 m/s
+  Std. Sapma:          0.95 m/s
+
+
+============================================================
+Sıra #18: Kısa Vade 22
+============================================================
+Toplam Dosya: 41
+Veri İçeren Dosya: 41
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.36 m/s
+  Ortanca (Median):    15.40 m/s
+  Minimum:             13.62 m/s
+  Maksimum:            16.97 m/s
+  Std. Sapma:          0.95 m/s
+
+
+============================================================
+Sıra #19: KV-7
+============================================================
+Toplam Dosya: 140
+Veri İçeren Dosya: 140
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.34 m/s
+  Ortanca (Median):    15.38 m/s
+  Minimum:             13.11 m/s
+  Maksimum:            17.14 m/s
+  Std. Sapma:          0.99 m/s
+
+
+============================================================
+Sıra #20: G 3
+============================================================
+Toplam Dosya: 63
+Veri İçeren Dosya: 63
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.33 m/s
+  Ortanca (Median):    15.26 m/s
+  Minimum:             13.07 m/s
+  Maksimum:            16.87 m/s
+  Std. Sapma:          0.97 m/s
+
+
+============================================================
+Sıra #21: Handikap 17
+============================================================
+Toplam Dosya: 157
+Veri İçeren Dosya: 157
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.32 m/s
+  Ortanca (Median):    15.35 m/s
+  Minimum:             12.78 m/s
+  Maksimum:            17.02 m/s
+  Std. Sapma:          0.96 m/s
+
+
+============================================================
+Sıra #22: SATIŞ 2
+============================================================
+Toplam Dosya: 98
+Veri İçeren Dosya: 98
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.19 m/s
+  Ortanca (Median):    15.13 m/s
+  Minimum:             13.65 m/s
+  Maksimum:            16.87 m/s
+  Std. Sapma:          0.85 m/s
+
+
+============================================================
+Sıra #23: KV-6
+============================================================
+Toplam Dosya: 161
+Veri İçeren Dosya: 161
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.13 m/s
+  Ortanca (Median):    15.13 m/s
+  Minimum:             12.56 m/s
+  Maksimum:            17.35 m/s
+  Std. Sapma:          1.03 m/s
+
+
+============================================================
+Sıra #24: SATIŞ 1
+============================================================
+Toplam Dosya: 79
+Veri İçeren Dosya: 79
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.11 m/s
+  Ortanca (Median):    15.16 m/s
+  Minimum:             13.30 m/s
+  Maksimum:            17.06 m/s
+  Std. Sapma:          0.89 m/s
+
+
+============================================================
+Sıra #25: ŞARTLI 5
+============================================================
+Toplam Dosya: 226
+Veri İçeren Dosya: 226
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.10 m/s
+  Ortanca (Median):    15.14 m/s
+  Minimum:             12.56 m/s
+  Maksimum:            17.46 m/s
+  Std. Sapma:          1.01 m/s
+
+
+============================================================
+Sıra #26: ŞARTLI 4
+============================================================
+Toplam Dosya: 254
+Veri İçeren Dosya: 254
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.05 m/s
+  Ortanca (Median):    15.06 m/s
+  Minimum:             12.76 m/s
+  Maksimum:            17.43 m/s
+  Std. Sapma:          1.02 m/s
+
+
+============================================================
+Sıra #27: Handikap 16
+============================================================
+Toplam Dosya: 233
+Veri İçeren Dosya: 233
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.04 m/s
+  Ortanca (Median):    15.07 m/s
+  Minimum:             12.77 m/s
+  Maksimum:            17.58 m/s
+  Std. Sapma:          1.00 m/s
+
+
+============================================================
+Sıra #28: Maiden
+============================================================
+Toplam Dosya: 201
+Veri İçeren Dosya: 201
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     15.00 m/s
+  Ortanca (Median):    14.97 m/s
+  Minimum:             12.66 m/s
+  Maksimum:            17.03 m/s
+  Std. Sapma:          1.06 m/s
+
+
+============================================================
+Sıra #29: ŞARTLI 3
+============================================================
+Toplam Dosya: 251
+Veri İçeren Dosya: 251
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     14.97 m/s
+  Ortanca (Median):    14.99 m/s
+  Minimum:             12.45 m/s
+  Maksimum:            17.09 m/s
+  Std. Sapma:          1.01 m/s
+
+
+============================================================
+Sıra #30: Handikap 15
+============================================================
+Toplam Dosya: 233
+Veri İçeren Dosya: 233
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     14.95 m/s
+  Ortanca (Median):    14.97 m/s
+  Minimum:             12.47 m/s
+  Maksimum:            17.02 m/s
+  Std. Sapma:          1.03 m/s
+
+
+============================================================
+Sıra #31: Handikap 14
+============================================================
+Toplam Dosya: 207
+Veri İçeren Dosya: 207
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     14.88 m/s
+  Ortanca (Median):    14.90 m/s
+  Minimum:             12.63 m/s
+  Maksimum:            17.15 m/s
+  Std. Sapma:          1.02 m/s
+
+
+============================================================
+Sıra #32: ŞARTLI 19
+============================================================
+Toplam Dosya: 83
+Veri İçeren Dosya: 83
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     14.86 m/s
+  Ortanca (Median):    14.81 m/s
+  Minimum:             12.51 m/s
+  Maksimum:            16.63 m/s
+  Std. Sapma:          1.05 m/s
+
+
+============================================================
+Sıra #33: ŞARTLI 2
+============================================================
+Toplam Dosya: 126
+Veri İçeren Dosya: 126
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     14.66 m/s
+  Ortanca (Median):    14.72 m/s
+  Minimum:             12.40 m/s
+  Maksimum:            16.74 m/s
+  Std. Sapma:          1.01 m/s
+
+
+============================================================
+Sıra #34: Amatör Binici
+============================================================
+Toplam Dosya: 1
+Veri İçeren Dosya: 1
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     14.51 m/s
+  Ortanca (Median):    14.51 m/s
+  Minimum:             14.51 m/s
+  Maksimum:            14.51 m/s
+
+
+============================================================
+Sıra #35: Handikap 13
+============================================================
+Toplam Dosya: 56
+Veri İçeren Dosya: 56
+
+İSTATİSTİKLER:
+  Ortalama (Mean):     14.27 m/s
+  Ortanca (Median):    14.27 m/s
+  Minimum:             12.34 m/s
+  Maksimum:            16.28 m/s
+  Std. Sapma:          1.05 m/s
+

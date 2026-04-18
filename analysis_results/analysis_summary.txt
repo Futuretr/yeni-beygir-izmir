@@ -1,0 +1,23 @@
+TOPLU YARIŞ ANALİZİ ÖZETİ
+================================================================================
+
+Toplam Yarış: 20
+Toplam At: 277
+Ortalama Yarış Başına At: 13.8
+
+Şehir Dağılımı:
+race_city
+Urfa    277
+
+Pist Tipi Dağılımı:
+race_track_type
+Kum    277
+
+Mesafe Dağılımı:
+race_distance
+1400    91
+1300    74
+1700    36
+1200    32
+1900    30
+1800    14

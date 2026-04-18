@@ -1,0 +1,1341 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Türkiye Jokey Kulübü Dernegi At Yetistiriciligi Ve Yarislari Iktisadi Isletmesi" />
+    <meta name="keywords" content="Türkiye Jokey Kulübü, AtYetistiriciligi, Yaris, hipodrom" />
+    <meta name="Author" content="TJK, tjk.org" />
+
+    
+
+    <title>İdman İstatistikleri</title>
+
+    <link href="/Content/font.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://medya-cdn.tjk.org/medyaftp/Content/box.css" />
+    <link href="https://medya-cdn.tjk.org/medyaftp/Content/tjk_30.css?v=2" rel="stylesheet" type="text/css"  />
+    <link href="https://medya-cdn.tjk.org/medyaftp/Content/columnwidths.css?v=7" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 7]>
+           <link href="/Content/tjk-ie7.css?v=1" rel="stylesheet"
+    type="text/css" />
+           <![endif]-->
+    <!--[if lte IE 6]>
+      <link href="/Content/tjk-ie6.css"
+    rel="stylesheet" type="text/css" />
+           <![endif]-->
+    <!--[if IE 8]>
+      <link href="/Content/tjk-ie8.css"
+    rel="stylesheet" type="text/css" />
+           <![endif]-->
+    <link href="https://medya-cdn.tjk.org/medyaftp/Content/datepicker.css" rel="stylesheet" type="text/css" />
+    <link href="https://medya-cdn.tjk.org/medyaftp/Content/form.css" rel="stylesheet" type="text/css" />
+
+    <!--Banners-->
+    <style type="text/css">
+
+        .raceWeatherGreen {
+            border: 2px solid green;
+            padding: 5px;
+            margin-right: 4px;
+            color: green;
+        }
+
+        .raceWeatherBrown {
+            border: 2px solid #996633;
+            padding: 5px;
+            margin-right: 4px;
+            color: #996633;
+        }
+
+        #loginesBox {
+            width: 160px;
+            height: 600px;
+            position: relative;
+            margin-top: 20px;
+            float: left;
+        }
+    </style>
+    <!--Banners-->
+
+
+        <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery-1.7.min.js"></script>
+
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.idTabs.min.js?v=1"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.jquerytools.min.js?v=1"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/customV5.js?v=1"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/init.js?v=5fbb7e79-4417-432f-bb98-e4a6cf05c681"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.select-replacr.js?v=1"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/uni-form-validation.jquery.min.js?v=2"></script>
+        <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/dateTR.js"></script>
+        <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/tr.js?v=2"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.ticker.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.captify.min.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.datePicker.js?v=1"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.rotator.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/selectivizr.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jquery.showoff.js?v=1"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/jqprint.js"></script>
+    <link href="https://medya-cdn.tjk.org/medyaftp/Content/images/favicon.ico" rel="SHORTCUT ICON" />
+
+
+
+    <script type="text/javascript">
+
+        function submitSuccesss() {
+            try {
+                submitTiming();
+            } catch (err) { }
+        }
+
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async=async src="https://www.googletagmanager.com/gtag/js?id=UA-21139746-2"></script>
+
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-21139746-2', { 'sample_rate': 5 });
+    </script>
+
+    <script type="text/javascript">
+        function closeBox(toClose) {
+            document.getElementById(toClose).style.display = "none";
+            setCookie(toClose, "closed", 365);
+        }
+        function setCookie(cName, value, expiredays) {
+            var expDate = new Date();
+            expDate.setDate(expDate.getDate() + expiredays);
+            document.cookie = cName + "=" + escape(value) +
+                ";expires=" + expDate.toGMTString();
+        }
+        function loadMsg(msgClass) {
+            msg = document.getElementsByTagName("div");
+            for (i = 0; i < msg.length; i++) {
+                if (msg[i].className == msgClass) {
+                    if (document.cookie.indexOf(msg[i].id) == -1) {
+                        msg[i].style.display = "block";
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function isIpad() {
+            const ua = window.navigator.userAgent;
+            if (ua.indexOf('iPad') > -1) {
+                return true;
+            }
+            if (ua.indexOf('Macintosh') > -1) {
+                try {
+                    document.createEvent("TouchEvent");
+                    return true;
+                } catch (e) { }
+            }
+
+            return false;
+        }
+    </script>
+
+</head>
+
+<body onload="loadMsg('msgbox');">
+
+
+
+    <!-- Kulakçık başlangıç-->
+    <!-- Kulakçık bitiş-->
+
+
+    <div class="tjk">
+
+        <div class="container_24 ">
+
+            <div class="grid_13 home">
+                <a href="/TR/YarisSever/YarisSever/Index" class="logo"></a>
+            </div>
+
+            <div class="grid_11">
+
+                <div class="i18n">
+                        <div style="right:0; position:absolute;">
+                            <a href="https://www.tjk.org/TR/YarisSever/YarisSever/Index">
+                                Ana Sayfa
+                            </a>
+
+                            <span style="color: white">|</span>
+
+                            <a href='/EN/YarisSever/Query/Page/IdmanIstatistikleri?QueryParameter_AtId=117124'>English</a>
+
+                            <span style="color: white">|</span>
+
+                            <a href="https://www.tjk.org/TR/YarisSever/Static/Page/SiteMap">
+                                Site Haritası
+                            </a>
+                            <span style="color: white">|</span>
+
+                            <a href="https://www.tjk.org/TR/YarisSever/Static/Page/BizeUlasin">
+                                Bize Ulaşın
+                            </a>
+                        </div>
+                </div>
+
+
+                    <div>
+                        <div style="float: left; margin-top: -8px !important;">
+                            <ul>
+                                <li>
+                                    <a href="https://www.facebook.com/T%C3%BCrkiye-Jokey-Kul%C3%BCb%C3%BC-420846981602324/" target="_blank"><img style="float:left;margin:10px 1px;width:25px; height:25px;" src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/facebook_1.png" class="" /></a>
+
+                                    <a href="https://twitter.com/_tjk_" target="_blank"><img style="float:left;margin:10px 1px;width:25px; height:25px;" src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/twitter_1.png" class="" /></a>
+
+                                    <a href="https://www.youtube.com/channel/UCNLO4lpteIloZ4IKb9L2DoA" target="_blank"> <img style="float:left;margin:10px 1px;width:25px; height:25px;" src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/youtube_1.png" class="" /></a>
+
+                                    <a href="https://www.instagram.com/turkiyejokeykulubu/" target="_blank">  <img style="float:left;margin:10px 1px;width:25px; height:25px;" src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/instagram_1.png" class="" /></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="nav" style="float:right; margin-top:0px !important;">
+                            <ul>
+                                <li>
+                                    <a href="/TR/Kurumsal/Kurumsal" class="tab-1">KURUMSAL</a>
+                                </li>
+                                <li>
+                                    <a href="/TR/YarisSever/YarisSever/Index" class="selected tab-2">YARIŞSEVER</a>
+                                </li>
+                                <li>
+                                    <a href="/TR/Yetistiricilik/Yetistiricilik" class="tab-3">YARIŞ ve YETİŞTİRİCİLİK</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+
+
+            <div class="clear">&nbsp;</div>
+            <div class="clear">&nbsp;</div>
+
+            <div class="push_4 grid_20 hot">
+                
+            </div>
+
+                <div>
+                    <div class="clear">
+                        &nbsp;
+                    </div>
+
+
+                    <div>
+
+
+                            <style type="text/css">
+                                #loginesBox {
+                                    /*z-index: -1 !important;*/
+                                    height: 0px;
+                                }
+                            </style>
+
+
+                        <div class="pane" id="yarissever" style="float:left">
+<div class="grid_20 prefix_4">
+                    <div class="menu">
+                        <div class="menus">
+                            <div class="menu_tabs">
+                                <a href="#tjk" class="menu-head">TJK</a>
+																<a href="#gunluk" class="menu-head">Günlük Bilgiler</a>
+																<a href="#report" class="menu-head">Raporlar</a>
+																<a href="#sorgu" class="menu-head">Sorgulama</a>
+																<a href="#stat" class="menu-head">İstatistikler</a>																
+																<a target="_blank" href="https://ebayi.tjk.org/" class="menu-head">Bahis Yap</a>
+                            </div>
+                            <form class="search" name="search">
+                            <input type="text" id="search-phrase" placeholder="Arama metni giriniz." />
+                            <select name="search-options" id="search-options">
+                                <option value="0" selected="selected">At İsmi İle</option>
+                                <option value="1">Anne Adı İle</option>
+                                <option value="2">Baba Adı İle</option>
+                                <option value="3">Sahip Adı İle</option>
+                                <option value="4">Jokey Adı İle</option>
+                                <option value="5">Yetiştirici Adı İle</option>
+                                <option value="6">Antrenör Adı İle</option>
+                            </select>
+                            <input type="submit" name="search-submit" value="ARA" id="search-button" />
+                            </form>
+                            <div class="clear">
+                                &nbsp;</div>
+                        </div>
+                        <ul id="tjk" class="menu-items">
+                          
+                            <div class="menu-col">
+                                <li><a href="/TR/Kurumsal/Static/Page/Tarihce">Tarihçe</a></li>
+                                <li><a href="/TR/Kurumsal/Static/Page/Baskanlarimiz">Başkanlarımız</a></li>
+                                <li><a href="/TR/Kurumsal/Static/Page/YonetimKurulu">Yönetim Kurulu</a></li>
+
+                            </div>
+                            <div class="menu-col">
+
+                                <li><a href="/TR/Kurumsal/Static/Page/Hipodromlar">Hipodromlar</a></li>
+                                <li><a href="/TR/YarisSever/Static/Page/HaraVeAsimIstasyonlari">Hara ve Aşım İstasyonları</a></li>
+                                <li><a href="/TR/YarisSever/Static/Page/AprantiEgitimMerkezi">Ekrem Kurt Aprt. Eğitim</a></li>
+                                <li><a href="/TR/Yarissever/Static/Page/SanalBayiler">Sanal Bayiler</a></li>
+
+                            </div>
+
+                            <div class="menu-col">
+                                <li><a href="/TR/YarisSever/Static/Page/Aygirlar">Aygırlar</a></li>
+                                <li><b><a href="/TR/Yarissever/Query/Page/Bayiler">Bayiler</a></b></li>
+                                <li><a href="/TR/YarisSever/Static/Page/Bahisler">Bahisler</a></li>
+                     
+                            </div>
+
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/YillikYarisProgramiCoklu">Yıllık Yarış Prog.</a></b></li>
+                                <li><a href="/TR/YarisSever/Query/Page/OnemliKosular">Önemli Koşular</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/TumOnemliKosular">Tüm İsimli Koşular</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/UluslarArasiKosuSonuclari">Uluslararası Koşular</a></li>
+                            </div>
+
+                            <div class="menu-col">
+
+                                <li><a href="/TR/YarisSever/Static/Page/GenelHukumler">Genel Hükümler</a></li>
+                                <li><a href="/TR/YarisSever/Static/Page/KanunYonetmelik">Kanun ve Yönetmelikler</a></li>
+                                <li><b><a href="/Kvkk">KVKK</a></b></li>
+
+                            </div>
+
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/BasindaBiz">Basında Biz</a></b></li>
+                                <li><b><a href="/TR/Kurumsal/Form/Beyazmasa">Beyaz Masa</a></b></li>
+                                <li><b><a href="/TR/Kurumsal/Static/Page/BizeUlasin">Bize Ulaşın</a></b></li>
+
+                            </div>
+
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Static/Page/TjkninSesi">TJK'nın Sesi</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Static/Page/YarisVeYetistiricilikKitabi">Yarış ve Yetiştiricilik</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Static/Page/Takvim">Takvim</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Static/Page/Duvarkagidi">Duvar Kağıtları</a></b></li>
+                            </div>
+
+
+                        </ul>
+                            <ul id="gunluk" class="menu-items">
+                                <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Info/Page/GunlukYarisProgrami">Yarış Programı</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Info/Page/GunlukYarisSonuclari">Yarış Sonuçları</a></b></li>
+                                <li>  <b><a href="/TR/YarisSever/Info/SabitIhtimalliOyunProgrami"><span>Sabit İhtimalli Yarış Programı</span> <p class="new_label_animation">Yeni</p></a></b></li>
+
+
+</div>
+                            <div class="menu-col">
+                                <li><a href="/TR/YarisSever/Info/Page/Kayitlar">Kayıtlar</a></li>                                
+                                <li><a href="/TR/YarisSever/Info/Page/Deklareler">Deklareler</a></li>
+                            </div>
+							<div class="menu-col">
+                               <li><b><a href="/TR/YarisSever/Query/Page/YillikYarisProgramiCoklu">Yıllık Yarış Programı</a></b></li>
+                               <li><b><a href="/TR/YarisSever/Query/Page/SatilikAtlar">Satılık Atlar</a></b></li>
+                            </div>
+
+							
+                        </ul>
+                        <ul id="sorgu" class="menu-items">
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/Atlar?QueryParameter_OLDUFLG=on">At Sorgulama</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/Orijin">Orijin Sorgulama</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/KosuSorgulama">Koşu Sorgulama</a></b></li>
+                            </div>
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/CezaliAtSahip">Cezalı At Sahibi</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/CezaliJokey">Cezalı Jokey</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/CezaliAt">Cezalı At</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/CezaliAntronor">Cezalı Antrenör</a></b></li>
+
+                            </div>
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/CezaliAtSahipVekili">Cezalı At Sahibi Vekili</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/CezaliSeyisveSeyisBasi">Cezalı Seyis ve SeyisBaşı</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/CezaliSairGorevli">Cezalı Sair Görevli</a></b></li>
+                                </div>
+                            <div class="menu-col">
+                                
+                                <li><b><a href="/TR/YarisSever/Query/Page/RaporluJokey">Raporlu Jokey</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/JokeyOlmayaKalanYarisSayisi">Jokey Olmaya Kalan</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/HandikapPuanlari">Handikap Puanları</a></b></li>
+                            </div>
+                            <div class="menu-col">
+                                <li><a href="/TR/YarisSever/Query/Page/UluslarArasiKosuSonuclari">Uluslararası Koşu</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/UzunVadeliKosu">Uzun Vadeli Koşu</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/YeniDoganTay">Yeni Doğan Tay</a></li>
+                                
+                            </div>
+
+                            <div class="menu-col">
+
+                                
+                                <li><a href="/TR/YarisSever/Query/Page/YasakliMaddeMuayeneSonuc">Yasaklı Madde Muayene Sonuç</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/AhirTahsis">Ahır Tahsis</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/AsimMuracatDetay">Aşım Müracaatları</a></li>
+
+                            </div>
+                        </ul>
+                        <ul id="stat" class="menu-items">
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/AtIstatistikleri">At</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/JokeyIstatistikleri">Jokey</a></b></li>
+                                <li><a href="/TR/YarisSever/Query/Page/AntrenorIstatistikleri">Antrenör</a></li>
+                                
+                            </div>
+                            <div class="menu-col">
+                                <li><a href="/TR/YarisSever/Query/Page/SahipIstatistikleri">Sahip</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/YetistiriciIstatistikleri">Yetiştirici</a></li>
+                            </div>
+                            <div class="menu-col">
+                                <li><a href="/TR/YarisSever/Query/Page/AygirIstatistikleri">Aygır</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/KisrakIstatistikleri">Kısrak</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/KisrakBabasi">Kısrak Babası</a></li>
+                            </div>
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/DereceIst">Derece</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/DetayliDereceIst">Detaylı Derece</a></b></li>
+                                <li><b><a href="/TR/YarisSever/Query/Page/Son800Ist">Son 800</a></b></li>
+                            </div>
+                            <div class="menu-col">
+                                <li><a href="/TR/YarisSever/Static/Page/GenelIstatistikler">Genel İstatistikler</a></li>
+                                <li><a href="/TR/YarisSever/Static/Page/AyrintiliIstatistikler">Ayrıntılı İstatistikler</a></li>
+                                <li><a href="/TR/YarisSever/Query/Page/IdmanIstatistikleri">İdman İstatistikleri</a></li>
+                            </div>
+                        </ul>
+                        <ul id="report" class="menu-items">
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/PistBilgileri">Pist Bilgileri</a></b></li>
+                            </div>
+                            <div class="menu-col">
+                                <li><b><a href="/TR/YarisSever/Query/Page/KomiserRaporlari">Komiser Raporları</a></b></li>
+			                </div>
+                        </ul>
+                        <ul id="bahis-menu" class="menu-items">
+                            <div class="menu-col">
+                             <li><a target="_blank" href="https://e-bayi.tjk.org/">Bahis Yap</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear">
+                    &nbsp;</div>
+                            <!--  -->
+<h2 class="tableTitle">İdman İstatistikleri</h2>
+<div class="printthis">
+    <a href="#" onclick='$("#dataDiv").jqprint(); return false;'>
+        Yazdır
+    </a>
+</div>
+
+<input id="raceStartTime" name="raceStartTime" time="08:00:00" type="hidden" value="08:00:00" />
+
+<form Class="query" action="/TR/YarisSever/Query/Data/IdmanIstatistikleri" data-ajax="true" data-ajax-complete="onQueryUpdate" data-ajax-loading="#table-loading" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-success="submitSuccesss" data-ajax-update="#dataDiv" id="ajaxForm" method="post"><input Class="txt autopostback" id="QueryParameter_ATADI" name="QueryParameter_ATADI" placeholder="At İsmi Giriniz" type="text" value="" /><input Class="txt datepicker" Style="" id="QueryParameter_tarih" name="QueryParameter_tarih" placeholder="Koşu Tarihi" type="text" value="" /><select Class="autopostbackDropdown filter " Style="" id="QueryParameter_SehirId" name="QueryParameter_SehirId" parentParameter="" parentParameter2="" placeholder="Koştuğu Tüm Hipodromlar"><option selected="selected" value="-1">Koştuğu T&#252;m Hipodromlar</option>
+<option value=""></option>
+<option value="1">Adana</option>
+<option value="5">Ankara</option>
+<option value="10">Antalya</option>
+<option value="4">Bursa</option>
+<option value="8">Diyarbakır</option>
+<option value="7">Elazığ</option>
+<option value="3">İstanbul</option>
+<option value="2">İzmir</option>
+<option value="9">Kocaeli</option>
+<option value="6">Şanlıurfa</option>
+</select><input Class="txt datepicker" Style="" id="QueryParameter_IDMANTARIH" name="QueryParameter_IDMANTARIH" placeholder="İdman Tarihi" type="text" value="" /><select Class="autopostbackDropdown filter " Style="" id="QueryParameter_KOSTUGUHIP" name="QueryParameter_KOSTUGUHIP" parentParameter="" parentParameter2="" placeholder="Tüm İdman Hipodromları"><option selected="selected" value="-1">T&#252;m İdman Hipodromları</option>
+<option value=""></option>
+<option value="Adana">Adana</option>
+<option value="Ankara">Ankara</option>
+<option value="Antalya">Antalya</option>
+<option value="Bursa">Bursa</option>
+<option value="Diyarbakır">Diyarbakır</option>
+<option value="Elazığ">Elazığ</option>
+<option value="İstanbul">İstanbul</option>
+<option value="İzmir">İzmir</option>
+<option value="Kocaeli">Kocaeli</option>
+<option value="Şanlıurfa">Şanlıurfa</option>
+</select>                <div class="clear"></div>
+<select Class="autopostbackDropdown filter " Style="" id="QueryParameter_IRKADI" name="QueryParameter_IRKADI" parentParameter="" parentParameter2="" placeholder="Tüm Irklar"><option selected="selected" value="-1">T&#252;m Irklar</option>
+<option value="Arap">Arap</option>
+<option value="İngiliz">İngiliz</option>
+</select><select Class="autopostbackDropdown filter " Style="" id="QueryParameter_CINSIYETADI" name="QueryParameter_CINSIYETADI" parentParameter="" parentParameter2="" placeholder="Tüm Cinsiyetler"><option selected="selected" value="-1">T&#252;m Cinsiyetler</option>
+<option value="Dişi">Dişi</option>
+<option value="Erkek">Erkek</option>
+</select><input date="01.01.0001" id="Era" name="Era" type="hidden" value="past" /><input id="Sort" name="Sort" type="hidden" value="" /><input id="OldQueryParameter_AtId" name="OldQueryParameter_AtId" type="hidden" value="117124" /></form>
+
+
+
+
+<link rel="stylesheet" href="https://medya-cdn.tjk.org/medyaftp/Content/css/select2.css" />
+
+<script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/select2.min.js"></script>
+    <script type="text/javascript" src="https://medya-cdn.tjk.org/medyaftp/Scripts/Select2-locales/select2_locale_tr.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("div.race-info > ul.gunluk-tabs > li > a").live('click', function () {
+            if ($("#QueryParameter_KOSMAZFLG").length > 0) {
+                $("form.query > input#helName").remove();
+                $("form.query").prepend('<input type="hidden" value="' + $(this).attr("href") + '" id="helName">');
+                $("#ShowSilk").removeAttr("checked");
+            }
+
+                //if (parseInt($("div.race-info > ul.gunluk-tabs > li > a").attr("data-sehir-id")) > 10 && parseInt($("div.race-info > ul.gunluk-tabs > li > a").attr("data-sehir-id")) < 1000) {
+                //    $("#ShowSilk").hide();
+                //    $("#ShowSilk").next("span").hide();
+                //} else {
+                //    $("#ShowSilk").show();
+                //    $("#ShowSilk").next("span").show();
+                //}
+        });
+        $("#ShowSilk").change(function () {
+            //if ($(this).is(":checked")) {
+            //    $("th.formaHeader").show();
+            //    $("td.gunluk-GunlukYarisProgrami-FormaKodu").show();
+            //    $("td.gunluk-GunlukYarisSonuclari-FormaKodu").show();
+            //}
+            //else {
+            //    $("th.formaHeader").hide();
+            //    $("td.gunluk-GunlukYarisProgrami-FormaKodu").hide();
+            //    $("td.gunluk-GunlukYarisSonuclari-FormaKodu").hide();
+            //}
+            const SilkPage = $("td.gunluk-GunlukYarisProgrami-FormaKodu > a > img").length > 0 ? $("td.gunluk-GunlukYarisProgrami-FormaKodu > a > img") : ($("td.gunluk-GunlukYarisSonuclari-FormaKodu > a > img").length > 0 ? $("td.gunluk-GunlukYarisSonuclari-FormaKodu > a > img") : null);
+            if ($(this).is(":checked")) {
+                $("th.formaHeader").show();
+                if (SilkPage != null) {
+                    SilkPage.parent().parent().show();
+                    for (i = 0; i < SilkPage.length; i++) {
+                        var att = document.createAttribute("src");
+                        var ImgTag = SilkPage[i];
+                        att.value = SilkPage.parent()[i].getAttribute("href");
+                        if (ImgTag.getAttribute("src") !== att.value) {
+                            ImgTag.setAttributeNode(att);
+                        }
+                    }
+                }
+            }
+            else {
+                $("th.formaHeader").hide();
+                if (SilkPage != null) {
+                    SilkPage.parent().parent().hide();
+                }
+            }
+
+        });
+        $("input[type='checkbox']#QueryParameter_OLDUFLG").change(function () {
+            if (this.checked) {
+                $("#ajaxForm").prepend('<input type="hidden" name="OldQueryParameter_OLDUFLG" id="OldQueryParameter_OLDUFLG" value="on" />');
+                $("#pagerForm").prepend('<input type="hidden" name="OldQueryParameter_OLDUFLG" id="OldQueryParameter_OLDUFLG" value="on" />');
+                postAjaxForm();
+            } else {
+                $("#ajaxForm").find("input#OldQueryParameter_OLDUFLG").remove();
+                $("#pagerForm").find("input#OldQueryParameter_OLDUFLG").remove();
+                postAjaxForm();
+            }
+        });
+
+
+        $(".select2ajax").select2({
+            minimumInputLength: 1,
+            allowClear: true,
+            ajax: {
+                url: "/TR/YarisSever/Query/ParameterQuery",
+                data: function (term, page) {
+                    var parentParameterName = $(this).data("parentParameterName");
+                    return { parameterName: $(this).data("parameterName"), filter: term, page: page, parentParameterName: parentParameterName, parentParameterValue: $('#QueryParameter_' + parentParameterName).val() };
+                },
+                results: function (data, page) {
+                    return { results: data.entities, more: data.totalCount > page * 20 };
+                }
+            },
+            initSelection: function (element, callback) {
+                var id = $(element).val();
+                var parameterName = $(element).data("parameterName");
+                if (id) {
+                    $.ajax({
+                        url: "/TR/YarisSever/Query/ParameterValue",
+                        data: { parameterName: parameterName, id: id },
+                        type: "GET",
+                        async: true,
+                    }).done(function (result) {
+                        callback({ id: result.Id, text: result.Name });
+                    });
+                }
+            }
+        });
+        $(".select2ajax").on("change", function (event) {
+            postAjaxForm();
+        });
+
+    });
+
+    function onQueryUpdate() {
+        if ($(document).find("input#helName").length > 0) {
+            var href = $(document).find("input#helName").val();
+            $("ul.gunluk-tabs li a[href='" + href + "']").click();
+        }
+    }
+</script>
+
+<div class="clear">
+    &nbsp;
+</div>
+<div class="table-loading" id="table-loading">
+    Sorgu Tamamlanıyor
+</div>
+<div class="clear">
+    &nbsp;
+</div>
+
+
+
+
+
+<div id="content" style='margin-top:10px;margin-left:10px;'>
+
+    
+
+    
+
+</div>
+
+<script>
+
+
+    function updateQueryStringParameter(uri, key, value) {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + value + '$2');
+        }
+        else {
+            return uri + separator + key + "=" + value;
+        }
+    }
+
+
+    
+
+
+</script>
+
+
+
+
+
+
+
+
+<div class="program" id="dataDiv">
+    <table id="queryTable" summary="Koşular" class="tablesorter">
+        <thead>
+            <tr>
+
+
+                    <th scope="col">
+                        <a name="ATADI" href="#" class="" title="" onclick="">At Adı</a>
+                    </th>
+                    <th scope="col">
+                        <a name="IRKADI" href="#" class="" title="" onclick="">Irk</a>
+                    </th>
+                    <th scope="col">
+                        <a name="CINSIYETADI" href="#" class="" title="" onclick="">Cins.</a>
+                    </th>
+                    <th scope="col">
+                        <a name="YAS" href="#" class="" title="" onclick="">Yaş</a>
+                    </th>
+                    <th scope="col">
+                        <a name="INFO1400" href="#" class="" title="" onclick="">1400m</a>
+                    </th>
+                    <th scope="col">
+                        <a name="INFO1200" href="#" class="" title="" onclick="">1200m</a>
+                    </th>
+                    <th scope="col">
+                        <a name="INFO1000" href="#" class="" title="" onclick="">1000m</a>
+                    </th>
+                    <th scope="col">
+                        <a name="INFO800" href="#" class="" title="" onclick="">800m</a>
+                    </th>
+                    <th scope="col">
+                        <a name="INFO600" href="#" class="" title="" onclick="">600m</a>
+                    </th>
+                    <th scope="col">
+                        <a name="INFO400" href="#" class="" title="" onclick="">400m</a>
+                    </th>
+                    <th scope="col">
+                        <a name="INFO200" href="#" class="" title="" onclick="">200m</a>
+                    </th>
+                    <th scope="col">
+                        <a name="GALOPKISA" href="#" class="" title="" onclick="">Durum</a>
+                    </th>
+                    <th scope="col">
+                        <a name="IDMANTARIH" href="#" class="" title="" onclick="">İ. Tarihi</a>
+                    </th>
+                    <th scope="col">
+                        <a name="KOSTUGUHIP" href="#" class="" title="" onclick="">İ. Hip.</a>
+                    </th>
+                    <th scope="col">
+                        <a name="ATINKONUMU" href="#" class="" title="" onclick="">P.Dur</a>
+                    </th>
+                    <th scope="col">
+                        <a name="PISTTUR" href="#" class="" title="" onclick="">Pist</a>
+                    </th>
+                    <th scope="col">
+                        <a name="IDMANTUR" href="#" class="" title="" onclick="">İ. T&#252;r&#252;</a>
+                    </th>
+                    <th scope="col">
+                        <a name="JOKEY" href="#" class="" title="" onclick="">İ. Jokeyi</a>
+                    </th>
+                    <th scope="col">
+                        <a name="Id" href="#" class="" title="" onclick="">Detay</a>
+                    </th>
+            </tr>
+        </thead>
+
+        <tbody id="tbody0" class="ajaxtbody">
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+0.44.20            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+16.01.2026            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+İBRAHİM S EFA SÖĞÜT            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=701096" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=701096&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+1.01.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.31.70            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+12.01.2026            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+İBRAHİM S EFA SÖĞÜT            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=700208" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=700208&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+0.45.30            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.70            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+09.01.2026            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+GÖKHAN ERDUMAN            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=698555" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=698555&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+0.59.20            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+28.12.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+NASUH AKTAŞ            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=694565" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=694565&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+0.41.30            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.27.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+16.09.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=644421" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=644421&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+1.10.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.28.20            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+06.09.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=639255" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=639255&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+0.43.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.28.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+04.09.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=637877" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=637877&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+1.10.70            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+30.08.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=635417" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=635417&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+1.10.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.27.70            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+08.08.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=623862" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=623862&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+0.57.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.28.30            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+03.08.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=621422" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=621422&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+0.56.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.27.70            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+24.07.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=615751" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=615751&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+0.58.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+20.07.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=613920" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=613920&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+04.06.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Kenter            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=589453" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=589453&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+1.10.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.28.70            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+Ç            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+31.05.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=587320" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=587320&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+1.12.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+24.05.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+	ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=583529" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=583529&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.00            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+22.05.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Sprint            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=581702" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=581702&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.28.60            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+15.05.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Sprint            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=578155" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=578155&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+0.55.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.27.20            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+03.05.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=571799" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=571799&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.30            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+01.05.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Sprint            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+ERDİ GÖKÇE            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=570415" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=570415&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="odd" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.30.20            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+28.04.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Sprint            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+GÖKHAN KALIN            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=570165" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=570165&quot;)>Detay</a>
+            </td>        </tr>
+        <tr class="even" >
+            <td class="sorgu-IdmanIstatistikleri-ATADI" style="">
+KOĞ TEPESİ            </td>            <td class="sorgu-IdmanIstatistikleri-IRKADI" style="">
+Arap            </td>            <td class="sorgu-IdmanIstatistikleri-CINSIYETADI" style="">
+Erkek            </td>            <td class="sorgu-IdmanIstatistikleri-YAS" style="">
+4            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1400" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO1000" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO800" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-INFO600" style="">
+0.43.70            </td>            <td class="sorgu-IdmanIstatistikleri-INFO400" style="">
+0.29.50            </td>            <td class="sorgu-IdmanIstatistikleri-INFO200" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-GALOPKISA" style="">
+R            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTARIH" style="">
+24.04.2025            </td>            <td class="sorgu-IdmanIstatistikleri-KOSTUGUHIP" style="">
+İzmir            </td>            <td class="sorgu-IdmanIstatistikleri-ATINKONUMU" style="">
+            </td>            <td class="sorgu-IdmanIstatistikleri-PISTTUR" style="">
+Kum            </td>            <td class="sorgu-IdmanIstatistikleri-IDMANTUR" style="">
+Galop            </td>            <td class="sorgu-IdmanIstatistikleri-JOKEY" style="">
+GÖKHAN KALIN            </td>            <td class="sorgu-IdmanIstatistikleri-Id" style="">
+                                <a target="_blank" href="../Page/../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=566592" onclick=openDetayPopup(&quot;../../Info/idmanpistiDetay?1=1&amp;QueryParameter_Id=566592&quot;)>Detay</a>
+            </td>        </tr>
+    <tr class="hidable">
+        <td colspan="19">
+            <div>
+                    <div>
+                        Toplam 21 sonuçtan 21 tanesi gösteriliyor
+                    </div>
+                    <a href="#">Başa Dön</a>
+            </div>
+            <div class="clear">
+                &nbsp;
+            </div>
+            <div>
+                <div class="table-loading" style="margin-top:0; height: 50px;" id="loading1">
+                    Yükleniyor...
+                </div>
+            </div>
+            <div class="clear">
+                &nbsp;
+            </div>
+        </td>
+    </tr>
+</tbody>
+
+    </table>
+
+
+</div>
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#queryTable thead tr th a").live("click", function () {
+            var sort = $("#Sort").val();
+            var sortItemName = $(this).attr("name");
+            var sortPartition = sort.length > 0 ? sort.split(",") : [];
+            var itemIndex = sortPartition.indexOf(sortItemName + " DESC");
+            if (itemIndex !== -1) {
+                sortPartition.splice(itemIndex, 1);
+                $(this).removeClass("down");
+            } else {
+                itemIndex = sortPartition.indexOf(sortItemName);
+                if (itemIndex === -1) {
+                    sortPartition.push(sortItemName);
+                    $(this).addClass("up");
+                } else {
+                    sortPartition.splice(itemIndex, 1, sortItemName + " DESC");
+                    $(this).removeClass("up").addClass("down");
+                }
+            }
+
+            $("#Sort").val(sortPartition.join());
+            postAjaxForm();
+        });
+
+    });
+</script>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="clear">
+                        &nbsp;
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="clear">
+            &nbsp;
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+<div class="footer-container" style="height:230px" >
+    <div class="container_24">
+        <div id="footer">
+            <div class="prefix_7 grid_4 footer-list">
+                <h2 style="text-align:center">
+                    KURUMSAL
+                </h2>
+                <ul>
+                    <li><a href="/TR/Kurumsal/Static/Page/KanunTuzukYonetmelik">Kanunlar ve Yönetmelikler</a></li>
+                    <li><a href="/TR/Kurumsal/Query/Page/Ilanlar">İlanlar</a></li>
+                    <li><a href="/TR/Kurumsal/Static/Page/BayilikIslemleri">Bayilik İşlemleri</a></li>
+                    <li><a href="/Kvkk">Kişisel Verilerin Korunması</a></li>
+                    <li><a href="/TR/Kurumsal/Static/Page/NasilGanyanBayiOlunur">Nasıl Ganyan Bayi Olunur?</a></li>
+                    <li><a href="/TR/Kurumsal/Static/Page/Baglantilar">Bağlantılar</a></li>
+                    <li><a href="https://onlinev2.tjk.org" target="_blank">Online İşlemler(Cari Hesap Takibi)</a></li>
+                    
+                    <li><a href="/TR/YarisSever/Form/BeyazMasa">Beyaz Masa</a></li>
+                </ul>
+            </div>
+            <div class="grid_4 footer-list">
+                <h2 style="text-align:center">
+                    YARIŞSEVER
+                </h2>
+                <ul>
+                    <li><a href="/TR/YarisSever/Query/Page/OnemliKosular">Önemli Koşular</a></li>
+                    <li><a href="/TR/YarisSever/Query/Page/UluslararasiKosu">Uluslararası Koşular</a></li>
+                    <li><a href="/TR/Yarissever/Static/Page/FotoFinis">Foto-Finiş Nasıl Çalışır?</a></li>
+                    <li><a href="/TR/Yarissever/Static/Page/Baglantilar">Bağlantılar</a></li>
+                    <li><a href="https://e-bayi.tjk.org/" target="_blank">Bahis Yap</a></li>
+                    <li><a href="/TR/Yarissever/Static/Page/Bahisler">Bahisler</a></li>
+                    <li><a href="/TR/Yarissever/Static/Page/Odeme">Kazançlı biletler nasıl ödenir?</a></li>
+                    <li><a href="/TR/YarisSever/Static/Page/NasilOynanir">Nasıl Oynanır ?</a></li>
+                    <li><a href="/TR/YarisSever/Form/BeyazMasa">Beyaz Masa</a></li>
+                    <li>  <a href="#" class="nesil-open-modal ">Çerez Tercihleri</a></li>
+					
+                </ul>
+            </div>
+            <div class="grid_5 footer-list">
+                <h2 style="text-align:center">
+                    YARIŞ ve YETİŞTİRİCİLİK
+                </h2>
+                <ul>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/GenelHukumler">Genel Hükümler</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/OBirSampiyondu">O Bir Şampiyondu</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/AprantiEgitimMerkezi">TJK Ekrem Kurt Apranti Eğitim Merkezi</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/Talimatnameler">Talimatnameler</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/AhirTahsis">Ahır Tahsis Müracaat Formu</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/Aygirlar">Aygırlar</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/SahipNasilOlunur">At Sahibi Belgesi Nasıl Alınır ?</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/Baglantilar">Bağlantılar</a></li>
+                    <li><a href="https://onlinev2.tjk.org" target="_blank">Online İşlemler(Cari Hesap Takibi)</a></li>
+                    <li><a href="/TR/Yetistiricilik/Static/Page/TripleCrown" target="_blank">Triple Crown Nedir ?</a></li>
+                    <li><a href="/TR/YarisSever/Form/BeyazMasa">Beyaz Masa</a></li>
+                </ul>
+            </div>
+            <div class="grid_4 footer-list">
+                <h2 style="text-align:center">
+                    SOSYAL MEDYA
+                </h2>
+                <div style="text-align:center;padding:5px 5px 5px 5px">
+                    <a href="https://www.facebook.com/T%C3%BCrkiye-Jokey-Kul%C3%BCb%C3%BC-420846981602324/" target="_blank"><img src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/facebook_1.png" width="30" height="30"></a> 
+                    <a href="http://twitter.com/_tjk_" target="_blank"> <img src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/twitter_1.png" width="30" height="30"></a>
+                 </div>
+                <div style="text-align:center;padding:5px 5px 5px 5px">
+                    <a href="https://www.youtube.com/channel/UCNLO4lpteIloZ4IKb9L2DoA" target="_blank"><img src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/youtube_1.png" width="30" height="30"></a>
+                    <a href="https://www.instagram.com/turkiyejokeykulubu" target="_blank"><img src="https://medya-cdn.tjk.org/medyaftp/img/socialmedia/instagram_1.png" width="30" height="30"></a>
+                </div>
+               
+
+                <a href="https://itunes.apple.com/tr/app/tjk-mobil/id735255624?l=tr&mt=8" target="_blank"><img src="https://medya-cdn.tjk.org/medyaftp/img/app2.png" width="178" height="50"></a> 
+                <a href="https://www.tjk.org/m/uygulama.html" target="_blank"><img src="https://medya-cdn.tjk.org/medyaftp/img/google.png"  style="margin-left:12px;"></a> 
+              
+
+            </div>
+            <div class="clear">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+    <img src="https://medya-cdn.tjk.org/medyaftp/site_img/sgs27001.png" alt="SGS 27001:2005" rel="#sgs" class="overlink sgs" />
+    <div id="sgs" class="overlay">
+        <img style="float:left" alt="ISO/IEC 27001:2005" src="https://medya-cdn.tjk.org/medyaftp/site_img/politikav9.jpg">
+    </div>
+</div>        <div class="footerText">
+            <a href="https://gazi.tjk.org/" target="_blank" class="footerTextItem">GAZİ</a> |
+            <a href="https://athastaneleri.tjk.org/" target="_blank" class="footerTextItem">TJK AT HASTANELERİ</a> |
+            <a href="https://atlaterapi.tjk.org/" target="_blank" class="footerTextItem">TJK ATLA TERAPİ</a> |
+            <a href="https://yayinlar.tjk.org/" target="_blank" class="footerTextItem">TJK YAYINLARI</a> |
+            <a href="https://ponyclub.tjk.org/index.html" target="_blank" class="footerTextItem">PONY CLUB</a>
+        </div>
+    </div>
+
+</body>
+</html>

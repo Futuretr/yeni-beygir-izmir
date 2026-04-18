@@ -1,0 +1,212 @@
+{
+  "regression": {
+    "metrics": {
+      "mae": 0.7833452460982583,
+      "rmse": 1.3566596914777598,
+      "r2": 0.8466059705365989
+    },
+    "top_features": [
+      {
+        "feature": "last_3_worst_finish",
+        "importance": 0.31388533115386963
+      },
+      {
+        "feature": "last_5_worst_finish",
+        "importance": 0.1594846397638321
+      },
+      {
+        "feature": "last_3_avg_finish",
+        "importance": 0.0942486897110939
+      },
+      {
+        "feature": "last_3_win_rate",
+        "importance": 0.03303109481930733
+      },
+      {
+        "feature": "last_3_best_finish",
+        "importance": 0.03169206902384758
+      },
+      {
+        "feature": "last_10_std_finish",
+        "importance": 0.02366986870765686
+      },
+      {
+        "feature": "last_5_win_rate",
+        "importance": 0.02344457618892193
+      },
+      {
+        "feature": "last_3_std_finish",
+        "importance": 0.016099870204925537
+      },
+      {
+        "feature": "last_5_avg_finish",
+        "importance": 0.014532695524394512
+      },
+      {
+        "feature": "last_10_avg_time",
+        "importance": 0.013940084725618362
+      }
+    ],
+    "group_stats": {
+      "Son Yarışlar": {
+        "total": 0.8282686471939087,
+        "avg": 0.03451119363307953,
+        "count": 24
+      },
+      "Pist/Mesafe": {
+        "total": 0.06109800189733505,
+        "avg": 0.006109800189733505,
+        "count": 10
+      },
+      "Genetik": {
+        "total": 0.019513923674821854,
+        "avg": 0.009756961837410927,
+        "count": 2
+      },
+      "Form": {
+        "total": 0.018355531617999077,
+        "avg": 0.0030592551920562983,
+        "count": 6
+      },
+      "İlişkisel": {
+        "total": 0.01705045811831951,
+        "avg": 0.005683485884219408,
+        "count": 3
+      },
+      "Kariyer": {
+        "total": 0.014202159829437733,
+        "avg": 0.004734053276479244,
+        "count": 3
+      },
+      "Temel": {
+        "total": 0.014164844527840614,
+        "avg": 0.0035412111319601536,
+        "count": 4
+      },
+      "Bahis": {
+        "total": 0.009805827401578426,
+        "avg": 0.0024514568503946066,
+        "count": 4
+      },
+      "Zaman": {
+        "total": 0.00849206279963255,
+        "avg": 0.0021230156999081373,
+        "count": 4
+      },
+      "Trend": {
+        "total": 0.007969933561980724,
+        "avg": 0.003984966780990362,
+        "count": 2
+      }
+    }
+  },
+  "classification": {
+    "metrics": {
+      "accuracy": 0.9927272727272727,
+      "confusion_matrix": [
+        [
+          258,
+          0
+        ],
+        [
+          2,
+          15
+        ]
+      ]
+    },
+    "top_features": [
+      {
+        "feature": "last_3_best_finish",
+        "importance": 0.24445973336696625
+      },
+      {
+        "feature": "last_5_std_finish",
+        "importance": 0.10391120612621307
+      },
+      {
+        "feature": "last_10_worst_finish",
+        "importance": 0.06026069074869156
+      },
+      {
+        "feature": "last_3_avg_time",
+        "importance": 0.02927117981016636
+      },
+      {
+        "feature": "form_length",
+        "importance": 0.028461536392569542
+      },
+      {
+        "feature": "last_10_avg_time",
+        "importance": 0.025096915662288666
+      },
+      {
+        "feature": "career_avg_time",
+        "importance": 0.02241560071706772
+      },
+      {
+        "feature": "last_5_avg_finish",
+        "importance": 0.02037024311721325
+      },
+      {
+        "feature": "last_5_top3_rate",
+        "importance": 0.02002899721264839
+      },
+      {
+        "feature": "last_3_worst_finish",
+        "importance": 0.01996087096631527
+      }
+    ],
+    "group_stats": {
+      "Son Yarışlar": {
+        "total": 0.6780726909637451,
+        "avg": 0.02825302816927433,
+        "count": 24
+      },
+      "Pist/Mesafe": {
+        "total": 0.07686714082956314,
+        "avg": 0.0076867141760885715,
+        "count": 10
+      },
+      "Form": {
+        "total": 0.06829407066106796,
+        "avg": 0.011382345110177994,
+        "count": 6
+      },
+      "Kariyer": {
+        "total": 0.04373004287481308,
+        "avg": 0.014576680958271027,
+        "count": 3
+      },
+      "İlişkisel": {
+        "total": 0.036015793681144714,
+        "avg": 0.01200526487082243,
+        "count": 3
+      },
+      "Temel": {
+        "total": 0.02477031946182251,
+        "avg": 0.0061925798654556274,
+        "count": 4
+      },
+      "Genetik": {
+        "total": 0.02209939807653427,
+        "avg": 0.011049699038267136,
+        "count": 2
+      },
+      "Bahis": {
+        "total": 0.020042698830366135,
+        "avg": 0.005010674707591534,
+        "count": 4
+      },
+      "Zaman": {
+        "total": 0.017442867159843445,
+        "avg": 0.004360716789960861,
+        "count": 4
+      },
+      "Trend": {
+        "total": 0.013332875445485115,
+        "avg": 0.0066664377227425575,
+        "count": 2
+      }
+    }
+  }
+}

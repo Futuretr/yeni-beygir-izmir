@@ -1,0 +1,115 @@
+{
+  "analysis_info": {
+    "race_category": "KV-8",
+    "city": "Izmir",
+    "horse_type": "Arap",
+    "track_type": "Kum",
+    "distance": 1600,
+    "ideal_time_seconds": 111.46,
+    "ideal_time_formatted": "1.51.45"
+  },
+  "horses": [
+    {
+      "horse_id": "102033",
+      "total_races": 45,
+      "avg_finish": 3.96,
+      "condition_stats": {
+        "races": 7,
+        "avg_finish": 2.29,
+        "avg_time_seconds": 111.14,
+        "avg_time_formatted": "1.51.14"
+      },
+      "comparison": {
+        "time_difference_seconds": -0.32,
+        "time_difference_formatted": "-0.32s",
+        "faster_than_ideal": true,
+        "percentage_diff": -0.29
+      }
+    },
+    {
+      "horse_id": "97016",
+      "total_races": 51,
+      "avg_finish": 3.25,
+      "condition_stats": {
+        "races": 5,
+        "avg_finish": 4.4,
+        "avg_time_seconds": 111.38,
+        "avg_time_formatted": "1.51.37"
+      },
+      "comparison": {
+        "time_difference_seconds": -0.08,
+        "time_difference_formatted": "-0.08s",
+        "faster_than_ideal": true,
+        "percentage_diff": -0.07
+      }
+    },
+    {
+      "horse_id": "78299",
+      "total_races": 71,
+      "avg_finish": 5.01,
+      "condition_stats": {
+        "races": 15,
+        "avg_finish": 4.33,
+        "avg_time_seconds": 116.16,
+        "avg_time_formatted": "1.56.15"
+      },
+      "comparison": {
+        "time_difference_seconds": 4.7,
+        "time_difference_formatted": "+4.70s",
+        "faster_than_ideal": false,
+        "percentage_diff": 4.22
+      }
+    },
+    {
+      "horse_id": "95565",
+      "total_races": 70,
+      "avg_finish": 3.79,
+      "condition_stats": {
+        "races": 6,
+        "avg_finish": 3.83,
+        "avg_time_seconds": 111.19,
+        "avg_time_formatted": "1.51.18"
+      },
+      "comparison": {
+        "time_difference_seconds": -0.27,
+        "time_difference_formatted": "-0.27s",
+        "faster_than_ideal": true,
+        "percentage_diff": -0.24
+      }
+    },
+    {
+      "horse_id": "107100",
+      "total_races": 52,
+      "avg_finish": 4.9,
+      "condition_stats": {
+        "races": 3,
+        "avg_finish": 7.0,
+        "avg_time_seconds": 115.78,
+        "avg_time_formatted": "1.55.78"
+      },
+      "comparison": {
+        "time_difference_seconds": 4.32,
+        "time_difference_formatted": "+4.32s",
+        "faster_than_ideal": false,
+        "percentage_diff": 3.88
+      }
+    },
+    {
+      "horse_id": "94711",
+      "total_races": 45,
+      "avg_finish": 3.49,
+      "condition_stats": {
+        "races": 3,
+        "avg_finish": 3.67,
+        "avg_time_seconds": 111.73,
+        "avg_time_formatted": "1.51.73"
+      },
+      "comparison": {
+        "time_difference_seconds": 0.27,
+        "time_difference_formatted": "+0.27s",
+        "faster_than_ideal": false,
+        "percentage_diff": 0.24
+      }
+    }
+  ]
+}

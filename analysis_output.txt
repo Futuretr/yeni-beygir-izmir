@@ -1,0 +1,19 @@
+﻿Model y³kleniyor...
+.\.venv\Scripts\python.exe : Traceback (most recent call last):
+At line:1 char:1
++ .\.venv\Scripts\python.exe comprehensive_analysis.py 2>&1 | Out-File  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteExcepti 
+   on
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\emir\Desktop\HorseRacingAPI-master\comprehensive_analysis.py", line 37, in <module>
+    predictor = XGBoostRacePredictor()
+  File "C:\Users\emir\Desktop\HorseRacingAPI-master\predict_with_xgboost.py", line 80, in __init__
+    print(f"\u2713 Modeller y³klendi: {model_dir}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\emir\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1254.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to 
+<undefined>
