@@ -6,8 +6,18 @@ from pathlib import Path
 
 
 def norm_text(s: str) -> str:
+    text = (s or "")
+    # Try to repair common UTF-8 -> latin1/cp1252 mojibake sequences.
+    for _ in range(2):
+        if any(ch in text for ch in ("Ã", "Å", "Ä")):
+            try:
+                text = text.encode("latin1", errors="strict").decode("utf-8", errors="strict")
+                continue
+            except Exception:
+                pass
+        break
     return (
-        (s or "")
+        text
         .replace("Ä°", "İ")
         .replace("Ã‡", "Ç")
         .replace("Ã–", "Ö")
