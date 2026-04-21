@@ -219,7 +219,7 @@ def main() -> int:
 
             last_race = (
                 f"Son {esc(row.get('son_mesafe', '') or '-') }m {esc(row.get('son_pist', '') or '-')}"
-                f"<br><span class='muted'>Son kilo: {esc(row.get('son_kilo', '') or '-')} | Simdiki kilo: {esc(row.get('kilo', '') or '-')} | Hipodrom: {esc(row.get('son_hipodrom', '') or '-')}</span>"
+                f"<br><span class='muted'>Son kilo: {esc(row.get('kilo', '') or '-')} | Simdiki kilo: {esc(row.get('son_kilo', '') or '-')} | Hipodrom: {esc(row.get('son_hipodrom', '') or '-')}</span>"
             )
             sample_size = esc(row.get("stil_veri_sayisi", "") or "0")
             parts.append(
