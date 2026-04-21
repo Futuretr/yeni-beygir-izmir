@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ankara At Analiz Listesi</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #f6f7fb; color: #1f2a37; }
+    .wrap { max-width: 1000px; margin: 24px auto 40px; padding: 0 16px; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .sub { margin: 0 0 24px; color: #5c6b7a; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .back { text-decoration: none; font-size: 13px; color: #0f3d5e; border: 1px solid #bfd0e1; padding: 6px 10px; border-radius: 999px; background: #eef4fb; }
+    .back:hover { background: #e2edf8; }
+    .role-note { margin: 0 0 10px; font-size: 13px; color: #334e68; font-weight: 600; }
+    .race { background: #fff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; overflow: hidden; }
+    .race h2 { margin: 0; padding: 12px 14px; background: #0f3d5e; color: #fff; font-size: 18px; }
+    .guide { background: #ffffff; border: 1px solid #d8dee9; border-radius: 12px; margin-bottom: 18px; padding: 12px; }
+    .guide h3 { margin: 0 0 8px; font-size: 15px; color: #0f3d5e; }
+    .guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .guide table { width: 100%; border-collapse: collapse; }
+    .guide th, .guide td { border: 1px solid #e6edf5; padding: 6px; font-size: 12px; }
+    .guide th { background: #f7fafc; }
+    .tempo { margin: 10px 14px 2px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tempo-chip { display: inline-block; border-radius: 999px; background: #f1f5f9; border: 1px solid #d5e0eb; color: #102a43; padding: 4px 10px; font-size: 12px; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #edf1f5; text-align: left; font-size: 14px; }
+    th { background: #f8fafc; color: #334155; font-weight: 700; }
+    tr:last-child td { border-bottom: 0; }
+    .num { width: 70px; font-weight: 700; color: #0f3d5e; }
+    .score { width: 90px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #e8f1f8; color: #0f3d5e; font-size: 12px; margin-right: 6px; }
+    @media (max-width: 700px) {
+      th, td { padding: 8px; font-size: 13px; }
+      h1 { font-size: 24px; }
+      .guide-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="role-note">Profesör ve Yardımcı Profesör için</p>
+    <div class="topbar"><a class="back" href="index.html">Geri Don ve Sehir Sec</a></div>
+    <h1>Ankara Kosulari - At Listesi</h1>
+    <p class="sub">Kosu kosu at numarasi, isim, cikti ve stil etiketleri</p>
+    <section class="guide">
+      <h3>Tempo Rehberi (Kisa Tablo)</h3>
+      <div class="guide-grid">
+        <table><thead><tr><th>Tempo Indeksi</th><th>Yaris Tipi</th><th>Avantaj</th></tr></thead><tbody>
+          <tr><td>&lt; 0.9</td><td>Dusuk Tempo</td><td>Onde Kacan</td></tr>
+          <tr><td>0.9 - 1.2</td><td>Orta Tempo</td><td>Takipci</td></tr>
+          <tr><td>1.2 - 1.4</td><td>Yuksek Tempo</td><td>Guclu Takipci / Sprinter</td></tr>
+          <tr><td>&gt; 1.4</td><td>Cok Yuksek</td><td>Sprinter / Guclu Kapanis</td></tr>
+        </tbody></table>
+        <table><thead><tr><th>Toplam Tempo</th><th>Siddet</th><th>Anlam</th></tr></thead><tbody>
+          <tr><td>&lt; 6</td><td>Dusuk</td><td>Lider rahat</td></tr>
+          <tr><td>6 - 10</td><td>Orta</td><td>Dengeli yaris</td></tr>
+          <tr><td>&gt; 10</td><td>Yuksek</td><td>Yipranma fazla</td></tr>
+        </tbody></table>
+        <table><thead><tr><th>At Sayisi</th><th>Yapi</th><th>Etki</th></tr></thead><tbody>
+          <tr><td>3 - 6</td><td>Kucuk grup</td><td>Kontrollu tempo</td></tr>
+          <tr><td>7 - 10</td><td>Orta grup</td><td>Standart yaris</td></tr>
+          <tr><td>11+</td><td>Kalabalik</td><td>Kaos / surpriz</td></tr>
+        </tbody></table>
+        <table><thead><tr><th>Matriks Ozeti</th><th>Sonuc</th><th>En Avantajli</th></tr></thead><tbody>
+          <tr><td>Dusuk + Dusuk</td><td>Yavas yaris</td><td>Onde Kacan</td></tr>
+          <tr><td>Orta + Orta</td><td>Klasik yaris</td><td>Takipci</td></tr>
+          <tr><td>Yuksek + Yuksek</td><td>Yaris yanar</td><td>Sprinter</td></tr>
+          <tr><td>Cok Yuksek + Yuksek</td><td>Kaos</td><td>En guclu kapanis</td></tr>
+        </tbody></table>
+      </div>
+    </section>
+    <section class="race">
+      <h2>1. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.108</span>
+        <span class="tempo-chip">Yaris Tipi: Yüksek Tempo</span>
+        <span class="tempo-chip">Siddet: Orta</span>
+        <span class="tempo-chip">At: 9</span>
+        <span class="tempo-chip">Toplam Tempo: 3.111</span>
+        <span class="tempo-chip">Yapi: Orta grup</span>
+        <span class="tempo-chip">Sonuc: Tempolu yarış, sonlarda kırılma beklenir | Tahmini 400m: 26.65</span>
+        <span class="tempo-chip">En Avantajli: Takipçi</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">3</td><td>CALVADOS</td><td class="score">6.13</td><td><span class="badge">Önde Kaçan</span></td><td></td><td><span class="badge">Nem</span></td></tr>
+          <tr><td class="num">8</td><td>KUPA AVCISI</td><td class="score">6.19</td><td><span class="badge">Takipçi</span></td><td></td><td></td></tr>
+          <tr><td class="num">7</td><td>WALLACE</td><td class="score">6.25</td><td><span class="badge">Takipçi</span></td><td></td><td></td></tr>
+          <tr><td class="num">2</td><td>MY SİXTH SENSE</td><td class="score">6.28</td><td><span class="badge">Takipçi</span></td><td></td><td></td></tr>
+          <tr><td class="num">1</td><td>CATALYST</td><td class="score">6.34</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td></td></tr>
+          <tr><td class="num">4</td><td>THRACE FEVER</td><td class="score">6.35</td><td><span class="badge">Takipçi</span></td><td></td><td></td></tr>
+          <tr><td class="num">5</td><td>TURBO FANI</td><td class="score">6.35</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">9</td><td>GOLDEN SNOW</td><td class="score">6.53</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td><span class="badge">X (&gt;7.27 sn)</span></td></tr>
+          <tr><td class="num">6</td><td>REFLECTED GLORY</td><td class="score">6.68</td><td><span class="badge">Takipçi</span></td><td></td><td><span class="badge">X (&gt;7.55 sn)</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="race">
+      <h2>2. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.056</span>
+        <span class="tempo-chip">Yaris Tipi: Orta Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
+        <span class="tempo-chip">At: 6</span>
+        <span class="tempo-chip">Toplam Tempo: 1.081</span>
+        <span class="tempo-chip">Yapi: Küçük grup</span>
+        <span class="tempo-chip">Sonuc: Dengeli yarış, pozisyon savaşı belirleyici | Tahmini 400m: 27.06</span>
+        <span class="tempo-chip">En Avantajli: Takipçi</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">4</td><td>SUPER DİVO</td><td class="score">6.54</td><td><span class="badge">Önde Kaçan</span></td><td></td><td></td></tr>
+          <tr><td class="num">1</td><td>ALAMETİ FARİKA</td><td class="score">6.55</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">2</td><td>NEJDET BAŞKAN</td><td class="score">6.58</td><td><span class="badge">Takipçi</span></td><td></td><td><span class="badge">Sulu</span></td></tr>
+          <tr><td class="num">6</td><td>CAPITAL</td><td class="score">6.70</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Takipçi</span></td><td></td></tr>
+          <tr><td class="num">5</td><td>ARNO RABEL</td><td class="score">6.79</td><td><span class="badge">Orta Grup</span></td><td></td><td></td></tr>
+          <tr><td class="num">3</td><td>TAM TIME</td><td class="score">6.85</td><td><span class="badge">Sprinter</span></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="race">
+      <h2>3. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.000</span>
+        <span class="tempo-chip">Yaris Tipi: Orta Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
+        <span class="tempo-chip">At: 11</span>
+        <span class="tempo-chip">Toplam Tempo: 0.000</span>
+        <span class="tempo-chip">Yapi: Kalabalık</span>
+        <span class="tempo-chip">Sonuc: Dengeli yarış, pozisyon savaşı belirleyici | Stil verisi dağınık: Takipçi ≈ Orta Grup ≈ Önde Kaçan ≈ Sprinter | Tahmini 400m: 27.50</span>
+        <span class="tempo-chip">En Avantajli: Takipçi / Orta Grup / Önde Kaçan / Sprinter</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>AYDIN DAYI</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">2</td><td>BAY AHMET</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">3</td><td>BÜCÜRÜK AKTAŞ</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">4</td><td>ÇİZİKKARDEŞLER</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">5</td><td>ENESBERKE</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">6</td><td>HASNENNİ</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">7</td><td>KAHRAMAN</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">8</td><td>RASTGELOĞLUM</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">9</td><td>ŞAH TUNALI</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">10</td><td>TORLAK</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">11</td><td>SON KRALİÇE</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="race">
+      <h2>4. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.058</span>
+        <span class="tempo-chip">Yaris Tipi: Orta Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
+        <span class="tempo-chip">At: 12</span>
+        <span class="tempo-chip">Toplam Tempo: 2.210</span>
+        <span class="tempo-chip">Yapi: Kalabalık</span>
+        <span class="tempo-chip">Sonuc: Dengeli yarış, pozisyon savaşı belirleyici | Tahmini 400m: 27.05</span>
+        <span class="tempo-chip">En Avantajli: Takipçi</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">9</td><td>ÖZTUĞ</td><td class="score">6.43</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td></td></tr>
+          <tr><td class="num">6</td><td>METİNCİM</td><td class="score">6.50</td><td><span class="badge">Sprinter</span></td><td></td><td></td></tr>
+          <tr><td class="num">8</td><td>ATEŞ REİSİ</td><td class="score">6.53</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td></td></tr>
+          <tr><td class="num">11</td><td>NUSRET OĞLU</td><td class="score">6.55</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">1</td><td>CEVAHİRKAN</td><td class="score">6.57</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">4</td><td>DOĞUYURT</td><td class="score">6.62</td><td><span class="badge">Sprinter</span></td><td></td><td></td></tr>
+          <tr><td class="num">3</td><td>HOPDEDİK</td><td class="score">6.69</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td></td></tr>
+          <tr><td class="num">10</td><td>KÜÇÜKCEVER</td><td class="score">6.70</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Önde Kaçan</span></td><td><span class="badge">X (&gt;10.77 sn)</span><span class="badge">Sulu</span></td></tr>
+          <tr><td class="num">7</td><td>HERZAMAN</td><td class="score">6.71</td><td><span class="badge">Önde Kaçan</span></td><td></td><td></td></tr>
+          <tr><td class="num">5</td><td>DELİ UMUT</td><td class="score">6.74</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td></td></tr>
+          <tr><td class="num">2</td><td>BERAY SULTAN</td><td class="score">6.96</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td><span class="badge">X (&gt;7.99 sn)</span></td></tr>
+          <tr><td class="num">12</td><td>NERGİSLİK TAY</td><td class="score">7.02</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Sprinter</span></td><td><span class="badge">X (&gt;13.25 sn)</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="race">
+      <h2>5. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.043</span>
+        <span class="tempo-chip">Yaris Tipi: Orta Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
+        <span class="tempo-chip">At: 10</span>
+        <span class="tempo-chip">Toplam Tempo: 1.374</span>
+        <span class="tempo-chip">Yapi: Orta grup</span>
+        <span class="tempo-chip">Sonuc: Dengeli yarış, pozisyon savaşı belirleyici | Tahmini 400m: 27.16</span>
+        <span class="tempo-chip">En Avantajli: Takipçi</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">8</td><td>GÜÇLÜ PRENS</td><td class="score">7.15</td><td><span class="badge">Sprinter</span></td><td></td><td></td></tr>
+          <tr><td class="num">3</td><td>CAZGIR YAŞAR</td><td class="score">7.17</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">1</td><td>SAADIN KASIRGASI</td><td class="score">7.25</td><td><span class="badge">Sprinter</span></td><td></td><td></td></tr>
+          <tr><td class="num">2</td><td>TURAN YILDIZI</td><td class="score">7.28</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">9</td><td>ERDİ BEY</td><td class="score">7.29</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">5</td><td>İSKİT ALP</td><td class="score">7.36</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">7</td><td>SİDAR BEY</td><td class="score">7.40</td><td><span class="badge">Takipçi</span></td><td></td><td><span class="badge">Sulu</span></td></tr>
+          <tr><td class="num">6</td><td>KULAGER</td><td class="score">7.54</td><td><span class="badge">Takipçi</span></td><td></td><td><span class="badge">X (&gt;5.53 sn)</span></td></tr>
+          <tr><td class="num">10</td><td>FENNAN</td><td class="score">8.03</td><td><span class="badge">Önde Kaçan</span></td><td><span class="badge">Takipçi</span></td><td><span class="badge">X (&gt;10.33 sn)</span></td></tr>
+          <tr><td class="num">4</td><td>TAÇYİĞİT</td><td class="score">8.95</td><td><span class="badge">Önde Kaçan</span></td><td><span class="badge">Takipçi</span></td><td><span class="badge">X (&gt;37.61 sn)</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="race">
+      <h2>6. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.078</span>
+        <span class="tempo-chip">Yaris Tipi: Orta Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
+        <span class="tempo-chip">At: 8</span>
+        <span class="tempo-chip">Toplam Tempo: 1.993</span>
+        <span class="tempo-chip">Yapi: Orta grup</span>
+        <span class="tempo-chip">Sonuc: Dengeli yarış, pozisyon savaşı belirleyici | Stil dengesi: Takipçi ≈ Sprinter ≈ Önde Kaçan | Tahmini 400m: 26.89</span>
+        <span class="tempo-chip">En Avantajli: Takipçi / Sprinter / Önde Kaçan</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">6</td><td>DRAGON KINGDOM</td><td class="score">6.39</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">5</td><td>MY SARAYYERLIM</td><td class="score">6.41</td><td><span class="badge">Önde Kaçan</span></td><td></td><td></td></tr>
+          <tr><td class="num">7</td><td>BANDOLERO</td><td class="score">6.48</td><td><span class="badge">Sprinter</span></td><td></td><td></td></tr>
+          <tr><td class="num">8</td><td>SHINNY</td><td class="score">6.52</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">2</td><td>HOOD RIVER</td><td class="score">6.53</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">4</td><td>MONEY WELL SPENT</td><td class="score">6.53</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Önde Kaçan</span></td><td><span class="badge">Nem</span></td></tr>
+          <tr><td class="num">1</td><td>FROU FROU</td><td class="score">6.70</td><td><span class="badge">Önde Kaçan</span></td><td></td><td><span class="badge">X (&gt;6.41 sn)</span></td></tr>
+          <tr><td class="num">3</td><td>PERCY JACKSON</td><td class="score">6.70</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td><span class="badge">X (&gt;6.52 sn)</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="race">
+      <h2>7. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.148</span>
+        <span class="tempo-chip">Yaris Tipi: Yüksek Tempo</span>
+        <span class="tempo-chip">Siddet: Orta</span>
+        <span class="tempo-chip">At: 11</span>
+        <span class="tempo-chip">Toplam Tempo: 5.194</span>
+        <span class="tempo-chip">Yapi: Kalabalık</span>
+        <span class="tempo-chip">Sonuc: Tempolu yarış, sonlarda kırılma beklenir | Yakın ikinci stil: Sprinter | Tahmini 400m: 26.34</span>
+        <span class="tempo-chip">En Avantajli: Takipçi / Sprinter</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">3</td><td>CEZZAR BEY</td><td class="score">6.91</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">2</td><td>ÖZTAMER</td><td class="score">6.92</td><td><span class="badge">Takipçi</span></td><td></td><td><span class="badge">Sulu</span></td></tr>
+          <tr><td class="num">5</td><td>SAMET EFENDİ</td><td class="score">6.99</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">1</td><td>RÜZGAR DELEN</td><td class="score">7.06</td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Takipçi</span></td><td><span class="badge">Isl</span></td></tr>
+          <tr><td class="num">11</td><td>PRENSES ANCELİNA</td><td class="score">7.08</td><td><span class="badge">Önde Kaçan</span></td><td><span class="badge">Orta Grup</span></td><td></td></tr>
+          <tr><td class="num">7</td><td>DENİZ SAVAŞI</td><td class="score">7.12</td><td><span class="badge">Takipçi</span></td><td></td><td></td></tr>
+          <tr><td class="num">9</td><td>GAZNELİ</td><td class="score">7.16</td><td><span class="badge">Takipçi</span></td><td></td><td></td></tr>
+          <tr><td class="num">4</td><td>GÜLFİLİZ</td><td class="score">7.22</td><td><span class="badge">Önde Kaçan</span></td><td><span class="badge">Takipçi</span></td><td></td></tr>
+          <tr><td class="num">6</td><td>ERSOYHAN</td><td class="score">7.26</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Önde Kaçan</span></td><td></td></tr>
+          <tr><td class="num">10</td><td>BYCEVHER</td><td class="score">7.26</td><td><span class="badge">Sprinter</span></td><td><span class="badge">Orta Grup</span></td><td><span class="badge">Sulu</span></td></tr>
+          <tr><td class="num">8</td><td>ÖMERİNOĞLU</td><td class="score">7.88</td><td><span class="badge">Takipçi</span></td><td><span class="badge">Önde Kaçan</span></td><td><span class="badge">X (&gt;9.20 sn)</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="race">
+      <h2>8. Koşu</h2>
+      <div class="tempo">
+        <span class="tempo-chip">Tempo Indeksi: 1.000</span>
+        <span class="tempo-chip">Yaris Tipi: Orta Tempo</span>
+        <span class="tempo-chip">Siddet: Düşük</span>
+        <span class="tempo-chip">At: 12</span>
+        <span class="tempo-chip">Toplam Tempo: 0.000</span>
+        <span class="tempo-chip">Yapi: Kalabalık</span>
+        <span class="tempo-chip">Sonuc: Dengeli yarış, pozisyon savaşı belirleyici | Stil verisi dağınık: Takipçi ≈ Orta Grup ≈ Önde Kaçan ≈ Sprinter | Tahmini 400m: 27.50</span>
+        <span class="tempo-chip">En Avantajli: Takipçi / Orta Grup / Önde Kaçan / Sprinter</span>
+      </div>
+      <table>
+        <thead><tr><th class="num">No</th><th>At Ismi</th><th class="score">Cikti</th><th>Stil Etiketi</th><th>Stil Etiketi 2</th><th>Uyari</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>AKERBEY</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">2</td><td>ALABİNİT</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">3</td><td>AMİRSOYLU</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">4</td><td>ATAERİ</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">5</td><td>ÇAKIR METE</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">6</td><td>HÜKÜMSÜREN</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">7</td><td>HÜRTAYFA</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">8</td><td>KOEMAN</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">9</td><td>MİSİLLEME</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">10</td><td>VURGUNHAN</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">11</td><td>ZEYDANTAY</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+          <tr><td class="num">12</td><td>MAHPAREM</td><td class="score">geçersiz</td><td><span class="badge">Bilinmiyor</span></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>

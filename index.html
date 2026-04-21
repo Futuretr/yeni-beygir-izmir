@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>At Listesi Secimi</title>
+  <style>
+    :root { color-scheme: light; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #fef3c7 0, #f6f7fb 40%, #e8eef9 100%);
+      color: #102a43;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+    }
+    .wrap {
+      position: relative;
+      width: min(760px, 100%);
+      background: #ffffffd9;
+      border: 1px solid #d6deeb;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 16px 40px rgba(16, 42, 67, 0.12);
+    }
+    .big-note {
+      margin: 0 0 8px;
+      font-size: 40px;
+      line-height: 1;
+      letter-spacing: 1px;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: left;
+      color: #0f3d5e;
+      text-shadow: 0 2px 0 #dce8f5;
+      max-width: calc(100% - 320px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      text-align: left;
+      max-width: calc(100% - 320px);
+    }
+    .meme-strip {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      display: flex;
+      gap: 8px;
+    }
+    .meme {
+      width: 94px;
+      height: 94px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid #d6deeb;
+      box-shadow: 0 8px 18px rgba(15, 61, 94, 0.2);
+    }
+    .sub {
+      margin: 0 0 20px;
+      text-align: left;
+      color: #486581;
+      max-width: calc(100% - 320px);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    a.card {
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #cbd5e1;
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: #0f3d5e;
+      box-shadow: 0 8px 20px rgba(15, 61, 94, 0.16);
+    }
+    .city {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .desc {
+      margin: 0;
+      font-size: 14px;
+      color: #627d98;
+    }
+    @media (max-width: 680px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 25px; }
+      .big-note {
+        font-size: 30px;
+        max-width: 100%;
+      }
+      h1,
+      .sub {
+        max-width: 100%;
+      }
+      .meme-strip {
+        position: static;
+        justify-content: center;
+        margin: 0 auto 12px;
+      }
+      .meme {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="meme-strip">
+      <img class="meme" src="the-original-image-of-the-monkey-thinking-meme-v0-vewwqeyihbaf1.webp" alt="Maymun 1" />
+      <img class="meme" src="WhatsApp%20Image%202026-04-12%20at%2013.16.37.jpeg" alt="At" />
+      <img class="meme" src="monkey.jpeg" alt="Maymun 2" />
+    </div>
+    <p class="big-note">PROFESOR VE YARDIMCI PROFESOR ICIN</p>
+    <h1>Hangi Sehirin Verisini Gormek Istersin?</h1>
+    <p class="sub">Secim yap ve ilgili kosu listesini ac.</p>
+    <section class="grid">
+      <a class="card" href="izmir_yayin.html">
+        <h2 class="city">Izmir</h2>
+        <p class="desc">Kosu kosu no, isim, cikti ve stil etiketleri.</p>
+      </a>
+      <a class="card" href="adana_yayin.html">
+        <h2 class="city">Adana</h2>
+        <p class="desc">Kosu kosu no, isim, cikti ve stil etiketleri.</p>
+      </a>
+      <a class="card" href="bursa_yayin.html">
+        <h2 class="city">Bursa</h2>
+        <p class="desc">Kosu kosu no, isim, cikti ve stil etiketleri.</p>
+      </a>
+      <a class="card" href="sanliurfa_yayin.html">
+        <h2 class="city">Sanliurfa</h2>
+        <p class="desc">Kosu kosu no, isim, cikti ve stil etiketleri.</p>
+      </a>
+      <a class="card" href="istanbul_17_04_2026.html">
+        <h2 class="city">Istanbul</h2>
+        <p class="desc">17.04.2026 - Stil + derece birlesik tek sayfa.</p>
+      </a>
+      <a class="card" href="elazig_15_04_2026.html">
+        <h2 class="city">Elazig</h2>
+        <p class="desc">15.04.2026 - Stil + derece birlesik tek sayfa.</p>
+      </a>
+      <a class="card" href="ankara_16_04_2026.html">
+        <h2 class="city">Ankara</h2>
+        <p class="desc">16.04.2026 - Numara + isim + stil listesi.</p>
+      </a>
+      <a class="card" href="izmir_18_04_2026.html">
+        <h2 class="city">Izmir (18.04.2026)</h2>
+        <p class="desc">Yeni analizden uretilen tek sayfa at listesi.</p>
+      </a>
+      <a class="card" href="diyarbakir_18_04_2026.html">
+        <h2 class="city">Diyarbakir (18.04.2026)</h2>
+        <p class="desc">Yeni analizden uretilen tek sayfa at listesi.</p>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
