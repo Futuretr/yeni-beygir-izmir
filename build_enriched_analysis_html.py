@@ -64,6 +64,16 @@ def fetch_html(url: str) -> str:
         return resp.read().decode("utf-8", "ignore")
 
 
+def parse_weight_value(raw_text: str) -> str:
+    text = str(raw_text or "").strip().replace(" ", "")
+    if not text:
+        return ""
+    match = re.match(r"(\d+(?:[.,]\d+)?)", text)
+    if not match:
+        return ""
+    return match.group(1).replace(",", ".")
+
+
 def classify_race_group(raw_text: str) -> tuple[int | None, str]:
     text = normalize_text(raw_text)
 
@@ -113,11 +123,11 @@ def classify_race_group(raw_text: str) -> tuple[int | None, str]:
     return None, raw_text.strip()
 
 
-def extract_previous_race_group(horse_url: str) -> tuple[int | None, str]:
+def extract_previous_race_info(horse_url: str) -> dict[str, str | int | None]:
     try:
         soup = BeautifulSoup(fetch_html(horse_url), "html.parser")
     except Exception:
-        return None, ""
+        return {"previous_group": None, "previous_group_label": "", "previous_weight": ""}
 
     target_table = None
     for table in soup.find_all("table"):
@@ -127,19 +137,36 @@ def extract_previous_race_group(horse_url: str) -> tuple[int | None, str]:
             break
 
     if target_table is None:
-        return None, ""
+        return {"previous_group": None, "previous_group_label": "", "previous_weight": ""}
+
+    headers = [th.get_text(" ", strip=True) for th in target_table.find_all("th")]
+    kilo_idx = headers.index("Kilo") if "Kilo" in headers else -1
 
     for tr in target_table.find_all("tr")[1:]:
         tds = tr.find_all("td")
         if len(tds) < 3:
             continue
         date_text = tds[0].get_text(" ", strip=True)
-        if not date_text or date_text.lower() == "bugün":
+        if not date_text or normalize_text(date_text) == "BUGUN":
+            continue
+        derece_text = tds[6].get_text(" ", strip=True) if len(tds) > 6 else ""
+        if not derece_text:
+            continue
+        row_text = normalize_text(" ".join(td.get_text(" ", strip=True) for td in tds))
+        if "KOSMAZ" in row_text:
             continue
         race_type = tds[2].get_text(" ", strip=True)
-        return classify_race_group(race_type)
+        previous_group, previous_group_label = classify_race_group(race_type)
+        previous_weight = ""
+        if kilo_idx >= 0 and kilo_idx < len(tds):
+            previous_weight = parse_weight_value(tds[kilo_idx].get_text(" ", strip=True))
+        return {
+            "previous_group": previous_group,
+            "previous_group_label": previous_group_label,
+            "previous_weight": previous_weight,
+        }
 
-    return None, ""
+    return {"previous_group": None, "previous_group_label": "", "previous_weight": ""}
 
 
 def build_style_context(
@@ -169,7 +196,7 @@ def build_style_context(
         )
         for tr in table.find_all("tr")[1:]:
             tds = tr.find_all("td")
-            if len(tds) < 2:
+            if len(tds) < 4:
                 continue
             horse_no = tds[0].get_text(" ", strip=True)
             horse_link = tds[1].find("a", href=True)
@@ -177,6 +204,7 @@ def build_style_context(
             if horse_no and horse_name:
                 horse_map[(race_label, normalize_text(horse_name))] = {
                     "no": horse_no,
+                    "current_weight": parse_weight_value(tds[3].get_text(" ", strip=True)),
                     "url": (
                         f"https://yenibeygir.com{horse_link['href']}"
                         if horse_link and horse_link["href"].startswith("/")
@@ -232,7 +260,7 @@ def main() -> int:
     input_path = Path(args.input)
     output_path = Path(args.output)
     horse_map, race_group_map = build_style_context(args.city, args.date)
-    previous_group_cache: dict[str, tuple[int | None, str]] = {}
+    previous_info_cache: dict[str, dict[str, str | int | None]] = {}
 
     races: dict[str, list[dict[str, str]]] = {}
     with input_path.open("r", encoding="utf-8-sig", newline="") as f:
@@ -245,12 +273,19 @@ def main() -> int:
             horse_ctx = horse_map.get((race_name, normalize_text(row.get("at_ismi", ""))), {})
             current_group, current_group_label = race_group_map.get(race_name, (None, ""))
             horse_url = horse_ctx.get("url", "")
-            if horse_url and horse_url not in previous_group_cache:
-                previous_group_cache[horse_url] = extract_previous_race_group(horse_url)
-            previous_group, previous_group_label = previous_group_cache.get(horse_url, (None, ""))
+            if horse_url and horse_url not in previous_info_cache:
+                previous_info_cache[horse_url] = extract_previous_race_info(horse_url)
+            previous_info = previous_info_cache.get(
+                horse_url,
+                {"previous_group": None, "previous_group_label": "", "previous_weight": ""},
+            )
+            previous_group = previous_info.get("previous_group")
+            previous_group_label = str(previous_info.get("previous_group_label") or "")
             row["primary_style"] = primary_style
             row["secondary_or_dist"] = secondary_or_dist
             row["at_no"] = horse_ctx.get("no", "")
+            row["site_current_weight"] = str(horse_ctx.get("current_weight", "") or "")
+            row["site_previous_weight"] = str(previous_info.get("previous_weight", "") or "")
             row["group_transition"] = ""
             row["group_transition_note"] = ""
             row["group_transition_kind"] = "unknown"
@@ -347,7 +382,7 @@ def main() -> int:
 
             last_race = (
                 f"Son {esc(row.get('son_mesafe', '') or '-') }m {esc(row.get('son_pist', '') or '-')}"
-                f"<br><span class='muted'>Son kilo: {esc(row.get('kilo', '') or '-')} | Simdiki kilo: {esc(row.get('son_kilo', '') or '-')} | Hipodrom: {esc(row.get('son_hipodrom', '') or '-')}</span>"
+                f"<br><span class='muted'>Son kilo: {esc(row.get('site_previous_weight', '') or '-')} | Simdiki kilo: {esc(row.get('site_current_weight', '') or '-')} | Hipodrom: {esc(row.get('son_hipodrom', '') or '-')}</span>"
             )
             sample_size = esc(row.get("stil_veri_sayisi", "") or "0")
             transition_html = ""
