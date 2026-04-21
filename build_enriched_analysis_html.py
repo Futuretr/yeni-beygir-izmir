@@ -17,6 +17,16 @@ STYLE_LABELS = {
     "stil_4": "Onde Kacan",
 }
 
+GROUP_1_SARTLI = {1, 2, 3, 4, 19}
+GROUP_1_HANDIKAP = {13, 14, 15, 16}
+GROUP_1_SATIS = {1, 2, 3, 4}
+
+GROUP_2_SARTLI = {5, 6, 7}
+GROUP_2_HANDIKAP = {17, 21, 22, 24}
+GROUP_2_GRUP = {1, 2, 3}
+GROUP_2_KV = {8, 9, 10, 21, 22, 23, 24}
+GROUP_2_ACIK = {2, 3}
+
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
@@ -54,10 +64,92 @@ def fetch_html(url: str) -> str:
         return resp.read().decode("utf-8", "ignore")
 
 
-def build_style_number_map(city: str, date: str) -> dict[tuple[str, str], str]:
+def classify_race_group(raw_text: str) -> tuple[int | None, str]:
+    text = normalize_text(raw_text)
+
+    if "MAIDEN" in text:
+        return 1, "Maiden"
+
+    match = re.search(r"SATIS\s*(\d+)", text)
+    if match:
+        level = int(match.group(1))
+        if level in GROUP_1_SATIS:
+            return 1, f"Satis {level}"
+
+    match = re.search(r"(?:SARTLI|SRT)\s*(\d+)", text)
+    if match:
+        level = int(match.group(1))
+        if level in GROUP_1_SARTLI:
+            return 1, f"Sartli {level}"
+        if level in GROUP_2_SARTLI:
+            return 2, f"Sartli {level}"
+
+    match = re.search(r"(?:HANDIKAP|HND)\s*(\d+)", text)
+    if match:
+        level = int(match.group(1))
+        if level in GROUP_1_HANDIKAP:
+            return 1, f"Handikap {level}"
+        if level in GROUP_2_HANDIKAP:
+            return 2, f"Handikap {level}"
+
+    match = re.search(r"\bGRUP\s*(\d+)", text)
+    if match:
+        level = int(match.group(1))
+        if level in GROUP_2_GRUP:
+            return 2, f"Grup {level}"
+
+    match = re.search(r"\bKV\s*(\d+)", text)
+    if match:
+        level = int(match.group(1))
+        if level in GROUP_2_KV:
+            return 2, f"KV {level}"
+
+    match = re.search(r"ACIK\s*(\d+)", text)
+    if match:
+        level = int(match.group(1))
+        if level in GROUP_2_ACIK:
+            return 2, f"Acik {level}"
+
+    return None, raw_text.strip()
+
+
+def extract_previous_race_group(horse_url: str) -> tuple[int | None, str]:
+    try:
+        soup = BeautifulSoup(fetch_html(horse_url), "html.parser")
+    except Exception:
+        return None, ""
+
+    target_table = None
+    for table in soup.find_all("table"):
+        headers = [th.get_text(" ", strip=True) for th in table.find_all("th")]
+        if "Tarih" in headers and "K. Cinsi" in headers:
+            target_table = table
+            break
+
+    if target_table is None:
+        return None, ""
+
+    for tr in target_table.find_all("tr")[1:]:
+        tds = tr.find_all("td")
+        if len(tds) < 3:
+            continue
+        date_text = tds[0].get_text(" ", strip=True)
+        if not date_text or date_text.lower() == "bugün":
+            continue
+        race_type = tds[2].get_text(" ", strip=True)
+        return classify_race_group(race_type)
+
+    return None, ""
+
+
+def build_style_context(
+    city: str,
+    date: str,
+) -> tuple[dict[tuple[str, str], dict[str, str]], dict[str, tuple[int | None, str]]]:
     year, month, day = date.split("-")
     city_slug = normalize_text(city).lower().replace(" ", "")
-    number_map: dict[tuple[str, str], str] = {}
+    horse_map: dict[tuple[str, str], dict[str, str]] = {}
+    race_group_map: dict[str, tuple[int | None, str]] = {}
 
     for race_no in range(1, 21):
         url = f"https://yenibeygir.com/{day}-{month}-{year}/{city_slug}/{race_no}/stiller"
@@ -71,16 +163,28 @@ def build_style_number_map(city: str, date: str) -> dict[tuple[str, str], str]:
             continue
 
         race_label = f"{race_no}. Koşu"
+        race_info = soup.find("h3")
+        race_group_map[race_label] = classify_race_group(
+            race_info.get_text(" ", strip=True) if race_info else ""
+        )
         for tr in table.find_all("tr")[1:]:
             tds = tr.find_all("td")
             if len(tds) < 2:
                 continue
             horse_no = tds[0].get_text(" ", strip=True)
+            horse_link = tds[1].find("a", href=True)
             horse_name = tds[1].get_text(" ", strip=True)
             if horse_no and horse_name:
-                number_map[(race_label, normalize_text(horse_name))] = horse_no
+                horse_map[(race_label, normalize_text(horse_name))] = {
+                    "no": horse_no,
+                    "url": (
+                        f"https://yenibeygir.com{horse_link['href']}"
+                        if horse_link and horse_link["href"].startswith("/")
+                        else (horse_link["href"] if horse_link else "")
+                    ),
+                }
 
-    return number_map
+    return horse_map, race_group_map
 
 
 def parse_args() -> argparse.Namespace:
@@ -127,7 +231,8 @@ def main() -> int:
     args = parse_args()
     input_path = Path(args.input)
     output_path = Path(args.output)
-    number_map = build_style_number_map(args.city, args.date)
+    horse_map, race_group_map = build_style_context(args.city, args.date)
+    previous_group_cache: dict[str, tuple[int | None, str]] = {}
 
     races: dict[str, list[dict[str, str]]] = {}
     with input_path.open("r", encoding="utf-8-sig", newline="") as f:
@@ -137,9 +242,20 @@ def main() -> int:
             if not race_name:
                 continue
             primary_style, secondary_or_dist = build_style_summary(row)
+            horse_ctx = horse_map.get((race_name, normalize_text(row.get("at_ismi", ""))), {})
+            current_group, current_group_label = race_group_map.get(race_name, (None, ""))
+            horse_url = horse_ctx.get("url", "")
+            if horse_url and horse_url not in previous_group_cache:
+                previous_group_cache[horse_url] = extract_previous_race_group(horse_url)
+            previous_group, previous_group_label = previous_group_cache.get(horse_url, (None, ""))
             row["primary_style"] = primary_style
             row["secondary_or_dist"] = secondary_or_dist
-            row["at_no"] = number_map.get((race_name, normalize_text(row.get("at_ismi", ""))), "")
+            row["at_no"] = horse_ctx.get("no", "")
+            row["group_transition"] = ""
+            row["group_transition_note"] = ""
+            if current_group in {1, 2} and previous_group in {1, 2} and current_group != previous_group:
+                row["group_transition"] = f"{previous_group}. Grup -> {current_group}. Grup"
+                row["group_transition_note"] = f"{previous_group_label} -> {current_group_label}"
             races.setdefault(race_name, []).append(row)
 
     for race_rows in races.values():
@@ -172,6 +288,7 @@ def main() -> int:
     parts.append("    .score{font-weight:700;color:#0f3d5e;white-space:nowrap;}")
     parts.append("    .badge{display:inline-block;padding:3px 8px;border-radius:999px;background:#e8f1f8;color:#0f3d5e;font-size:12px;margin:0 6px 6px 0;}")
     parts.append("    .badge.alt{background:#eff6eb;color:#285430;}")
+    parts.append("    .badge.warn{background:#fff3cd;color:#7a4b00;}")
     parts.append("    .muted{color:#6b7c93;font-size:12px;line-height:1.45;}")
     parts.append("    .dist{font-size:12px;color:#52667a;line-height:1.5;}")
     parts.append("    .name{font-weight:700;}")
@@ -222,10 +339,16 @@ def main() -> int:
                 f"<br><span class='muted'>Son kilo: {esc(row.get('kilo', '') or '-')} | Simdiki kilo: {esc(row.get('son_kilo', '') or '-')} | Hipodrom: {esc(row.get('son_hipodrom', '') or '-')}</span>"
             )
             sample_size = esc(row.get("stil_veri_sayisi", "") or "0")
+            transition_html = ""
+            if row.get("group_transition"):
+                transition_html = (
+                    f"<div><span class='badge warn'>{esc(row['group_transition'])}</span></div>"
+                    f"<div class='muted'>{esc(row.get('group_transition_note', ''))}</div>"
+                )
             parts.append(
                 "          <tr>"
                 f"<td class='score'>{esc(row.get('at_no', '') or '-')}</td>"
-                f"<td><div class='name'>{esc(row.get('at_ismi', ''))}</div><div class='muted'>Stil veri sayisi: {sample_size}</div></td>"
+                f"<td><div class='name'>{esc(row.get('at_ismi', ''))}</div>{transition_html}<div class='muted'>Stil veri sayisi: {sample_size}</div></td>"
                 f"<td class='score'>{esc(row.get('cikti', '') or '-')}</td>"
                 f"<td><span class='badge'>{esc(row['primary_style'])}</span>{secondary_html}</td>"
                 f"<td><div class='dist'>{dist_html}</div></td>"
