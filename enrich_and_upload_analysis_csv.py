@@ -11,6 +11,8 @@ from typing import Any
 from urllib.parse import quote_plus
 from urllib.request import Request, urlopen
 
+from bs4 import BeautifulSoup
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
@@ -52,6 +54,19 @@ def parse_args() -> argparse.Namespace:
         help="Opsiyonel: kaynak sayfadan yakalanan stil siniflarini JSON olarak kaydet.",
     )
     p.add_argument(
+        "--meeting-date",
+        help="Opsiyonel: YYYY-MM-DD formatinda yaris tarihi. Direkt stiller sayfalari icin kullanilir.",
+    )
+    p.add_argument(
+        "--meeting-city",
+        help="Opsiyonel: Yenibeygir sehir slug'i. Ornek: elazig, izmir, diyarbakir",
+    )
+    p.add_argument(
+        "--direct-style-pages",
+        action="store_true",
+        help="Yenibeygir arama sayfasi yerine /tarih/sehir/kosu/stiller sayfalarindan cek.",
+    )
+    p.add_argument(
         "--timeout",
         type=int,
         default=20,
@@ -75,6 +90,12 @@ class HorseRow:
     source_url: str = ""
     extracted_style: str = ""
     extracted_notes: str = ""
+    style_bucket_1: str = ""
+    style_bucket_2: str = ""
+    style_bucket_3: str = ""
+    style_bucket_4: str = ""
+    style_sample_size: int | None = None
+    dominant_style_bucket: str = ""
 
 
 def to_float(v: str | None) -> float | None:
@@ -110,6 +131,28 @@ def clean_html_text(html: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     return text
+
+
+def normalize_text(text: str) -> str:
+    normalized = unicodedata.normalize("NFKD", str(text or ""))
+    ascii_text = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    ascii_text = ascii_text.upper().replace("İ", "I")
+    ascii_text = re.sub(r"[^A-Z0-9]+", " ", ascii_text)
+    return re.sub(r"\s+", " ", ascii_text).strip()
+
+
+def get_value(raw: dict[str, Any], *keys: str) -> str:
+    for key in keys:
+        if key in raw and raw.get(key) is not None:
+            return str(raw.get(key)).strip()
+
+    normalized_lookup = {normalize_text(k): v for k, v in raw.items()}
+    for key in keys:
+        normalized_key = normalize_text(key)
+        if normalized_key in normalized_lookup and normalized_lookup[normalized_key] is not None:
+            return str(normalized_lookup[normalized_key]).strip()
+
+    return ""
 
 
 def extract_style_label(html: str) -> str:
@@ -172,9 +215,9 @@ def parse_input_rows(input_path: Path) -> list[HorseRow]:
     with input_path.open("r", encoding="utf-8-sig", newline="") as f:
         reader = csv.DictReader(f)
         for raw in reader:
-            horse_name = (raw.get("At İsmi") or "").strip()
-            race_label = (raw.get("Koşu") or "").strip()
-            output_raw = (raw.get("Çıktı") or "").strip()
+            horse_name = get_value(raw, "At İsmi", "At Ismi", "At Ä°smi")
+            race_label = get_value(raw, "Koşu", "Kosu", "KoÅŸu")
+            output_raw = get_value(raw, "Çıktı", "Cikti", "Ã‡Ä±ktÄ±")
 
             if race_label and not horse_name:
                 current_race = race_label
@@ -192,15 +235,119 @@ def parse_input_rows(input_path: Path) -> list[HorseRow]:
                     race_label=current_race,
                     score_raw=output_raw,
                     score=to_float(output_raw),
-                    last_distance=to_int(raw.get("Son Mesafe")),
-                    last_surface=(raw.get("Son Pist") or "").strip(),
-                    last_weight=to_float(raw.get("Son Kilo")),
-                    current_weight=to_float(raw.get("Kilo")),
-                    last_hipodrom=(raw.get("Son Hipodrom") or "").strip(),
+                    last_distance=to_int(get_value(raw, "Son Mesafe")),
+                    last_surface=get_value(raw, "Son Pist"),
+                    last_weight=to_float(get_value(raw, "Son Kilo")),
+                    current_weight=to_float(get_value(raw, "Kilo")),
+                    last_hipodrom=get_value(raw, "Son Hipodrom"),
                 )
             )
 
     return rows
+
+
+def parse_race_number(race_label: str) -> int | None:
+    match = re.search(r"(\d+)", race_label or "")
+    if not match:
+        return None
+    return int(match.group(1))
+
+
+def build_direct_style_url(meeting_date: str, meeting_city: str, race_number: int) -> str:
+    year, month, day = meeting_date.split("-")
+    return f"https://yenibeygir.com/{day}-{month}-{year}/{meeting_city}/{race_number}/stiller"
+
+
+def parse_style_percentages(style_cell: Any) -> list[str]:
+    percentages: list[str] = []
+    style_container = style_cell.find("div", class_="AtStyle") or style_cell
+    for block in style_container.find_all("div", recursive=False)[:4]:
+        title = (block.get("title") or "").strip()
+        match = re.search(r"\((\d+)%\)", title)
+        percentages.append(match.group(1) if match else "")
+    while len(percentages) < 4:
+        percentages.append("")
+    return percentages
+
+
+def enrich_from_direct_style_pages(
+    rows: list[HorseRow],
+    meeting_date: str,
+    meeting_city: str,
+    timeout: int,
+) -> dict[str, Any]:
+    report: dict[str, Any] = {"pages": {}, "errors": {}}
+    rows_by_race: dict[int, list[HorseRow]] = {}
+
+    for row in rows:
+        race_number = parse_race_number(row.race_label)
+        if race_number is None:
+            row.source_status = "error"
+            row.extracted_notes = "race_number_not_found"
+            report["errors"][row.horse_name] = row.extracted_notes
+            continue
+        rows_by_race.setdefault(race_number, []).append(row)
+
+    for race_number, race_rows in rows_by_race.items():
+        url = build_direct_style_url(meeting_date, meeting_city, race_number)
+        report["pages"][str(race_number)] = url
+        row_map = {(race_number, normalize_text(row.horse_name)): row for row in race_rows}
+
+        try:
+            html = fetch_html(url, timeout=timeout)
+            soup = BeautifulSoup(html, "html.parser")
+            table = soup.find("table")
+            if table is None:
+                raise ValueError("style_table_not_found")
+
+            matched_keys: set[tuple[int, str]] = set()
+            for tr in table.find_all("tr")[1:]:
+                tds = tr.find_all("td")
+                if len(tds) < 7:
+                    continue
+
+                horse_name = tds[1].get_text(" ", strip=True)
+                style_key = (race_number, normalize_text(horse_name))
+                row = row_map.get(style_key)
+                if row is None:
+                    report["errors"][f"{race_number}:{horse_name}"] = "horse_not_in_input_csv"
+                    continue
+
+                style_values = parse_style_percentages(tds[5])
+                numeric_values = [(idx, int(value) if value else -1) for idx, value in enumerate(style_values, start=1)]
+                dominant_index = max(numeric_values, key=lambda item: item[1])[0]
+
+                row.source_status = "ok"
+                row.source_url = url
+                row.style_bucket_1 = style_values[0]
+                row.style_bucket_2 = style_values[1]
+                row.style_bucket_3 = style_values[2]
+                row.style_bucket_4 = style_values[3]
+                row.style_sample_size = to_int(tds[6].get_text(" ", strip=True))
+                row.dominant_style_bucket = f"stil_{dominant_index}"
+                row.extracted_style = " / ".join(
+                    f"stil_{idx}:{value}%"
+                    for idx, value in enumerate(style_values, start=1)
+                    if value != ""
+                )
+                matched_keys.add(style_key)
+
+            for style_key, row in row_map.items():
+                if style_key in matched_keys:
+                    continue
+                row.source_status = "error"
+                row.source_url = url
+                row.extracted_notes = "horse_not_found_on_style_page"
+                report["errors"][f"{race_number}:{row.horse_name}"] = row.extracted_notes
+
+        except Exception as exc:
+            for row in race_rows:
+                row.source_status = "error"
+                row.source_url = url
+                row.extracted_notes = str(exc)[:250]
+            report["errors"][f"race_{race_number}"] = str(exc)[:250]
+
+    return report
 
 
 def enrich_from_source(
@@ -244,6 +391,12 @@ def save_output_csv(rows: list[HorseRow], output_path: Path) -> None:
         "kaynak_durum",
         "kaynak_url",
         "stil",
+        "stil_1_yuzde",
+        "stil_2_yuzde",
+        "stil_3_yuzde",
+        "stil_4_yuzde",
+        "stil_veri_sayisi",
+        "baskin_stil",
         "not",
     ]
 
@@ -264,6 +417,12 @@ def save_output_csv(rows: list[HorseRow], output_path: Path) -> None:
                     "kaynak_durum": row.source_status,
                     "kaynak_url": row.source_url,
                     "stil": row.extracted_style,
+                    "stil_1_yuzde": row.style_bucket_1,
+                    "stil_2_yuzde": row.style_bucket_2,
+                    "stil_3_yuzde": row.style_bucket_3,
+                    "stil_4_yuzde": row.style_bucket_4,
+                    "stil_veri_sayisi": row.style_sample_size if row.style_sample_size is not None else "",
+                    "baskin_stil": row.dominant_style_bucket,
                     "not": row.extracted_notes,
                 }
             )
@@ -313,7 +472,17 @@ def main() -> None:
 
     style_report: dict[str, Any] = {"classes_by_horse": {}, "errors": {}}
     if not args.skip_source_fetch:
-        style_report = enrich_from_source(horses, args.source_url_template, args.timeout)
+        if args.direct_style_pages:
+            if not args.meeting_date or not args.meeting_city:
+                raise SystemExit("--direct-style-pages icin --meeting-date ve --meeting-city gerekli.")
+            style_report = enrich_from_direct_style_pages(
+                horses,
+                args.meeting_date,
+                args.meeting_city,
+                args.timeout,
+            )
+        else:
+            style_report = enrich_from_source(horses, args.source_url_template, args.timeout)
 
     save_output_csv(horses, output_path)
     print(f"CSV yazildi: {output_path} | satir: {len(horses)}")
