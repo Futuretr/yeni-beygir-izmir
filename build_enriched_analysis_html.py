@@ -74,6 +74,29 @@ def parse_weight_value(raw_text: str) -> str:
     return match.group(1).replace(",", ".")
 
 
+def parse_weight_cell(cell) -> str:
+    if cell is None:
+        return ""
+
+    # Yenibeygir bazen hucrede net kiloyu gosterip asil degeri title'a
+    # "50+2" veya "53+0,6" olarak koyuyor. Bu durumda sadece ana kiloyu al.
+    title_sources = []
+    own_title = cell.get("title")
+    if own_title:
+        title_sources.append(own_title)
+    title_sources.extend(
+        node.get("title")
+        for node in cell.find_all(attrs={"title": True})
+        if node.get("title")
+    )
+    for raw_title in title_sources:
+        parsed = parse_weight_value(raw_title)
+        if parsed:
+            return parsed
+
+    return parse_weight_value(cell.get_text(" ", strip=True))
+
+
 def classify_race_group(raw_text: str) -> tuple[int | None, str]:
     text = normalize_text(raw_text)
 
@@ -159,7 +182,7 @@ def extract_previous_race_info(horse_url: str) -> dict[str, str | int | None]:
         previous_group, previous_group_label = classify_race_group(race_type)
         previous_weight = ""
         if kilo_idx >= 0 and kilo_idx < len(tds):
-            previous_weight = parse_weight_value(tds[kilo_idx].get_text(" ", strip=True))
+            previous_weight = parse_weight_cell(tds[kilo_idx])
         return {
             "previous_group": previous_group,
             "previous_group_label": previous_group_label,
@@ -204,7 +227,7 @@ def build_style_context(
             if horse_no and horse_name:
                 horse_map[(race_label, normalize_text(horse_name))] = {
                     "no": horse_no,
-                    "current_weight": parse_weight_value(tds[3].get_text(" ", strip=True)),
+                    "current_weight": parse_weight_cell(tds[3]),
                     "url": (
                         f"https://yenibeygir.com{horse_link['href']}"
                         if horse_link and horse_link["href"].startswith("/")
