@@ -2,7 +2,12 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
+import unicodedata
 from pathlib import Path
+from urllib.request import Request, urlopen
+
+from bs4 import BeautifulSoup
 
 
 STYLE_LABELS = {
@@ -11,6 +16,11 @@ STYLE_LABELS = {
     "stil_3": "Takipci",
     "stil_4": "Onde Kacan",
 }
+
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+)
 
 
 def esc(text: str) -> str:
@@ -28,6 +38,49 @@ def to_float(value: str) -> float:
         return float(str(value or "").replace(",", "."))
     except ValueError:
         return 9999.0
+
+
+def normalize_text(text: str) -> str:
+    normalized = unicodedata.normalize("NFKD", str(text or ""))
+    ascii_text = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    ascii_text = ascii_text.upper().replace("İ", "I")
+    ascii_text = re.sub(r"[^A-Z0-9]+", " ", ascii_text)
+    return re.sub(r"\s+", " ", ascii_text).strip()
+
+
+def fetch_html(url: str) -> str:
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=30) as resp:
+        return resp.read().decode("utf-8", "ignore")
+
+
+def build_style_number_map(city: str, date: str) -> dict[tuple[str, str], str]:
+    year, month, day = date.split("-")
+    city_slug = normalize_text(city).lower().replace(" ", "")
+    number_map: dict[tuple[str, str], str] = {}
+
+    for race_no in range(1, 21):
+        url = f"https://yenibeygir.com/{day}-{month}-{year}/{city_slug}/{race_no}/stiller"
+        try:
+            soup = BeautifulSoup(fetch_html(url), "html.parser")
+        except Exception:
+            continue
+
+        table = soup.find("table")
+        if table is None:
+            continue
+
+        race_label = f"{race_no}. Koşu"
+        for tr in table.find_all("tr")[1:]:
+            tds = tr.find_all("td")
+            if len(tds) < 2:
+                continue
+            horse_no = tds[0].get_text(" ", strip=True)
+            horse_name = tds[1].get_text(" ", strip=True)
+            if horse_no and horse_name:
+                number_map[(race_label, normalize_text(horse_name))] = horse_no
+
+    return number_map
 
 
 def parse_args() -> argparse.Namespace:
@@ -74,6 +127,7 @@ def main() -> int:
     args = parse_args()
     input_path = Path(args.input)
     output_path = Path(args.output)
+    number_map = build_style_number_map(args.city, args.date)
 
     races: dict[str, list[dict[str, str]]] = {}
     with input_path.open("r", encoding="utf-8-sig", newline="") as f:
@@ -85,6 +139,7 @@ def main() -> int:
             primary_style, secondary_or_dist = build_style_summary(row)
             row["primary_style"] = primary_style
             row["secondary_or_dist"] = secondary_or_dist
+            row["at_no"] = number_map.get((race_name, normalize_text(row.get("at_ismi", ""))), "")
             races.setdefault(race_name, []).append(row)
 
     for race_rows in races.values():
@@ -146,7 +201,7 @@ def main() -> int:
         parts.append('    <section class="race">')
         parts.append(f"      <h2>{esc(race_name)}</h2>")
         parts.append("      <table>")
-        parts.append("        <thead><tr><th>At Ismi</th><th>Cikti</th><th>Stil</th><th>Dagilim</th><th>Son Kosu</th></tr></thead>")
+        parts.append("        <thead><tr><th>No</th><th>At Ismi</th><th>Cikti</th><th>Stil</th><th>Dagilim</th><th>Son Kosu</th></tr></thead>")
         parts.append("        <tbody>")
         for row in rows:
             secondary = row["secondary_or_dist"]
@@ -169,6 +224,7 @@ def main() -> int:
             sample_size = esc(row.get("stil_veri_sayisi", "") or "0")
             parts.append(
                 "          <tr>"
+                f"<td class='score'>{esc(row.get('at_no', '') or '-')}</td>"
                 f"<td><div class='name'>{esc(row.get('at_ismi', ''))}</div><div class='muted'>Stil veri sayisi: {sample_size}</div></td>"
                 f"<td class='score'>{esc(row.get('cikti', '') or '-')}</td>"
                 f"<td><span class='badge'>{esc(row['primary_style'])}</span>{secondary_html}</td>"
