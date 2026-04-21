@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "1": "https://yenibeygir.com/21-04-2026/elazig/1/stiller",
+    "2": "https://yenibeygir.com/21-04-2026/elazig/2/stiller",
+    "3": "https://yenibeygir.com/21-04-2026/elazig/3/stiller",
+    "4": "https://yenibeygir.com/21-04-2026/elazig/4/stiller",
+    "5": "https://yenibeygir.com/21-04-2026/elazig/5/stiller",
+    "6": "https://yenibeygir.com/21-04-2026/elazig/6/stiller",
+    "7": "https://yenibeygir.com/21-04-2026/elazig/7/stiller",
+    "8": "https://yenibeygir.com/21-04-2026/elazig/8/stiller"
+  },
+  "errors": {
+    "3:GÜZELBİLGE": "horse_not_in_input_csv",
+    "3:KALBİN": "horse_not_in_input_csv",
+    "3:NERGİS SULTAN": "horse_not_in_input_csv",
+    "8:EDALI NİDA": "horse_not_in_input_csv",
+    "8:EKSEN": "horse_not_in_input_csv",
+    "8:ELİFNAZ HANIM": "horse_not_in_input_csv",
+    "8:TRIAN": "horse_not_in_input_csv"
+  }
+}
