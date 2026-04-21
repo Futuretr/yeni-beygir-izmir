@@ -253,9 +253,19 @@ def main() -> int:
             row["at_no"] = horse_ctx.get("no", "")
             row["group_transition"] = ""
             row["group_transition_note"] = ""
-            if current_group in {1, 2} and previous_group in {1, 2} and current_group != previous_group:
-                row["group_transition"] = f"{previous_group}. Grup -> {current_group}. Grup"
+            row["group_transition_kind"] = "unknown"
+            if current_group in {1, 2} and previous_group in {1, 2}:
                 row["group_transition_note"] = f"{previous_group_label} -> {current_group_label}"
+                if current_group != previous_group:
+                    row["group_transition"] = f"{previous_group}. Grup -> {current_group}. Grup"
+                    row["group_transition_kind"] = "changed"
+                else:
+                    row["group_transition"] = f"{current_group}. Grup (Ayni Grup)"
+                    row["group_transition_kind"] = "same"
+            elif current_group in {1, 2}:
+                row["group_transition"] = "Onceki grup bilinmiyor"
+                row["group_transition_note"] = current_group_label
+                row["group_transition_kind"] = "unknown"
             races.setdefault(race_name, []).append(row)
 
     for race_rows in races.values():
@@ -289,6 +299,7 @@ def main() -> int:
     parts.append("    .badge{display:inline-block;padding:3px 8px;border-radius:999px;background:#e8f1f8;color:#0f3d5e;font-size:12px;margin:0 6px 6px 0;}")
     parts.append("    .badge.alt{background:#eff6eb;color:#285430;}")
     parts.append("    .badge.warn{background:#fff3cd;color:#7a4b00;}")
+    parts.append("    .badge.neutral{background:#eef2f7;color:#425466;}")
     parts.append("    .muted{color:#6b7c93;font-size:12px;line-height:1.45;}")
     parts.append("    .dist{font-size:12px;color:#52667a;line-height:1.5;}")
     parts.append("    .name{font-weight:700;}")
@@ -341,10 +352,14 @@ def main() -> int:
             sample_size = esc(row.get("stil_veri_sayisi", "") or "0")
             transition_html = ""
             if row.get("group_transition"):
-                transition_html = (
-                    f"<div><span class='badge warn'>{esc(row['group_transition'])}</span></div>"
-                    f"<div class='muted'>{esc(row.get('group_transition_note', ''))}</div>"
-                )
+                badge_class = "warn"
+                if row.get("group_transition_kind") == "same":
+                    badge_class = "alt"
+                elif row.get("group_transition_kind") == "unknown":
+                    badge_class = "neutral"
+                transition_html = f"<div><span class='badge {badge_class}'>{esc(row['group_transition'])}</span></div>"
+                if row.get("group_transition_note"):
+                    transition_html += f"<div class='muted'>{esc(row.get('group_transition_note', ''))}</div>"
             parts.append(
                 "          <tr>"
                 f"<td class='score'>{esc(row.get('at_no', '') or '-')}</td>"
