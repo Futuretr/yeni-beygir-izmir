@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "1": "https://yenibeygir.com/22-04-2026/istanbul/1/stiller",
+    "2": "https://yenibeygir.com/22-04-2026/istanbul/2/stiller",
+    "3": "https://yenibeygir.com/22-04-2026/istanbul/3/stiller",
+    "4": "https://yenibeygir.com/22-04-2026/istanbul/4/stiller",
+    "5": "https://yenibeygir.com/22-04-2026/istanbul/5/stiller",
+    "6": "https://yenibeygir.com/22-04-2026/istanbul/6/stiller",
+    "7": "https://yenibeygir.com/22-04-2026/istanbul/7/stiller",
+    "8": "https://yenibeygir.com/22-04-2026/istanbul/8/stiller",
+    "9": "https://yenibeygir.com/22-04-2026/istanbul/9/stiller"
+  },
+  "errors": {
+    "4:BATUGA": "horse_not_in_input_csv",
+    "5:MUSTANG SALLY": "horse_not_in_input_csv",
+    "9:IRON THOR": "horse_not_in_input_csv"
+  }
+}
