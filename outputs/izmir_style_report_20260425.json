@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "1": "https://yenibeygir.com/25-04-2026/izmir/1/stiller",
+    "2": "https://yenibeygir.com/25-04-2026/izmir/2/stiller",
+    "3": "https://yenibeygir.com/25-04-2026/izmir/3/stiller",
+    "4": "https://yenibeygir.com/25-04-2026/izmir/4/stiller",
+    "5": "https://yenibeygir.com/25-04-2026/izmir/5/stiller",
+    "6": "https://yenibeygir.com/25-04-2026/izmir/6/stiller",
+    "7": "https://yenibeygir.com/25-04-2026/izmir/7/stiller",
+    "8": "https://yenibeygir.com/25-04-2026/izmir/8/stiller",
+    "9": "https://yenibeygir.com/25-04-2026/izmir/9/stiller"
+  },
+  "errors": {
+    "2:EXCEPTIONAL": "horse_not_in_input_csv",
+    "5:GÜLFEM HATUN": "horse_not_in_input_csv",
+    "9:YEĞENİM GÜLŞAH": "horse_not_in_input_csv"
+  }
+}

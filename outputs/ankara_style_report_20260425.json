@@ -1,0 +1,15 @@
+{
+  "pages": {
+    "1": "https://yenibeygir.com/25-04-2026/ankara/1/stiller",
+    "2": "https://yenibeygir.com/25-04-2026/ankara/2/stiller",
+    "3": "https://yenibeygir.com/25-04-2026/ankara/3/stiller",
+    "4": "https://yenibeygir.com/25-04-2026/ankara/4/stiller",
+    "5": "https://yenibeygir.com/25-04-2026/ankara/5/stiller",
+    "6": "https://yenibeygir.com/25-04-2026/ankara/6/stiller",
+    "7": "https://yenibeygir.com/25-04-2026/ankara/7/stiller"
+  },
+  "errors": {
+    "7:IMMO": "horse_not_in_input_csv",
+    "7:UTAH": "horse_not_in_input_csv"
+  }
+}

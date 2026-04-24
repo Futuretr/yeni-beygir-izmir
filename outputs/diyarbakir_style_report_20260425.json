@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "1": "https://yenibeygir.com/25-04-2026/diyarbakir/1/stiller",
+    "2": "https://yenibeygir.com/25-04-2026/diyarbakir/2/stiller",
+    "3": "https://yenibeygir.com/25-04-2026/diyarbakir/3/stiller",
+    "4": "https://yenibeygir.com/25-04-2026/diyarbakir/4/stiller",
+    "5": "https://yenibeygir.com/25-04-2026/diyarbakir/5/stiller",
+    "6": "https://yenibeygir.com/25-04-2026/diyarbakir/6/stiller"
+  },
+  "errors": {
+    "4:IVAR": "horse_not_in_input_csv",
+    "4:OTTO MOYE": "horse_not_in_input_csv",
+    "4:VALENTINE GIRL": "horse_not_in_input_csv",
+    "4:VICTORY XECE": "horse_not_in_input_csv"
+  }
+}
