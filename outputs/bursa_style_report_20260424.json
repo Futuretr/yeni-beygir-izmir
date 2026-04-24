@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "1": "https://yenibeygir.com/24-04-2026/bursa/1/stiller",
+    "2": "https://yenibeygir.com/24-04-2026/bursa/2/stiller",
+    "3": "https://yenibeygir.com/24-04-2026/bursa/3/stiller",
+    "4": "https://yenibeygir.com/24-04-2026/bursa/4/stiller",
+    "5": "https://yenibeygir.com/24-04-2026/bursa/5/stiller",
+    "6": "https://yenibeygir.com/24-04-2026/bursa/6/stiller",
+    "7": "https://yenibeygir.com/24-04-2026/bursa/7/stiller",
+    "8": "https://yenibeygir.com/24-04-2026/bursa/8/stiller",
+    "9": "https://yenibeygir.com/24-04-2026/bursa/9/stiller",
+    "10": "https://yenibeygir.com/24-04-2026/bursa/10/stiller"
+  },
+  "errors": {
+    "2:DOZER ALİ": "horse_not_in_input_csv",
+    "2:BATTLE STAR": "horse_not_in_input_csv",
+    "2:LABELLA CASADORA": "horse_not_in_input_csv",
+    "2:MIRACLE DREAM": "horse_not_in_input_csv",
+    "6:LUPIN": "horse_not_in_input_csv",
+    "9:OĞLUM KUTAY": "horse_not_in_input_csv",
+    "10:ALL ALONE": "horse_not_in_input_csv",
+    "10:BOLUN": "horse_not_in_input_csv"
+  }
+}
