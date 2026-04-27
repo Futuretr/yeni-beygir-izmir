@@ -1,0 +1,23 @@
+{
+  "pages": {
+    "1": "https://yenibeygir.com/27-04-2026/sanliurfa/1/stiller",
+    "2": "https://yenibeygir.com/27-04-2026/sanliurfa/2/stiller",
+    "3": "https://yenibeygir.com/27-04-2026/sanliurfa/3/stiller",
+    "4": "https://yenibeygir.com/27-04-2026/sanliurfa/4/stiller",
+    "5": "https://yenibeygir.com/27-04-2026/sanliurfa/5/stiller",
+    "6": "https://yenibeygir.com/27-04-2026/sanliurfa/6/stiller",
+    "7": "https://yenibeygir.com/27-04-2026/sanliurfa/7/stiller",
+    "8": "https://yenibeygir.com/27-04-2026/sanliurfa/8/stiller",
+    "9": "https://yenibeygir.com/27-04-2026/sanliurfa/9/stiller"
+  },
+  "errors": {
+    "race_1": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "2:KUMBULAZ": "horse_not_in_input_csv",
+    "4:KIR FATİH": "horse_not_in_input_csv",
+    "5:PERSEPOLIS": "horse_not_in_input_csv",
+    "6:MADENCİ": "horse_not_in_input_csv",
+    "8:BLUE RANSOM": "horse_not_in_input_csv",
+    "8:FIRTINA ONUR": "horse_not_in_input_csv",
+    "8:LORD SEYFO": "horse_not_in_input_csv"
+  }
+}
